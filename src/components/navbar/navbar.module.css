@@ -1,0 +1,35 @@
+/* Styles for the Navbar Component */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--main-bg-color);
+  padding: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navList {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navItem {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0px;
+}
+
+.navLink {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-weight: bold;
+}
+
+.navLink:hover{
+  color: var(--main-color);
+}

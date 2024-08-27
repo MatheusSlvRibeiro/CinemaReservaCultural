@@ -1,0 +1,26 @@
+.Location{
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.Icon {
+    color: var(--main-color);
+    min-width: 20px;
+    max-width: 20px;
+    padding: 5px;
+} 
+
+.State {
+    color: var(--main-color);
+}
+
+.Arrow {
+    min-width: 16px;
+    max-width: 16px;
+    padding: 5px;
+}
+
+
