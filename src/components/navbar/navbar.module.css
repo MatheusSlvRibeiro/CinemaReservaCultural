@@ -2,10 +2,9 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-color: var(--main-bg-color);
-  padding: 0px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0px 10%;
 }
 
 .navList {
