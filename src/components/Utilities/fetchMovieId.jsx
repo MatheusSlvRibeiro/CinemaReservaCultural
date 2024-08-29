@@ -14,12 +14,14 @@ const fetchMovieId = async (title) => {
 const getMovieIds = async () => {
     const movieTitles = [
         'Alien: Romulus',
+        'ESTÔMAGO 2: O PODEROSO CHEF',
+        'MOTEL DESTINO',
         'Harold e o lápis mágico',
         'Longlegs - vínculo mortal',
         'O Corvo',
         'Deadpool & Wolverine',
         'É assim que acaba',
-        'Armadilha'
+        'Os Fantasmas Ainda se Divertem: Beetlejuice Beetlejuice',
     ];
 
     const ids = [];

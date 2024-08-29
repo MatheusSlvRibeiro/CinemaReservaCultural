@@ -1,34 +1,119 @@
-.MovieCard {
+.slider_container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.slick-slide {
+    padding: 0 50px;
+}
+
+.container {
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.MovieCard{
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    
 }
 
 .moviePoster {
-    width: 10rem;
+    margin: 5px 0;
+    width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
 .movieContent {
+    display: grid;
+    grid-template-rows: repeat(2, 1f);
+    height: 80px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: #1f1f1f;
+    flex-direction: column;
+    text-align: center;
+}
+.movieTitle {
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 5px;
+    color: white;
+    text-align: left; /* Alinha o texto à esquerda */
+    overflow: hidden; /* Oculta o texto que excede o limite */
+    display: -webkit-box;
+    --webkit-box-orient: vertical;
+    --webkit-line-clamp: 2; /* Ajuste o número de linhas conforme necessário */ 
+    line-height: 1.2em; /* Ajuste a altura da linha conforme necessário */
+    max-height: 2.4em; /* Ajuste a altura máxima conforme o número de linhas */
+    text-overflow: ellipsis; /* Adiciona "..." quando o texto é cortado */
+}
+
+
+.description {
+    padding: 0 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.description p {
+    font-size: 10pt;
+    margin: 0;
+    color: white;
+    padding: 3px;
+}
+
+.movieLink {
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: inherit; /* Mantém a cor do texto conforme o estilo do filme */
+}
+
+/* Estilização de certificação */
+
+.certification {
+    border-radius: 8px;
+    padding: 5px;
+    width: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 10pt;
+    text-align: center;
+    align-items: center;
+}
+
+.livre {
+    background-color: green;
+}
+
+.dez {
+    background-color: blue;
+}
+
+.doze {
+    background-color: yellow;
+}
+
+.quatorze {
+    background-color: orange;
+}
+
+.dezesseis {
     background-color: red;
 }
 
-.movieTitle {
-    font-weight: 500;
-    font-size: 18px;
-    margin: 5px;
+.dezoito {
+    background-color: black;
     color: white;
 }
 
-.infoMovies { 
-    display: flex;
-    padding: 10px;
-    font-size: 14px;
+.naoDisponivel {
+    background-color: grey;
 }
 
-.infoMovies p {
-    padding: 5px;
-    color: white;
-}

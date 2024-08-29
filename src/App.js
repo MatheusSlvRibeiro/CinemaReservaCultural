@@ -2,9 +2,8 @@ import React from 'react';
 import './App.css';
 import NavBar from './components/navbar/navbar';
 import Slider from './components/Slider/Slider';
-import SimpleSlider from './components/PlayingSlider/PlayingSlider';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import MovieSlider from './components/Utilities/FetchMovieData';
+import NowPlaying from './components/PlayingNow/PlayingNow';
 
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
       <div>
         <NavBar />
         <Slider />
-        <SimpleSlider />
+        <NowPlaying />
       </div>
   );
 }

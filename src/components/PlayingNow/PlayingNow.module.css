@@ -1,0 +1,17 @@
+.GridContent{
+      margin: 0 10%; /* Margem de 20% nas laterais */
+      padding: 20px; /* Opcional: adicionar padding para espaçamento interno */
+      box-sizing: border-box; /* Garante que padding e border não afetem o tamanho total */
+}
+
+.sectionTitle{
+      font-size: 30pt;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: white;
+      text-align: start;
+      margin: 4rem 0 1rem 0;
+      border-bottom: 3px solid var(--main-color);  
+}
+
+
