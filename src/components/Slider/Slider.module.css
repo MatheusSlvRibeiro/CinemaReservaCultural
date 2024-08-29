@@ -1,6 +1,6 @@
 .slider {
   position: relative;
-  width: calc(100% - 190px);
+  width: calc(100% - 20%);
   max-width: 1200px;
   margin: 0 auto;
   background: #000000; /* dark background */

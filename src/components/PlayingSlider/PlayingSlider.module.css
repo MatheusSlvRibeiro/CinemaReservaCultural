@@ -1,0 +1,32 @@
+.slider_container{
+    display: flex;
+}   
+
+.MovieCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+
+.movie-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;
+}
+
+.moviePoster {
+    width: 100%;
+    height: auto;
+}
+
+.movieTitle {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.infoMovies {
+    padding: 10px;
+    font-size: 14px;
+}
