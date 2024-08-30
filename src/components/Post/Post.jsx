@@ -13,7 +13,7 @@ const Post = () => {
                 <div>
                     <a href="#PainDeFrance">
                         <img className={styles.Post}
-                        src="/images/post-250x240-2.jpg" 
+                        src="/images/post-250x250.jpg" 
                         alt="teste"/>
                     </a>
                 </div>
@@ -27,7 +27,7 @@ const Post = () => {
                 <div>
                     <a href="#Bistro">
                         <img className={styles.Post}
-                        src="/images/Conheca-os-novos-classicos-franceses-no-bistro.jpeg"
+                        src="/images/Post-250x240-2.jpg"
                         alt="teste"/>
                     </a>
                 </div>
