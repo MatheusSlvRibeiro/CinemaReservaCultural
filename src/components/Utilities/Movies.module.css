@@ -3,10 +3,6 @@
     margin: 0 auto;
 }
 
-.slick-slide {
-    padding: 0 50px;
-}
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -40,9 +36,9 @@
 .movieTitle {
     text-transform: uppercase;
     color: white;
-    padding: 10px;
+    padding: 5px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     margin: 5px;
     color: white;
     text-align: left; /* Alinha o texto à esquerda */

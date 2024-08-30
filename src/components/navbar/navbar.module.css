@@ -1,10 +1,10 @@
 /* Styles for the Navbar Component */
 .navbar {
+  padding: 0 11%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--main-bg-color);
-  padding: 0px 10%;
 }
 
 .navList {
