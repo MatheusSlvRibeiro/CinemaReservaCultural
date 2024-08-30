@@ -11,7 +11,7 @@
     font-weight: 500;
     color: white;
     text-align: start;
-    margin: 4rem 0 1rem 0;
+    margin: 4rem 0 1.5rem 0;
     border-bottom: 3px solid var(--main-color);
 }
 
@@ -22,8 +22,13 @@
 }
 
 .Post{
-    height: 300px;
-    max-width: 300px;
-    margin: 5px 24px;
+    height: 95%;
+    max-width: 95%;
+    margin: 5px;
     border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.Post:hover {
+    transform: scale(1.02)
 }

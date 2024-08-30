@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './Post.module.css'
+import styles from './News.module.css'
 
-const Post = () => {
+const News = () => {
     return (
 
         <section className={styles.PostGrid}>
@@ -37,4 +37,4 @@ const Post = () => {
     )
 }
 
-export default Post;
+export default News;

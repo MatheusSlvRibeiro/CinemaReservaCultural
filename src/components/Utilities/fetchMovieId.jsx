@@ -13,17 +13,15 @@ const fetchMovieId = async (title) => {
 
 const getMovieIds = async () => {
     const movieTitles = [
-        'Alien: Romulus',
-        'A VIÚVA CLICQUOT - A MULHER QUE FORMOU UM IMPÉRIO',
-        'BERNADETTE',
-        'Harold e o lápis mágico',
-        'Longlegs - vínculo mortal',
-        'O Corvo',
-        'Deadpool & Wolverine',
-        'É assim que acaba',
-        'Os Fantasmas Ainda se Divertem: Beetlejuice Beetlejuice',
-        'PEQUENAS CARTAS OBSCENAS',
         'O MAL NÃO EXISTE',
+        'Estômago 2 - O Poderoso Chef',
+        'BERNADETTE',
+        'PEQUENAS CARTAS OBSCENAS',
+        'motel destino',
+        'baile das loucas',
+        'A VIÚVA CLICQUOT - A MULHER QUE FORMOU UM IMPÉRIO',
+        'Fernanda young',
+        'o mensageiro',
     ];
 
     const ids = [];

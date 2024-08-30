@@ -3,7 +3,8 @@ import './App.css';
 import NavBar from './components/navbar/navbar';
 import Slider from './components/Slider/Slider';
 import NowPlaying from './components/PlayingNow/PlayingNow';
-import Post from './components/Post/Post';
+import News from './components/News/News';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         <NavBar />
         <Slider />
         <NowPlaying />
-        <Post />
+        <News />
+        <Footer />
       </div>
   );
 }

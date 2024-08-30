@@ -13,12 +13,13 @@
     display: flex;
     flex-direction: column;
     max-width: 160px;
-    
+    min-width: 160px;
 }
 
 .moviePoster {
     margin: 5px 0;
     width: 100%;
+    min-width: 100%;
     height: auto;
     border-radius: 12px;
 }
