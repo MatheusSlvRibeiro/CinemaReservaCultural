@@ -1,5 +1,5 @@
 .PostGrid{
-    max-width: 800;
+    max-width: 100%;
     margin: 0 10%; /* Margem de 20% nas laterais */
     padding: 20px; /* Opcional: adicionar padding para espaçamento interno */
     box-sizing: border-box; /* Garante que padding e border não afetem o tamanho total */
@@ -12,11 +12,11 @@
     color: white;
     text-align: start;
     margin: 4rem 0 1.5rem 0;
+    padding-bottom: 5px;
     border-bottom: 3px solid var(--main-color);
 }
 
 .PostSection {
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -27,6 +27,8 @@
     margin: 5px;
     border-radius: 20px;
     transition: transform 0.3s ease;
+    box-shadow: 0 6px 13px rgba(0, 0, 0, 0.8);
+
 }
 
 .Post:hover {

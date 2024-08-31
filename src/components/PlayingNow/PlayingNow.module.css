@@ -12,6 +12,7 @@
       color: white;
       text-align: start;
       margin: 4rem 0 1.5rem 0;
+      padding-bottom: 5px;
       border-bottom: 3px solid var(--main-color);  
 }
 
