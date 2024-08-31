@@ -8,18 +8,20 @@
 
 .Icon {
     color: var(--main-color);
-    min-width: 20px;
-    max-width: 20px;
+    min-width: 25px;
+    max-width: 25px;
     padding: 5px;
+    margin: 0 0 3px 0;
 } 
 
 .State {
+    font-size: 13pt;
     color: var(--main-color);
 }
 
 .Arrow {
-    min-width: 16px;
-    max-width: 16px;
+    min-width: 25px;
+    max-width: 25px;
     padding: 5px;
 }
 

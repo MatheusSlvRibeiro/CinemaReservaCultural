@@ -9,10 +9,9 @@ const NavBar = () => {
     const navItems = [
         { id: 1, text: 'Programação', url: '/programação' },
         { id: 2, text: 'Gastronomia', url: '/gastronomia' },
-        { id: 3, text: 'Livraria', url: '/livraria' },
-        { id: 4, text: 'Eventos', url: '/eventos' },
-        { id: 5, text: 'Fidelidade', url: '/fidelidade' },
-        { id: 6, text: 'Parceria', url: '/parceria' },
+        { id: 3, text: 'Eventos', url: '/eventos' },
+        { id: 4, text: 'Fidelidade', url: '/fidelidade' },
+        { id: 5, text: 'Parceria', url: '/parceria' },
     ];
 
     // Function to render the nav items

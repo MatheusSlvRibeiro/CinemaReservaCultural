@@ -23,6 +23,7 @@
 }
 
 .navLink {
+  text-transform: uppercase;
   box-sizing: border-box;
   text-decoration: none;
   color: var(--main-text-color);
