@@ -14,12 +14,12 @@ const fetchMovieId = async (title) => {
 const getMovieIds = async () => {
     const movieTitles = [
         'O MAL NÃO EXISTE',
-        'Estômago 2 - O Poderoso Chef',
+        'Estômago 2',
         'BERNADETTE',
         'PEQUENAS CARTAS OBSCENAS',
         'motel destino',
         'baile das loucas',
-        'A VIÚVA CLICQUOT - A MULHER QUE FORMOU UM IMPÉRIO',
+        'A VIÚVA CLICQUOT',
         'Fernanda young',
         'o mensageiro',
     ];
