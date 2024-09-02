@@ -3,21 +3,14 @@
     margin: 0 auto;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
-
 .MovieCard{
     display: flex;
     flex-direction: column;
     max-width: 160px;
-    min-width: 160px;
 }
 
 .moviePoster {
-    margin: 5px 0;
+    margin: 4px 0;
     width: 100%;
     min-width: 100%;
     height: auto;
@@ -29,7 +22,7 @@
     display: grid;
     grid-template-rows: repeat(2, 1f);
     height: 80px;
-    padding: 10px;
+    padding: 7px;
     border-radius: 12px;
     background-color: #1f1f1f;
     flex-direction: column;
@@ -43,7 +36,7 @@
     font-size: 12px;
     margin: 5px;
     color: white;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
     overflow: hidden; /* Oculta o texto que excede o limite */
     display: -webkit-box;
     --webkit-box-orient: vertical;
@@ -69,8 +62,8 @@
 }
 
 .movieLink {
-  text-decoration: none; /* Remove o sublinhado do link */
-  color: inherit; /* Mantém a cor do texto conforme o estilo do filme */
+  text-decoration: none; 
+  
 }
 
 /* Estilização de certificação */
@@ -115,3 +108,12 @@
     background-color: grey;
 }
 
+@media (max-width: 1024px ) {
+    .slider_container{
+        width: 940px;
+    }
+
+    .MoviePoster{
+        width: 90px;
+    }    
+}

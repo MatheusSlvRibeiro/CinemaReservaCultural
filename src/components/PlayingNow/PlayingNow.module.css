@@ -1,5 +1,5 @@
 .GridContent{
-      max-width: 800;
+      max-width: 1400px;
       margin: 0 10%; /* Margem de 20% nas laterais */
       padding: 20px; /* Opcional: adicionar padding para espaçamento interno */
       box-sizing: border-box; /* Garante que padding e border não afetem o tamanho total */
@@ -16,4 +16,10 @@
       border-bottom: 3px solid var(--main-color);  
 }
 
-
+@media (max-width: 1024px) {
+      .GridContent{
+            margin: 0;
+            padding: 0 40px;
+            
+      }
+}

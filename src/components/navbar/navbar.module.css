@@ -1,5 +1,6 @@
 /* Styles for the Navbar Component */
 .navbar {
+  max-width: 1400px;
   padding: 0 11%;
   display: flex;
   align-items: center;
@@ -28,8 +29,19 @@
   text-decoration: none;
   color: var(--main-text-color);
   font-weight: bold;
+  font-size: 15px;
 }
 
 .navLink:hover{
   color: var(--main-color);
 }
+
+@media (max-width: 1024px){
+  .navbar{
+    padding: 10px;
+  }
+  
+  .navLink{
+    font-size: 15px;
+    }
+};

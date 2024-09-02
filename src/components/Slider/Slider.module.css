@@ -3,7 +3,6 @@
   width: calc(100% - 25%);
   max-width: 1200px;
   margin: 0 auto;
-  background: #000000; /* dark background */
   overflow: hidden;
   height: 350px;
   border-radius: 25px;
@@ -80,12 +79,9 @@
   border-color: var(--main-color);
 }
 
-@media screen and (max-width: 800px) {
-  .slider {
-    width: calc(100% - 40px); /* Adjust for smaller screens if necessary */
-  }
-
-  .slide {
-    height: 500px; /* Adjust height for smaller screens */
+@media screen and (max-width: 1024px) {
+  .slider{
+    width: 1000px;
+    padding: 10px;
   }
 }
