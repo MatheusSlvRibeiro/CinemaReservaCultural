@@ -83,7 +83,7 @@ const MovieSlider = () => {
     };
 
     return (
-        <div className={styles.slider_container}>
+        <div  className={styles.slider_container} >
             <Slider {...settings}>
                 {movies.map(movie => (
                     <div className={styles.MovieCard} key={movie.id}>

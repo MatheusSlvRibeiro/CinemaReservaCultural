@@ -4,7 +4,7 @@ import styles from './PlayingNow.module.css'
 
 const NowPlaying = () => {
       return (
-            <section className={styles.GridContent}>
+            <section id='em_cartaz' className={styles.GridContent}>
                   <div>
                         <h3 className={styles.sectionTitle}>
                               em cartaz

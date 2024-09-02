@@ -8,11 +8,13 @@ const News = () => {
 
     const settings = {
         dots: false,
-        infinite: false,
-        speed: 300,
+        infinite: true,
+        speed: 600,
         slidesToShow: 3, // Ajuste conforme necessário
         slidesToScroll: 1,
         arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
     };
 
     return (
@@ -31,16 +33,16 @@ const News = () => {
                         </a>
                     </div>
                     <div>
-                        <a href="#conceito">
+                        <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view?usp=sharing" target="blank" rel="noopener noreferrer">
                             <img className={styles.Post}
-                            src="/images/post-1000x1000.jpg"
+                            src="/images/Post-250x240-2.jpg"
                             alt="teste"/>
                         </a>
                     </div>
                     <div>
-                        <a href="#Bistro">
+                        <a href="#conceito">
                             <img className={styles.Post}
-                            src="/images/Post-250x240-2.jpg"
+                            src="/images/post-1000x1000.jpg"
                             alt="teste"/>
                         </a>
                     </div>

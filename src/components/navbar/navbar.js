@@ -7,7 +7,7 @@ import Location from "../location/location";
 const NavBar = () => {
     // Array of navigation items
     const navItems = [
-        { id: 1, text: 'Programação', url: '/programação' },
+        { id: 1, text: 'Programação', url: '#em_cartaz' },
         { id: 2, text: 'Gastronomia', url: '/gastronomia' },
         { id: 3, text: 'Eventos', url: '/eventos' },
         { id: 4, text: 'Fidelidade', url: '/fidelidade' },

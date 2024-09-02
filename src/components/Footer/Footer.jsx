@@ -18,24 +18,15 @@ const Footer = () => {
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>Programação</h3>
               <ul>
-                <li><a className={Styles.column_item} href="#">Em Cartaz</a></li>
-                <li><a className={Styles.column_item} href="#">Ingressos</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Em Cartaz</a></li>
+                <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
+                                                      rel='noopener noreferrer' 
+                                                      target='blank'>Ingressos</a></li>
                 <li><a className={Styles.column_item} href="#">Tarifas</a></li>
                 <li><a className={Styles.column_item} href="#">Guia do Bom Espectador</a></li>
               </ul>
             </div>
 
-            <div className={Styles.column}>
-              <h3 className={Styles.column_title}>O Reserva</h3>
-              <ul>
-                <li><a className={Styles.column_item} href="#">O Conceito</a></li>
-                <li><a className={Styles.column_item} href="#">Fidelidade</a></li>
-                <li><a className={Styles.column_item} href="#">Livros e DVDs</a></li>
-                <li><a className={Styles.column_item} href="#">Estacionamento <br />conveniado</a></li>
-                <li><a className={Styles.column_item} href="#">Trabalhe Conosco</a></li>
-                <li><a className={Styles.column_item} href="#">Contato</a></li>
-              </ul>
-            </div>
 
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>Gastronomia</h3>
@@ -53,6 +44,18 @@ const Footer = () => {
               </ul>
             </div>
 
+            <div className={Styles.column}>
+              <h3 className={Styles.column_title}>O Reserva</h3>
+              <ul>
+                <li><a className={Styles.column_item} href="#">O Conceito</a></li>
+                <li><a className={Styles.column_item} href="#">Fidelidade</a></li>
+                <li><a className={Styles.column_item} href="#">Livros e DVDs</a></li>
+                <li><a className={Styles.column_item} href="#">Estacionamento <br />conveniado</a></li>
+                <li><a className={Styles.column_item} href="#">Trabalhe Conosco</a></li>
+                <li><a className={Styles.column_item} href="#">Contato</a></li>
+              </ul>
+            </div>
+            
             <div className={Styles.column}>
               
               <NewsletterSignup />
