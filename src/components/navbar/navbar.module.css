@@ -36,6 +36,16 @@
   color: var(--main-color);
 }
 
+@media (max-width: 768px) {
+  .navbar{
+    width: 1000px;
+  }
+
+  .navLink{
+    display: none;
+  }
+}
+
 @media (max-width: 1024px){
   .navbar{
     padding: 10px;
@@ -45,3 +55,6 @@
     font-size: 15px;
     }
 };
+
+
+

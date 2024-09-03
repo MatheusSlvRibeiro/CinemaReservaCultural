@@ -20,6 +20,11 @@
       .GridContent{
             margin: 0;
             padding: 0 40px;
-            
+      }
+}
+
+@media (max-width: 768px) {
+      .GridContent{
+            width: 1005px;
       }
 }

@@ -79,9 +79,10 @@
   border-color: var(--main-color);
 }
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .slider{
     width: 1000px;
     padding: 10px;
   }
 }
+

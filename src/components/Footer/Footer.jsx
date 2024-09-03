@@ -85,7 +85,7 @@ const Footer = () => {
           </a>
 
           <h3 className={Styles.copyright}>
-            &copy; 2024 Cinema Reserva Cultural. Todos os direitos reservados
+            Copyright &copy; 2024 Cinema Reserva Cultural 
           </h3>
 
           <p>Desenvolvido por <a href='https://www.linkedin.com/in/matheus-ribeiro-465861231/' target='_blank' rel='noopener noreferrer'>Matheus Ribeiro</a></p>
