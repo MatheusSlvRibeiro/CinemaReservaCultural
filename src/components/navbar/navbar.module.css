@@ -1,13 +1,15 @@
 /* Styles for the Navbar Component */
 .navbar {
   max-width: 1400px;
-  padding: 0 11%;
+  padding: 0 12%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--main-bg-color);
+  position: relative;
 }
 
+/* Estilos para a lista de navegação */
 .navList {
   list-style-type: none;
   padding: 10px;
@@ -17,12 +19,14 @@
   align-items: center;
 }
 
+/* Estilos para os itens de navegação */
 .navItem {
   padding: 10px 20px;
   cursor: pointer;
   margin: 0px;
 }
 
+/* Estilos para os links de navegação */
 .navLink {
   text-transform: uppercase;
   box-sizing: border-box;
@@ -32,29 +36,79 @@
   font-size: 15px;
 }
 
-.navLink:hover{
+/* Efeito hover nos links de navegação */
+.navLink:hover {
   color: var(--main-color);
 }
 
-@media (max-width: 768px) {
-  .navbar{
-    width: 1000px;
-  }
-
-  .navLink{
-    display: none;
-  }
+/* Esconde os ícones de menu em telas maiores */
+.menuIcon {
+  display: none;
 }
 
-@media (max-width: 1024px){
-  .navbar{
+/* Estilos para telas com largura máxima de 1024px */
+@media (max-width: 1024px) {
+  .navbar {
     padding: 10px;
   }
   
-  .navLink{
+  .navLink {
     font-size: 15px;
-    }
-};
+  }
+}
+
+/* Estilos para telas com largura máxima de 768px */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    justify-content: flex-end;
+    z-index: 100;
+    
+  }
+
+  /* Exibe o ícone do menu */
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+    color: var(--main-text-color);
+    background-color: #272727;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 24px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+
+    /* Estilos para a lista de navegação em modo mobile */
+  .navList {
+    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex; /* Altere para flex, mas com opacity 0 e visibility hidden */
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 80%;
+    background-color: var(--nav-color-mobile);
+    padding: 15px;
+    transition: opacity 0.4s ease, visibility 0.4s ease; /* Adicione transições */
+  }
+
+  /* Exibe a lista de navegação quando o menu está aberto */
+  .navList.open {
+    opacity: 1;
+    visibility: visible;
+    padding: 50px;
+  }
 
 
+  /* Estilos para os itens de navegação em modo mobile */
+  .navItem {
+    padding: 10px;
+    width: 100%;
+  }
 
+}

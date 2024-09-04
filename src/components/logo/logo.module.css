@@ -10,3 +10,11 @@
         width: 15%;
     }
 }
+
+@media (max-width: 768px){
+    .logoReserva{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

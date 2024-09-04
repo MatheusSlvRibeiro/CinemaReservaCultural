@@ -1,7 +1,7 @@
 .PostGrid{
     width: 100%;
-    margin: 0 12% 0 13%; /* Margem de 20% nas laterais */
-    padding: 20px 0px; /* Opcional: adicionar padding para espaçamento interno */
+    margin: 0 10%;/* Margem de 20% nas laterais */
+    padding: 60px 0px; /* Opcional: adicionar padding para espaçamento interno */
     box-sizing: border-box; /* Garante que padding e border não afetem o tamanho total */
     justify-content: space-around;
 }
@@ -36,23 +36,17 @@
     transform: scale(1.02)
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1024px) {
     .PostGrid{
-
-        width: 1000px;
-        justify-content: space-around;
+        max-width: 1050px;
+        
     }
 }
 
-@media (min-width: 768px) and  (max-width: 1024px) {
+@media (max-width: 1024px) {
     .PostGrid{
-        margin: 0;
-        padding: 50px 35px 50px 40px;
+        width: 900px;
+        margin: 0 6%;
     }
-}
-
-@media (max-width: 768px) {
-    .PostGrid{
-        width: 1000px;
-    }
+    
 }

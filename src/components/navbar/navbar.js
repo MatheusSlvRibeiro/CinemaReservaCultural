@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './navbar.module.css';
 import Logo from "../logo/logo";
 import Location from "../location/location";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
-    // Array of navigation items
+    const [menuOpen, setMenuOpen] = useState(false);
+
     const navItems = [
         { id: 1, text: 'Programação', url: '#em_cartaz' },
         { id: 2, text: 'Gastronomia', url: '/gastronomia' },
@@ -14,7 +16,6 @@ const NavBar = () => {
         { id: 5, text: 'Parceria', url: '/parceria' },
     ];
 
-    // Function to render the nav items
     const renderNavItems = () => {
         return navItems.map((item) => (
             <li key={item.id} className={styles.navItem}>
@@ -25,11 +26,20 @@ const NavBar = () => {
         ));
     };
 
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <nav className={styles.navbar}>
-            <Logo></Logo>
-            <ul className={styles.navList}>{renderNavItems()}</ul>
-            <Location></Location>
+            <div className={styles.menuIcon} onClick={toggleMenu}>
+                <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />
+            </div>
+            <Logo className="logo" />
+            <ul className={`${styles.navList} ${menuOpen ? styles.open : ''}`}>
+                {renderNavItems()}
+            </ul>
+            <Location />
         </nav>
     );
 };
