@@ -1,12 +1,16 @@
 /* Styles for the Navbar Component */
 .navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   max-width: 100%;
   padding: 0 12%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--main-bg-color);
-  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos para a lista de navegação */
