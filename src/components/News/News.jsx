@@ -1,16 +1,40 @@
-import React from "react";
-import Slider from "react-slick"; // Certifique-se de instalar e importar o react-slick
+import React, { useState, useEffect } from "react";
+import Slider from "react-slick";
 import styles from './News.module.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 
 const News = () => {
+    const [slidesToShow, setSlidesToShow] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 400) {
+                setSlidesToShow(1);
+            } else if (window.innerWidth <= 425) {
+                setSlidesToShow(2);
+            } else {
+                setSlidesToShow(3);
+            }
+        };
+
+        // Set initial value
+        handleResize();
+
+        // Add event listener
+        window.addEventListener('resize', handleResize);
+
+        // Clean up event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const settings = {
         dots: false,
         infinite: true,
         speed: 600,
-        slidesToShow: 3, // Ajuste conforme necessário
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
         arrows: true,
         autoplay: true,

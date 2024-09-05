@@ -80,15 +80,21 @@ const Footer = () => {
         </div>
 
         <div className={Styles.institucional}>
-          <a href="#">
-            <img className={Styles.footer_img} src="./images/Logo_reserva01.png" alt="Logo Reserva Cultural" />
-          </a>
+          <div>
+            <a href="#">
+              <img className={Styles.footer_img} src="./images/Logo_reserva01.png" alt="Logo Reserva Cultural" />
+            </a>
+          </div>
 
-          <h3 className={Styles.copyright}>
-            Copyright &copy; 2024 Cinema Reserva Cultural 
-          </h3>
+          <div>
+            <h3 className={Styles.copyright}>
+              Copyright &copy; 2024 Cinema Reserva Cultural 
+            </h3>
+          </div>
 
-          <p>Desenvolvido por <a href='https://www.linkedin.com/in/matheus-ribeiro-465861231/' target='_blank' rel='noopener noreferrer'>Matheus Ribeiro</a></p>
+          <div>
+            <p>Desenvolvido por <a href='https://www.linkedin.com/in/matheus-ribeiro-465861231/' target='_blank' rel='noopener noreferrer'>Matheus Ribeiro</a></p>
+          </div>
         </div>
       </div>
     </footer>

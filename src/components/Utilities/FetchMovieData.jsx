@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useMediaQuery } from 'react-responsive'; // Importei o hook
 import styles from './Movies.module.css';
 
-// Função para buscar IDs dos filmes
 import getMovieIds from './fetchMovieId';
 
 // Função para truncar o título do filme
@@ -54,7 +54,6 @@ const MovieSlider = () => {
                     const brazilRating = releaseData.results.find(release => release.iso_3166_1 === 'BR');
                     const certification = brazilRating ? brazilRating.release_dates[0].certification : 'Não disponível';
 
-                    // Verificação do gênero principal
                     let mainGenre = movieData.genres[0]?.name || 'Gênero não disponível';
                     if (mainGenre === 'Crime') {
                         mainGenre = 'Suspense';
@@ -73,18 +72,33 @@ const MovieSlider = () => {
         fetchMovieDetails();
     }, []);
 
-    const settings = {
+    // Verifica se a largura da tela é 425px ou menos
+    const isMobile = useMediaQuery({ query: '(max-width: 425px)' });
+
+    // Configurações para telas maiores
+    const settingsDesktop = {
         dots: false,
         infinite: false,
         speed: 300,
-        slidesToShow: 6, // Ajuste conforme necessário
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        arrows: true,
+    };
+
+    // Configurações para telas menores que 425px
+    const settingsMobile = {
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 2,
         slidesToScroll: 1,
         arrows: true,
     };
 
     return (
-        <div  className={styles.slider_container} >
-            <Slider {...settings}>
+        <div className={styles.slider_container}>
+            {/* Se estiver em uma tela menor, usa configurações de mobile, caso contrário, usa desktop */}
+            <Slider {...(isMobile ? settingsMobile : settingsDesktop)}>
                 {movies.map(movie => (
                     <div className={styles.MovieCard} key={movie.id}>
                         <a href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" target='blank' className={styles.movieLink}>

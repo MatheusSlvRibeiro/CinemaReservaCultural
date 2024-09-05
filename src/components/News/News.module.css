@@ -1,9 +1,8 @@
 .PostGrid{
-    width: 100%;
+    max-width: 100%;
     margin: 0 10%;/* Margem de 20% nas laterais */
-    padding: 60px 0px; /* Opcional: adicionar padding para espaçamento interno */
+    padding: 20px; /* Opcional: adicionar padding para espaçamento interno */
     box-sizing: border-box; /* Garante que padding e border não afetem o tamanho total */
-    justify-content: space-around;
 }
 
 .sectionTitle{
@@ -36,17 +35,8 @@
     transform: scale(1.02)
 }
 
-@media (min-width: 1024px) {
-    .PostGrid{
-        max-width: 1050px;
-        
-    }
-}
-
 @media (max-width: 1024px) {
     .PostGrid{
-        width: 900px;
-        margin: 0 6%;
+        margin: 1rem;
     }
-    
 }
