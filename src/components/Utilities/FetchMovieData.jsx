@@ -74,6 +74,8 @@ const MovieSlider = () => {
 
     // Verifica se a largura da tela é 425px ou menos
     const isMobile = useMediaQuery({ query: '(max-width: 425px)' });
+    // Verifica se a largura da tela é 2560px ou mais
+    const is4K = useMediaQuery({ query: '(min-width: 1900px)' });
 
     // Configurações para telas maiores
     const settingsDesktop = {
@@ -95,10 +97,22 @@ const MovieSlider = () => {
         arrows: true,
     };
 
+    // Configurações para telas 4K
+    const settings4K = {
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        arrows: true,
+    };
+
+    // Configurações baseadas na largura da tela
+    const settings = is4K ? settings4K : isMobile ? settingsMobile : settingsDesktop;
+
     return (
         <div className={styles.slider_container}>
-            {/* Se estiver em uma tela menor, usa configurações de mobile, caso contrário, usa desktop */}
-            <Slider {...(isMobile ? settingsMobile : settingsDesktop)}>
+            <Slider {...settings}>
                 {movies.map(movie => (
                     <div className={styles.MovieCard} key={movie.id}>
                         <a href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" target='blank' className={styles.movieLink}>
