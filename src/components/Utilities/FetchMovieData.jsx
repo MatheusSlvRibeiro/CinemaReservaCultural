@@ -69,8 +69,8 @@ const MovieSlider = () => {
         // Função para ajustar o número de slides com base no tamanho da tela
         const handleResize = () => {
             const width = window.innerWidth;
-            const quantidade = width / 250;
-            setSlidesToShow(quantidade);
+            const quantidade = Math.floor(width / 250);
+            setSlidesToShow(quantidade > 0 ? quantidade : 1); // Definir um número mínimo de slides
         };
 
         // Definir slides iniciais com base na largura atual da tela
@@ -94,6 +94,10 @@ const MovieSlider = () => {
         slidesToScroll: 1,
         arrows: true,
     };
+
+    if (movies.length <= 0) {
+        return null;
+    }
 
     return (
         <div className={styles.slider_container}>
