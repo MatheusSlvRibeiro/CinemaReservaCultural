@@ -16,7 +16,7 @@
       border-bottom: 3px solid var(--main-color);  
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1200px){
       .GridContent{
        margin: 1rem;     
       }

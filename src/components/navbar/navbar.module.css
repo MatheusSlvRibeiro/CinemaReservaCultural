@@ -50,8 +50,8 @@
   display: none;
 }
 
-/* Estilos para telas com largura máxima de 1024px */
-@media (max-width: 1024px) {
+/* Estilos para telas com largura máxima de 1200px */
+@media (max-width: 1200px) {
   .navbar {
     padding: 0.5rem;
   }
@@ -63,7 +63,7 @@
 
 /* Estilos para telas com largura máxima de 768px */
 /* Estilos para telas com largura máxima de 768px */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .navbar {
     width: 100%;
     justify-content: flex-end;
@@ -89,6 +89,7 @@
     flex-direction: column;
     align-items: flex-start;
     display: flex;
+    height: 100vh;
     position: absolute;
     top: 60px;
     left: -100%; /* Inicialmente fora da tela à esquerda */
@@ -115,7 +116,7 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1200px) {
   .navList{
     width: 100%;
   }

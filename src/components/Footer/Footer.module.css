@@ -1,5 +1,5 @@
 .footer{
-    max-width: 100%;
+    max-width: 100vw;
     position: relative;
     background-color: var(--main-bg-color-dark);
     display: flex;
@@ -88,7 +88,7 @@
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .footer{
         margin-top: 5rem;
     }
@@ -115,7 +115,7 @@
     }
 }
 
-@media (max-width: 425px){
+@media (max-width: 580px){
     .column{
         padding: 4rem 2rem 1rem 2rem;
     }
