@@ -79,7 +79,7 @@
   border-color: var(--main-color);
 }
 
-@media (max-width:1024px) {
+@media (max-width:1200px) {
   .slider{
     width: 94%;
   }

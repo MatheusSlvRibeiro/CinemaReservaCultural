@@ -76,7 +76,7 @@ code {
   border-radius: 15px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   ::-webkit-scrollbar{
     display: none;
   }

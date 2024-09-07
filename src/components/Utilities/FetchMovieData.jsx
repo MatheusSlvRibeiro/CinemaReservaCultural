@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useMediaQuery } from 'react-responsive'; // Importei o hook
 import styles from './Movies.module.css';
 
 import getMovieIds from './fetchMovieId';
@@ -15,30 +14,24 @@ const truncateTitle = (title, maxLength) => {
     return title;
 };
 
-// Função para obter a classe CSS com base na certificação
+const ratedMovies = {
+    'L': styles.livre,
+    '10': styles.dez,
+    '12': styles.doze,
+    '14': styles.quatorze,
+    '16': styles.dezesseis,
+    '18': styles.dezoito,
+}
+
 const getCertificationClass = (certification) => {
-    switch (certification) {
-        case 'L':
-            return styles.livre;
-        case '10':
-            return styles.dez;
-        case '12':
-            return styles.doze;
-        case '14':
-            return styles.quatorze;
-        case '16':
-            return styles.dezesseis;
-        case '18':
-            return styles.dezoito;
-        default:
-            return styles.naoDisponivel;
-    }
+    return ratedMovies[certification] || styles.naoDisponivel;
 };
 
 const API_KEY = 'd69cb7e92473b2944af9f61f30ebf1a4';
 
 const MovieSlider = () => {
     const [movies, setMovies] = useState([]);
+    const [slidesToShow, setSlidesToShow] = useState(4); // Valor inicial
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -72,43 +65,35 @@ const MovieSlider = () => {
         fetchMovieDetails();
     }, []);
 
-    // Verifica se a largura da tela é 425px ou menos
-    const isMobile = useMediaQuery({ query: '(max-width: 425px)' });
-    // Verifica se a largura da tela é 2560px ou mais
-    const is4K = useMediaQuery({ query: '(min-width: 1900px)' });
+    useEffect(() => {
+        // Função para ajustar o número de slides com base no tamanho da tela
+        const handleResize = () => {
+            const width = window.innerWidth;
+            const quantidade = width / 250;
+            setSlidesToShow(quantidade);
+        };
 
-    // Configurações para telas maiores
-    const settingsDesktop = {
+        // Definir slides iniciais com base na largura atual da tela
+        handleResize();
+
+        // Adicionar um event listener para monitorar o redimensionamento da janela
+        window.addEventListener('resize', handleResize);
+
+        // Limpar o event listener quando o componente desmontar
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    // Configurações do slider
+    const settings = {
         dots: false,
         infinite: false,
         speed: 300,
-        slidesToShow: 6,
+        slidesToShow: slidesToShow,
         slidesToScroll: 1,
         arrows: true,
     };
-
-    // Configurações para telas menores que 425px
-    const settingsMobile = {
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true,
-    };
-
-    // Configurações para telas 4K
-    const settings4K = {
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        arrows: true,
-    };
-
-    // Configurações baseadas na largura da tela
-    const settings = is4K ? settings4K : isMobile ? settingsMobile : settingsDesktop;
 
     return (
         <div className={styles.slider_container}>

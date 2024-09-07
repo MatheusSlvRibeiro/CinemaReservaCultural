@@ -5,13 +5,13 @@
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
     .logoReserva{
         width: 15%;
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 1200px){
     .logoReserva{
         position: absolute;
         left: 50%;
