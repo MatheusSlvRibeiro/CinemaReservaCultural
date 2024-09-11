@@ -44,13 +44,13 @@ const News = () => {
     return (
         <section className={styles.PostGrid}>
             <h3 className={styles.sectionTitle}>
-                sabores, novidades e conforto
+                Conceito, sabores e novidades 
             </h3>
         
             <div className={styles.PostSection}>
                 <Slider {...settings}>
                     <div>
-                        <a href="#PainDeFrance">
+                        <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view">
                             <img className={styles.Post}
                             src="/images/post-250x250.jpg" 
                             alt="teste"/>

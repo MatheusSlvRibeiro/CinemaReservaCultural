@@ -69,21 +69,28 @@ const MovieSlider = () => {
         // Função para ajustar o número de slides com base no tamanho da tela
         const handleResize = () => {
             const width = window.innerWidth;
-            const quantidade = Math.floor(width / 250);
+    
+            // Alterar 250 para 100 se a tela for menor que 425px
+            const baseWidth = width < 500 ? 200 : 250;
+    
+            // Calcula a quantidade de slides com base no tamanho da tela
+            const quantidade = Math.floor(width / baseWidth);
+            
             setSlidesToShow(quantidade > 0 ? quantidade : 1); // Definir um número mínimo de slides
         };
-
+    
         // Definir slides iniciais com base na largura atual da tela
         handleResize();
-
+    
         // Adicionar um event listener para monitorar o redimensionamento da janela
         window.addEventListener('resize', handleResize);
-
+    
         // Limpar o event listener quando o componente desmontar
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    
 
     // Configurações do slider
     const settings = {

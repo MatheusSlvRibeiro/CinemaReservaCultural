@@ -13,15 +13,16 @@ const fetchMovieId = async (title) => {
 
 const getMovieIds = async () => {
     const movieTitles = [
-        'O MAL NÃO EXISTE',
-        'Estômago 2',
-        'BERNADETTE',
-        'PEQUENAS CARTAS OBSCENAS',
+        'os fantasmas ainda se divertem',
+        'othelo, o grande',
+        'black rio! black power',
+        'estomago 2: o poderoso chef',
+        'bernadette - a mulher do presidente',
+        'fernanda young',
+        'a viuva clicquot',
         'motel destino',
         'baile das loucas',
-        'A VIÚVA CLICQUOT',
-        'Fernanda young',
-        'o mensageiro',
+        'o mal não existe',
     ];
 
     const ids = [];

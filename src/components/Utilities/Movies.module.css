@@ -119,19 +119,10 @@
 }
 
 @media (max-width: 768px) {
-    .moviePoster{
-        max-height: 11rem;
-    }
     .movieContent{
         padding: 0.1rem;
     }
     .movieTitle{
         font-size: 0.75rem;
-    }
-}
-
-@media (max-width: 425px){
-    .moviePoster{
-        max-height: 15rem;
     }
 }

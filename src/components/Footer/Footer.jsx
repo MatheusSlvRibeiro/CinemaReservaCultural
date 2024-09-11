@@ -22,8 +22,8 @@ const Footer = () => {
                 <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                       rel='noopener noreferrer' 
                                                       target='blank'>Ingressos</a></li>
-                <li><a className={Styles.column_item} href="#">Tarifas</a></li>
-                <li><a className={Styles.column_item} href="#">Guia do Bom Espectador</a></li>
+                <li><a className={Styles.column_item} href='#em_cartaz'>Tarifas</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Guia do Bom Espectador</a></li>
               </ul>
             </div>
 
@@ -31,28 +31,28 @@ const Footer = () => {
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>Gastronomia</h3>
               <ul>
-                <li><a className={Styles.column_item} href="#">Buffet Pain de France</a></li>
-                <li><a className={Styles.column_item} href="#">Bistro Reserva</a></li>
+                <li><a className={Styles.column_item} href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view" target='blank'>Buffet Pain de France</a></li>
+                <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>Bistro Reserva</a></li>
               </ul>
             </div>
 
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>Eventos</h3>
               <ul>
-                <li><a className={Styles.column_item} href="#">Eventos Realizados</a></li>
-                <li><a className={Styles.column_item} href="#">Parcerias</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Eventos Realizados</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Parcerias</a></li>
               </ul>
             </div>
 
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>O Reserva</h3>
               <ul>
-                <li><a className={Styles.column_item} href="#">O Conceito</a></li>
-                <li><a className={Styles.column_item} href="#">Fidelidade</a></li>
-                <li><a className={Styles.column_item} href="#">Livros e DVDs</a></li>
-                <li><a className={Styles.column_item} href="#">Estacionamento <br />conveniado</a></li>
-                <li><a className={Styles.column_item} href="#">Trabalhe Conosco</a></li>
-                <li><a className={Styles.column_item} href="#">Contato</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">O Conceito</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Fidelidade</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Livros e DVDs</a></li>
+                <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento <br />conveniado</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Trabalhe Conosco</a></li>
+                <li><a className={Styles.column_item} href="#em_cartaz">Contato</a></li>
               </ul>
             </div>
             
@@ -81,9 +81,7 @@ const Footer = () => {
 
         <div className={Styles.institucional}>
           <div>
-            <a href="#">
               <img className={Styles.footer_img} src="./images/Logo_reserva01.png" alt="Logo Reserva Cultural" />
-            </a>
           </div>
 
           <div>
