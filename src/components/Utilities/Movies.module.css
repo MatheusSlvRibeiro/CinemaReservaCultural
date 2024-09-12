@@ -52,7 +52,7 @@
 
 
 .description {
-    padding: 0 10px;
+    padding: 0 5px;
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -62,7 +62,6 @@
     font-size: 10pt;
     margin: 0;
     color: white;
-    padding: 3px;
 }
 
 .movieLink {
@@ -73,9 +72,10 @@
 /* Estilização de certificação */
 
 .certification {
-    border-radius: 8px;
+    border-radius: 5px;
+    width: 1.2rem;
+    height: 1.2rem;
     padding: 5px;
-    width: 20px;
     color: white;
     font-weight: 700;
     font-size: 10pt;
@@ -92,7 +92,7 @@
 }
 
 .doze {
-    background-color: yellow;
+    background-color: rgb(242, 195, 70);
 }
 
 .quatorze {
@@ -109,7 +109,7 @@
 }
 
 .naoDisponivel {
-    background-color: grey;
+    background-color: rgb(105, 105, 105);
 }
 
 @media (max-width: 1200px){

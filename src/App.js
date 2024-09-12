@@ -1,20 +1,11 @@
 import React from 'react';
 import './App.css';
-import NavBar from './components/navbar/navbar';
-import Slider from './components/Slider/Slider';
-import NowPlaying from './components/PlayingNow/PlayingNow';
-import News from './components/News/News';
-import Footer from './components/Footer/Footer';
-
+import Home from './Pages/Home';
 
 function App() {
   return (
       <div>
-        <NavBar />
-        <Slider />
-        <NowPlaying />
-        <News />
-        <Footer />
+        <Home />
       </div>
   );
 }
