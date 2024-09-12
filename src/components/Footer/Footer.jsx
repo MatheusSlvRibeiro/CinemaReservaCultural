@@ -22,7 +22,7 @@ const Footer = () => {
                 <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                       rel='noopener noreferrer' 
                                                       target='blank'>Ingressos</a></li>
-                <li><a className={Styles.column_item} href='#em_cartaz'>Tarifas</a></li>
+                <li><a className={Styles.column_item} href='/Tarifas'>Tarifas</a></li>
                 <li><a className={Styles.column_item} href="#em_cartaz">Guia do Bom Espectador</a></li>
               </ul>
             </div>

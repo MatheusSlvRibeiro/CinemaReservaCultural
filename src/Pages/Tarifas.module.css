@@ -1,0 +1,8 @@
+.Ingressos {
+    display: flex;
+    justify-content: center;
+    margin: 6% 10%;
+    max-width: 80%;
+    border-radius: 1rem;
+    height: auto;
+}
