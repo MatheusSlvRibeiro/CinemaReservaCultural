@@ -9,12 +9,12 @@ const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navItems = [
-        { id: 1, text: 'Programação', url: '#em_cartaz' },
+        { id: 1, text: 'Programação', url: '/#em_cartaz' },
         { id: 2, text: 'Gastronomia', url: 'https://linktr.ee/reservaculturalsp?fbclid=PAZXh0bgNhZW0CMTEAAabqWzJl6zTG3UtiPRTWnC8zr3pWonCUuq226x34JeR0tkpZf8ekFUDFmvU_aem_Zlg-S94_9wl7df3gnCguhQ' },
         { id: 3, text: 'Eventos', url: '/eventos' },
         { id: 4, text: 'Fidelidade', url: '/fidelidade' },
         { id: 5, text: 'Parceria', url: '/parceria' },
-    ];
+];
 
     const renderNavItems = () => {
         return navItems.map((item) => (
