@@ -7,7 +7,7 @@
   --nav-color-mobile: #0d0d0dfb;
   --main-bg-color-dark: #0a0a0a;
   --scrollbar: #929090;
-  --scrollbar-background: #cac7c7;
+  --scrollbar-background: #0d0d0d;
 
   /*================ Font and typography ================*/
   --body-font: 'League Spartan', sans-serif;
@@ -52,7 +52,7 @@ h1, h2, h3, h4, span {
 
 }
 
-a{
+a, p{
   color: var(--main-text-color);
 }
 
