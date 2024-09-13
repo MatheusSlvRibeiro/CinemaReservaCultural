@@ -11,7 +11,7 @@ function Home () {
             <NavBar />
             <Slider />
             <NowPlaying />
-            <News />
+            <News />            
             <Footer />
         </div>
     )

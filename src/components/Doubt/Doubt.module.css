@@ -1,0 +1,25 @@
+.Doubt_Container{
+    max-width: 80%;
+    margin: 6% 10%;
+    height: auto;
+}
+
+.DoubtTitle{
+    color: var(--main-text-color);
+    font-size: var(--big-font-size);
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--main-color);  
+}
+
+.Doubt_content{
+    display: flex;
+}
+
+.DoubtImg img{
+    border-radius: 20px;
+    margin-top: 2rem;
+    width: 99%;
+    cursor: pointer;
+}
+
+
