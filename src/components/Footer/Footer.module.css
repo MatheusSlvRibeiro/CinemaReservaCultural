@@ -56,24 +56,28 @@
     align-items: center;
     justify-content: space-between;
 }
-.institucional img{
-    max-width: 150px;
+
+.icon{
+    margin-right: 0.3rem;
 }
+
 .copyright{
     font-weight: 200;
 }
 .institucional p{
+    font-size: var(--normal-font-size);
     color: white;
+    margin-bottom: 0;
 }
 .institucional a{
     color: white;
     position: relative;
     display: inline-block;
 }
-.institucional a:hover{
+.Developer a:hover{
     color: var(--main-color);
 }
-.institucional a::after{
+.Developer a::after{
     content: '';
     position: absolute;
     width: 0;
@@ -83,7 +87,7 @@
     background-color: var(--main-color);
     transition: width 0.3s ease;
 }
-.institucional a:hover::after{
+.Developer a:hover::after{
     width: 100%;
 }
 

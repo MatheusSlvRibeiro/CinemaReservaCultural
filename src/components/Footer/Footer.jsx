@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import NewsletterSignup from '../NewsletterSignup/NewsletterSignup';
 
@@ -22,8 +23,9 @@ const Footer = () => {
                 <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                       rel='noopener noreferrer' 
                                                       target='blank'>Ingressos</a></li>
-                <li><a className={Styles.column_item} href='/Tarifas'>Tarifas</a></li>
-                <li><a className={Styles.column_item} href="/GuiadoEspectador">Guia do Bom Espectador</a></li>
+                <li><a className={Styles.column_item} href='/Fares'>Tarifas</a></li>
+                <li><a className={Styles.column_item} href='/reducedFare'>Meia-Entrada</a></li>
+                <li><a className={Styles.column_item} href="/Guide">Guia do Bom Espectador</a></li>
               </ul>
             </div>
 
@@ -47,7 +49,7 @@ const Footer = () => {
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>O Reserva</h3>
               <ul>
-                <li><a className={Styles.column_item} href="#em_cartaz">O Conceito</a></li>
+                <li><a className={Styles.column_item} href="/Concept">O Conceito</a></li>
                 <li><a className={Styles.column_item} href="#em_cartaz">Fidelidade</a></li>
                 <li><a className={Styles.column_item} href="#em_cartaz">Livros e DVDs</a></li>
                 <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento <br />conveniado</a></li>
@@ -81,17 +83,21 @@ const Footer = () => {
 
         <div className={Styles.institucional}>
           <div>
-              <img className={Styles.footer_img} src="./images/Logo_reserva01.png" alt="Logo Reserva Cultural" />
+              <a href='https://www.google.com.br/maps/place/Reserva+Cultural/@-23.5655019,-46.6538209,17z/data=!3m2!4b1!5s0x94ce59b87c0b5d29:0x60f9c4ac5c968669!4m6!3m5!1s0x94ce59b87796941b:0xd50eab4c6b2373a4!8m2!3d-23.5655068!4d-46.651246!16s%2Fg%2F1vrqbs12?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D' target='blank'>
+                <p><FontAwesomeIcon icon={faMapMarkerAlt}
+                                  className={Styles.icon} />
+              Avenida Paulista, 900 - Térreo Baixo</p>
+              </a>
           </div>
 
           <div>
             <h3 className={Styles.copyright}>
-              Copyright &copy; 2024 Cinema Reserva Cultural 
+              Copyright &copy; 2024 - Reserva Cultural 
             </h3>
           </div>
 
           <div>
-            <p>Desenvolvido por <a href='https://www.linkedin.com/in/matheus-ribeiro-465861231/' target='_blank' rel='noopener noreferrer'>Matheus Ribeiro</a></p>
+            <p className={Styles.Developer}>Desenvolvido por <a href='https://www.linkedin.com/in/matheus-ribeiro-465861231/' target='_blank' rel='noopener noreferrer'>Matheus Ribeiro</a></p>
           </div>
         </div>
       </div>

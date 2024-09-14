@@ -1,0 +1,32 @@
+article{
+    justify-content: center;
+    width: 75%;
+    margin: 7rem auto;
+    padding: 4rem 4rem;
+    border-radius: 1rem;
+    background-color: var(--main-bg-color-dark);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Content{
+    display: flex;
+}
+
+.Image{
+    width: 40%;
+    border-radius: 1.2rem;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1{
+    margin-bottom: 3rem;
+}
+
+h2{
+    margin: 1rem 2rem;
+    text-align: left;
+}
+
+p{
+    margin: 0 2rem;
+}
