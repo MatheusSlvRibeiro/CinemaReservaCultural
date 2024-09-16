@@ -9,6 +9,7 @@ import Loyalty from './Pages/Loyalty';
 import Guide from './Pages/Guide';
 import ReducedFare from './Pages/ReducedFare';
 import Concept from './Pages/Concept';
+import TrabalheConosco from './Pages/WorkWithUs';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/Loyalty" element={<Loyalty />} />
         <Route path="/ReducedFare" element={<ReducedFare />} />
         <Route path="/Concept" element={<Concept />} />
+        <Route path="/TrabalheConosco" element={<TrabalheConosco/>} />
       </Routes>
     </Router>
   );

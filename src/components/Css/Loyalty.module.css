@@ -1,7 +1,6 @@
 .Article{
-    margin: 10% 10%;
+    margin: 10% auto;
     border-radius: 1.5rem;
-    padding: 4rem 4rem;
     background-color: var(--main-bg-color-dark);
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
 }

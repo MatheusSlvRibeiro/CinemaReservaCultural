@@ -1,6 +1,11 @@
-.Image {
-    margin: 10% 20% 5%;
+.Image{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.Image img{
     border-radius: 20px;
     box-shadow: 0 10px 3px rgba(0, 0, 0, 0.3);
-
+    max-width: 100%;
 }

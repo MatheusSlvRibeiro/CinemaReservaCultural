@@ -8,8 +8,10 @@ function reducedFare () {
     return (
         <div>
             <NavBar />
-                <img className={Styles.Image} 
-                    src="./images/meia-entrada.png" alt="bla bla bla" />
+                <div className={Styles.Image} >
+                    <img alt="Informações sobre quem tem direito à meia-entrada no Brasil, incluindo estudantes, idosos, crianças, pessoas com deficiência, jovens de baixa renda e doadores de sangue. Também são listados os documentos aceitos para comprovação do benefício e um trecho da Lei 12.933/2013."
+                         src="./images/meia-entrada.png"/>
+                </div>
             <Footer />
         </div>
     );
