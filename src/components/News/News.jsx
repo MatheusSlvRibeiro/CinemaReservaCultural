@@ -77,7 +77,6 @@ const News = () => {
                             alt="teste"/>
                         </a>
                     </div>
-                    {/* Adicione mais slides aqui conforme necessário */}
                 </Slider>
             </div>
         </section>

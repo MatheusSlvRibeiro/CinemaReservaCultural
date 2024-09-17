@@ -6,8 +6,8 @@
       box-sizing: border-box;
       background-color: var(--main-bg-color-dark);
       border-radius: 1rem;
-      max-width: 100%;
-      width: 80vw; 
+      max-width: 80%;
+      width: 70vw; 
       height: 100vh; 
       box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
 
@@ -81,7 +81,7 @@ input[type="file"] {
       border: 1px solid #ccc;
 }
 
-button {
+.subtmit {
       width: 100%;
       padding: 0.8rem 2rem;
       background-color: var(--main-color);
@@ -92,7 +92,7 @@ button {
       cursor: pointer;
 }
 
-button:hover {
+.subtmit:hover {
       background-color: #FFD900;
 }
 

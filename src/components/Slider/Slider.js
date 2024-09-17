@@ -2,11 +2,23 @@ import React, { useState, useEffect } from 'react';
 import styles from './Slider.module.css';
 
 const images = [
-  require('../Utilities/ad/alien.jpg'),
-  require('../Utilities/ad/bistroMenu.jpg'),
-  require('../Utilities/ad/PequenasCartas.jpg'),
-  require('../Utilities/ad/kayak.jpg'),
-  require('../Utilities/ad/mostra.jpg'),
+  { src: require('../Utilities/ad/kayak.jpg'), 
+    href: 'https://www.kayak.com.br/Sao-Paulo.10988.guide' },
+  
+  { src: require('../Utilities/ad/menu.jpg'), 
+    href: 'https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view' },
+  
+  { src: require('../Utilities/ad/obastardo.jpg'), 
+    href: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo', 
+    title: 'O Bastardo' },
+  
+  { src: require('../Utilities/ad/MotelDestino.jpg'), 
+    href: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo', 
+    title: 'Motel Destino' },
+  
+  { src: require('../Utilities/ad/beetlejuice.jpg'), 
+    href: 'https://www.ingresso.com/filme/os-fantasmas-ainda-se-divertem-beetlejuice-beetlejuice?city=sao-paulo', 
+    title: 'Beetlejuice Beetlejuice' },
 ];
 
 const Slider = () => {
@@ -15,7 +27,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change slide every 3 seconds
+    }, 6000); // Change slide every 6 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -38,11 +50,17 @@ const Slider = () => {
     <div className={styles.slider}>
       <div className={styles.slidesContainer}>
         {images.map((image, index) => (
-          <div
+          <a
             key={index}
+            href={image.href}
             className={`${styles.slide} ${index === currentIndex ? styles.active : ''}`}
-            style={{ backgroundImage: `url(${image})` }}
-          />
+            style={{ backgroundImage: `url(${image.src})` }}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Slide ${index + 1}`}
+          >
+            {image.title && <div className={styles.title}>{image.title}</div>}
+          </a>
         ))}
       </div>
       <button className={styles.prev} onClick={prevSlide}>&#10094;</button>
