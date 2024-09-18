@@ -6,30 +6,3 @@
     border-radius: 1rem;
     height: auto;
 }
-.Container{
-    max-width: 75%;
-    margin: 6rem auto;
-    height: auto;
-}
-
-.Title{
-    text-transform: uppercase;
-    color: var(--main-text-color);
-    font-size: var(--big-font-size);
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--main-color);  
-}
-
-.Content{
-    display: flex;
-}
-
-.Img img{
-    border-radius: 20px;
-    margin-top: 1rem;
-    padding: 0.2rem;
-    width: 100%;
-    cursor: pointer;
-}
-
-

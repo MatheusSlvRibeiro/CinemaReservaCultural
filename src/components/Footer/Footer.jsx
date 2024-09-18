@@ -51,10 +51,9 @@ const Footer = () => {
               <ul>
                 <li><a className={Styles.column_item} href="/Concept">O Conceito</a></li>
                 <li><a className={Styles.column_item} href="/Loyalty">Fidelidade</a></li>
-                <li><a className={Styles.column_item} href="#em_cartaz">Livros e DVDs</a></li>
-                <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento <br />conveniado</a></li>
+                <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento</a></li>
                 <li><a className={Styles.column_item} href="/TrabalheConosco">Trabalhe Conosco</a></li>
-                <li><a className={Styles.column_item} href="#em_cartaz">Contato</a></li>
+                <li><a className={Styles.column_item} href="/Contact">Contato</a></li>
               </ul>
             </div>
             

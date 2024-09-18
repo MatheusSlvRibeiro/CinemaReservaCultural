@@ -2,6 +2,7 @@ import React from "react";
 import Styles from '../components/Css/Guide.module.css'
 import NavBar from "../components/navbar/navbar";
 import Footer from "../components/Footer/Footer";
+import Info from "../components/Info/Info";
 
 function Guide () {
       return (
@@ -63,6 +64,7 @@ function Guide () {
                               <h2 className={Styles.subtitle}>A equipe do Reserva Cultural</h2>
                         </div>
                   </article>
+                  <Info />
                   <Footer />
             </div>
       );

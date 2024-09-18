@@ -10,6 +10,7 @@ import Guide from './Pages/Guide';
 import ReducedFare from './Pages/ReducedFare';
 import Concept from './Pages/Concept';
 import TrabalheConosco from './Pages/WorkWithUs';
+import FormContact from './Pages/Contact';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path="/ReducedFare" element={<ReducedFare />} />
         <Route path="/Concept" element={<Concept />} />
         <Route path="/TrabalheConosco" element={<TrabalheConosco/>} />
+        <Route path="/Contact" element={<FormContact/>} />
+
       </Routes>
     </Router>
   );

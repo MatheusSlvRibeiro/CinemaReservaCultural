@@ -2,6 +2,7 @@ import React from "react";
 import Styles from '../components/Css/Loyalty.module.css';
 import Footer from "../components/Footer/Footer";
 import NavBar from "../components/navbar/navbar";
+import Info from "../components/Info/Info";
 
 function Loyalty() {
     return (
@@ -53,6 +54,7 @@ function Loyalty() {
                     </p>
                 </div>
             </article>
+            <Info />
             <Footer />
         </div>
     );
