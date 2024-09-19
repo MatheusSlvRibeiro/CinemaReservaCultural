@@ -16,9 +16,6 @@
 .subtitle{
     padding-top: 2rem;
     text-align: Left;
-}
-
-.subtitle{
     font-size: 1.7rem;
     margin-bottom: 1.5rem;
 }
@@ -26,4 +23,23 @@
 .paragraph{
     font-size: var(--h2-font-size);
     margin-bottom: 1.5rem;
+}
+
+@media (max-width: 550px) {
+    .Article{
+        padding: 7rem 2rem 2rem 2rem;
+        width: 90%;
+    }
+    
+    .title{
+        font-size: 1.6rem;
+    }
+
+    .subtitle{
+        font-size: 1.3rem;
+    }
+
+    .paragraph{
+        font-size: 1rem;
+    }
 }

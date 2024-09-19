@@ -5,16 +5,18 @@
     cursor: pointer;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px){
     .logoReserva{
-        width: 15%;
+        width: 40%;
+        position: absolute;
+        left: 30%;
+        transform: translateX(-50%);
+        transform: translateY(-40%);
     }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 425px) {
     .logoReserva{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        display: none;
     }
 }

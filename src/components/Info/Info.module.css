@@ -1,19 +1,21 @@
 .Container{
-    max-width: 75%;
-    margin: 6rem auto;
-    height: auto;
+    max-width: 100%;
+    margin: 0 10%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .Title{
+    font-size: var(--big-font-size);
     text-transform: uppercase;
     color: var(--main-text-color);
-    font-size: var(--big-font-size);
     padding-bottom: 0.5rem;
     border-bottom: 3px solid var(--main-color);  
 }
 
 .Content{
-    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Img img{

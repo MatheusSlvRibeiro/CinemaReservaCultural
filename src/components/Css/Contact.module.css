@@ -1,6 +1,6 @@
 .Title{
     padding: 0.5rem;
-    margin: 0 32%;
+    margin: 0 33%;
     margin-top: 6.5rem;
     margin-bottom: 2rem;
     font-size: 2rem;
@@ -61,3 +61,17 @@
     background-color: #45a049;
   }
   
+  @media (max-width: 704px) {
+    .Title{
+      padding-top: 7rem;
+      margin: 0 22%;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .Title{
+      font-size: 1.4rem;
+    }
+  }

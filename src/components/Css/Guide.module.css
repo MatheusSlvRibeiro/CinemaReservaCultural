@@ -30,3 +30,16 @@
       font-size: var(--h2-font-size);
       margin-bottom: 1.5rem;
 }
+
+@media (max-width: 550px) {
+      .Article{
+            width: 90%;
+            padding: 2rem;
+      }
+      .title{
+            font-size: 1.6rem;
+      }
+      .paragraph{
+            font-size: 1rem;
+      }
+}

@@ -33,7 +33,7 @@ const FormContact = () => {
     <div className={Styles.formWrapper}>
       <NavBar />
 
-      <h1 className={Styles.Title}>Contato</h1>
+      <h1 className={Styles.Title}>FALE CONOSCO</h1>
       <form onSubmit={handleSubmit} className={Styles.formulario_contato}>
         <label>
           Nome:
