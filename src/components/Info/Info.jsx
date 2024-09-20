@@ -76,7 +76,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="#conceito">
+                        <a href="/Concept">
                             <img
                                 src="/images/post-1000x1000.jpg"
                                 alt="teste"/>

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha"; // Importando o componente do reCAPTCHA
 import Styles from '../components/Css/Contact.module.css';
 import NavBar from "../components/navbar/navbar";
 import Footer from "../components/Footer/Footer";
@@ -16,17 +17,68 @@ const FormContact = () => {
     metodoPagamento: ''
   });
 
+  const [captchaValido, setCaptchaValido] = useState(false);
+  const [captchaErro, setCaptchaErro] = useState(null);
+  const [mensagemSucesso, setMensagemSucesso] = useState(""); 
+
+  // Referência para o componente do reCAPTCHA
+  const reCaptchaRef = useRef(null);
+
+  // Chave do reCAPTCHA
+  const reCaptchaSiteKey = "6LfcrUkqAAAAAEhuMjrfNJKAzBk2-4opWA3RDtfp"; 
+
   // Função para lidar com as mudanças nos inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Função para lidar com o envio do formulário
+  // Função para validar o reCAPTCHA
+  const handleCaptchaChange = (value) => {
+    if (value) {
+      setCaptchaValido(true);
+      setCaptchaErro(null); 
+    } else {
+      setCaptchaValido(false);
+      setCaptchaErro("Por favor, confirme o captcha antes de enviar.");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Adicionar a lógica para enviar os dados do formulário
+
+    if (!captchaValido) {
+      setCaptchaErro("Por favor, confirme o captcha antes de enviar.");
+      return;
+    }
+
     console.log(formData);
+
+    setFormData({
+      nome: '',
+      email: '',
+      telefone: '',
+      unidade: 'sp',
+      assunto: '',
+      mensagem: '',
+      filme: '',
+      horarioSessao: '',
+      metodoPagamento: ''
+    });
+
+    // Exibe a mensagem de sucesso
+    setMensagemSucesso("Mensagem enviada com sucesso! Obrigado pelo contato!!");
+
+    // Rolando a página para o topo
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Resetando o reCAPTCHA
+    if (reCaptchaRef.current) {
+      reCaptchaRef.current.reset();
+    }
+
+    // Resetar o estado do captcha
+    setCaptchaValido(false);
   };
 
   return (
@@ -34,6 +86,15 @@ const FormContact = () => {
       <NavBar />
 
       <h1 className={Styles.Title}>FALE CONOSCO</h1>
+
+      {/* Exibe a mensagem de sucesso diretamente */}
+      {mensagemSucesso && (
+        <div className={Styles.Sucess}>
+          <strong>{mensagemSucesso.split('!')[0]}!</strong><br />
+          {mensagemSucesso.split('!')[1]}
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className={Styles.formulario_contato}>
         <label>
           Nome:
@@ -105,6 +166,16 @@ const FormContact = () => {
             required 
           />
         </label>
+
+        {/* Componente reCAPTCHA */}
+        <div className={Styles.captchaContainer}>
+          <ReCAPTCHA
+            sitekey={reCaptchaSiteKey}
+            onChange={handleCaptchaChange}
+            ref={reCaptchaRef} // Adicionando referência ao reCAPTCHA
+          />
+        </div>
+        {captchaErro && <p style={{ color: "red" }}>{captchaErro}</p>}
         
         <button type="submit">Enviar</button>
       </form>
