@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import Navbar from '../components/navbar/navbar'; 
 import Footer from '../components/Footer/Footer';
+import Info from '../components/Info/Info'
 
 const Concept = () => {
     const sliderSettings = {
@@ -101,6 +102,7 @@ const Concept = () => {
                 </div>
 
             </article>
+            <Info />
             <Footer />
         </div>
     );

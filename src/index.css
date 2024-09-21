@@ -52,18 +52,13 @@ h1, h2, h3, h4, span {
 
 }
 
-a, p{
+a, p, label{
   color: var(--main-text-color);
-  line-height: 1.3rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-label {
-  color: var(--main-text-color);
 }
 
 article{
