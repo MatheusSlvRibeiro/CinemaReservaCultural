@@ -45,9 +45,21 @@
 }
 
 .SideBySide{
-    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
+.SideBySide div{
+    width: 100%;
+    padding-right: 1.5rem;
+}
+
+.SideBySide img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .Slider {
     width: 100%;
     height: auto;
@@ -80,5 +92,11 @@
     .Subtitle{font-size: 1.2rem;}
     .Paragraph{font-size: 1rem;}
     .Logo{width: 15rem;}
+}
+
+@media (Max-width: 1249px) {
+    .SideBySide{
+        flex-direction: column;
+    }
 }
 

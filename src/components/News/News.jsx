@@ -11,7 +11,7 @@ const News = () => {
         const handleResize = () => {
             if (window.innerWidth <= 400) {
                 setSlidesToShow(1);
-            } else if (window.innerWidth <= 425) {
+            } else if (window.innerWidth <= 605) {
                 setSlidesToShow(2);
             } else {
                 setSlidesToShow(3);
