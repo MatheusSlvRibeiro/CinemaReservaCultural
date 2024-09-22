@@ -27,7 +27,6 @@ function App() {
         <Route path="/Concept" element={<Concept />} />
         <Route path="/TrabalheConosco" element={<TrabalheConosco/>} />
         <Route path="/Contact" element={<FormContact/>} />
-
       </Routes>
     </Router>
   );

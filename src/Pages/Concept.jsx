@@ -24,7 +24,7 @@ const Concept = () => {
     return (
         <div>
             <Navbar />
-            <article>
+            <article className={Styles.Article}>
                 <h1 className={Styles.Title}>Conceito</h1>
                 <div>
                     <h2 className={Styles.Subtitle}> O Cinema Reserva Cultural | Mais do que um Cinema</h2>
@@ -60,12 +60,7 @@ const Concept = () => {
                             <p className={Styles.Paragraph}>O Cinema Reserva Cultural oferece aos seus frequentadores um Cartão Fidelidade. A cada dez ingressos adquiridos, o cliente ganha um. Desde maio de 2011, foi implementado o Cine Social, projeto vinculado ao cartão de fidelidade que funciona da seguinte maneira: uma vez ao ano, computa-se o total de ingressos cortesia entregues dentro do programa de fidelidade e o mesmo número será disponibilizado para instituições e associações beneficiadas pelo projeto. O programa de fidelidade também permite que o frequentador receba notícias e promoções exclusivas sobre o cinema e os filmes em cartaz, além de uma newsletter semanal informando sobre as novidades e os vários eventos que o complexo organiza e recebe.</p>
                         </div>
 
-                        <a href="/loyalty">
-                            <img 
-                                className={Styles.Image}
-                                src="/images/Fidelidade.jpg" 
-                                alt="Banner do Programa Fidelidade do Reserva Cultural com os seguintes benefícios: ganhe 1 ingresso a cada 10 comprados, adquira descontos em sessões especiais e receba a programação semanal com informações exclusivas. Botão ao final com o texto 'Saiba Mais'." />
-                        </a>    
+                        <Info  />   
                     </div>                        
                 </div>
 
@@ -97,10 +92,81 @@ const Concept = () => {
 
                 <div className={Styles.Subject}>
                     <h2 className={Styles.Subtitle}> Espaço para Exposições e Eventos</h2>
+                    
                     <p className={Styles.Paragraph}>Com espaço para exposições de arte e realização de eventos, o lobby possui monitores de plasma para exibição de entrevistas, trailers e making of de filmes e tem serviço gratuito de wi-fi.</p>
+                    
                     <p className={Styles.Paragraph}>Desde sua inauguração, o Cinema Reserva Cultural se destacou pela frequência e qualidade de seus eventos. O espaço recebeu dezenas de pré-estreias de filmes com atores, diretores e produtores brasileiros e estrangeiros, e diversos festivais de cinema anualmente.</p>
+                    
+                    <h2 className={Styles.Subtitle}>Eventos Excepcionais que Valorizam a Sétima Arte</h2>
+
+                    <p className={Styles.Paragraph}>Desde sua inauguração, o Cinema Reserva Cultural se destacou pela frequência e qualidade de seus eventos. O espaço recebeu dezenas de pré-estreias de filmes com atores, diretores e produtores brasileiros e estrangeiros, e diversos festivais de cinema anualmente.</p>
+
+                    <h2 className={Styles.Subtitle}>Pré-estreias Memoráveis com Atores Inesquecíveis</h2>
+
+                    <p className={Styles.Paragraph}>Nos últimos anos, o Cinema Reserva Cultural recebeu celebridades como Francis Ford Coppola na pré-estreia de seu filme Tetro; Catherine Deneuve para a première de Potiche e Audrey Tautou para uma sessão de Uma Doce Mentira. Mais recentemente, se destacou com a pré-estreia de Azul é a Cor Mais Quente (vencedor da Palma de Ouro no Festival de Cannes 2013) na presença do diretor Abdellatif Kechiche e das atrizes Léa Seydoux e Adèle Exarchopoulos, de Adeus à Linguagem, o primeiro filme 3D do celebríssimo diretor francês Jean-Luc Godard, ou ainda de Dois Amigos, com a presença do galã francês Louis Garrel. E o Cinema Reserva Cultural sempre dá ao seu público a oportunidade de estar presente nestes eventos, pelo preço convencional de um ingresso</p>
+
+                    <p className={Styles.Paragraph}>Nos últimos anos, o Cinema Reserva Cultural recebeu celebridades como Francis Ford Coppola na pré-estreia de seu filme Tetro; Catherine Deneuve para a première de Potiche e Audrey Tautou para uma sessão de Uma Doce Mentira. Mais recentemente, se destacou com a pré-estreia de Azul é a Cor Mais Quente (vencedor da Palma de Ouro no Festival de Cannes 2013) na presença do diretor Abdellatif Kechiche e das atrizes Léa Seydoux e Adèle Exarchopoulos, de Adeus à Linguagem, o primeiro filme 3D do celebríssimo diretor francês Jean-Luc Godard, ou ainda de Dois Amigos, com a presença do galã francês Louis Garrel. E o Cinema Reserva Cultural sempre dá ao seu público a oportunidade de estar presente nestes eventos, pelo preço convencional de um ingresso</p>
                 </div>
 
+                <div className={Styles.Subject}>
+                    <h2 className={Styles.Subtitle}>Eventos e Parcerias que Abrangem Todos os Públicos</h2>
+
+                    <p className={Styles.Paragraph}>Desde sua abertura, o Reserva Cultural participa todo ano da Mostra Internacional de Cinema de São Paulo e organiza em parceria com a Aliança Francesa o famoso CineClub, oferecendo antes da exibição de um filme francês ao domingo um kit de café da manhã por um preço acessível.</p>
+
+                    <p className={Styles.Paragraph}>Além destes conceituados eventos, o Cinema Reserva Cultural também recebe a Mostra Ecofalante de Cinema Ambiental, o festival internacional de documentário É Tudo Verdade e a Mostra Blues de Cinema, todos presentes no calendário oficial da cidade de São Paulo há mais de 3 anos.</p>
+                </div>
+                
+                <div className={Styles.Subject}>
+                    <h2 className={Styles.Subtitle}>Cursos e Concursos Culturais</h2>
+
+                    <p className={Styles.Paragraph}>Há alguns anos, o espaço ampliou as opções para o público e começou a propor semestralmente cursos de filosofia e literatura ligados à sétima arte. Sempre com a preocupação de contemplar seus fiéis frequentadores, o Cinema Reserva Cultural oferece através de concursos culturais a possibilidade de ganhar bolsas de estudos para os cursos, assim como ingressos para as sessões de filmes em cartaz.</p>
+                </div>
+
+                <div className={Styles.Subject}>
+                    <h2 className={Styles.Subtitle}>Parcerias e Benefícios para Frequentadores</h2>
+
+                    <p className={Styles.Paragraph}>O Cinema Reserva Cultural conta com parcerias da Pinacoteca de São Paulo, do MASP, MAM, onde o cliente apresentando seu ingresso de cinema com validade de 1 mês paga meia-entrada. Também é possível assistir em primeira mão aos espetáculos da OSESP, nosso recente parceiro.</p>
+                </div>
+
+                <div className={Styles.Subject}>
+                    <h2 className={Styles.Subtitle}>Organização de Eventos Corporativos e Privados</h2>
+
+                    <p className={Styles.Paragraph}>O espaço do Cinema Reserva Cultural também é palco para diversos eventos corporativos ou privados. As salas são locadas para congressos, lançamentos de campanha ou produto, treinamentos, seminários e celebração de datas comemorativas, entre outros. Além de toda a infraestrutura para receber qualquer tipo de evento, o espaço tem serviço de buffet próprio e trabalha com o que há de melhor no universo gastronômico.</p>
+                </div>
+
+                <div className={Styles.Subject}>
+                    <h2 className={Styles.Subtitle}>Sucesso Agora Também em Niterói – Rio de Janeiro</h2>
+
+                    <p className={Styles.Paragraph}>O Reserva Cultural encontra sucesso junto ao público de São Paulo desde sua inauguração em 2005. Seus clientes fiéis amam o seu conceito. Graças a esse sucesso, o Cinema Reserva Cultural ganhou a licitação pública para administrar por 25 anos um belíssimo prédio concebido e construído pelo mestre Oscar Niemeyer, localizado numa das cidades com um dos melhores IDH do país, Niterói.</p>
+
+                    <img src="" alt="" />
+
+                    <p className={Styles.Paragraph}>Depois de 2 anos de trabalho, esse complexo apresenta-se com cinco salas de cinema com som e imagem para filmes 2D e 3D, uma bomboniere com deck ao ar livre, além de um extraordinário espaço para opções gastronômicas, onde se encontra o Reserva Bistrô, fiel ao conceito de São Paulo, a Mística Pizza, o Bizu Bizu que oferece comidinhas do eixo Paris-Niterói-Nova York, uma livraria Blooks, uma galeria para exposições, e a Clappy Festas, especializada em eventos infantis.</p>
+
+                    <p className={Styles.Paragraph}>A programação do Cinema Reserva Cultural Niterói une filmes de arte, marca do Cinema Reserva Cultural, a filmes que ampliam as possibilidades de vir em família e com amigos.</p>
+
+                    <p className={Styles.Paragraph}>No dia da inauguração, 24 de agosto de 2016, o Cinema Reserva Cultural Niterói recebeu a pré-estreia nacional do filme Aquarius, na presença de toda a equipe do filme, em particular do diretor Kleber Mendonça Filho e da atriz Sônia Braga. Desde então, o Cinema Reserva Cultural se tornou o novo lugar para a cultura e o entretenimento em Niterói e organiza eventos abertos ao grande público.</p>
+                </div>
+
+                <div className={Styles.Subject}>
+                    <h2 className={Styles.Subtitle}>Pré-estreias e Eventos Memoráveis</h2>
+
+                    <p className={Styles.Paragraph}>O Cinema Reserva Cultural Niterói já realizou pré-estreias memoráveis na presença de artistas internacionais como o maior ator francês da atualidade, Gérard Depardieu, e nacionais, como Paulo Gustavo, que apresentou ao público de Niterói o filme Minha Mãe é Uma Peça 2. O Cinema Reserva Cultural Niterói também fez parte do Festival do Rio 2016, durante o qual recebeu as pré-estreias especiais dos filmes aclamados Elis e Pequeno Segredo, que representou o Brasil no Oscar 2017.</p>
+
+                    <p className={Styles.Paragraph}>O espaço Reserva Cultural Niterói também recebeu eventos diversos como a feira de gastronomia francesa Rio Je T’Aime, a exposição Impressões de Havana do fotógrafo Renato Moreth, ou também o projeto Ocupação Reserva, que ocorreu em fevereiro de 2017 e durante o qual o cinema Reserva Cultural Niterói se tornou um ponto de encontro para expressões artísticas variadas: durante 5 dias, foi palco de shows de música, talk shows, e encontros com cartunistas.</p>
+
+                    <p className={Styles.Paragraph}>Sem esquecer que todo domingo, em parceria com a Clappy Festas, na área externa do Reserva Cultural Niterói tem Nikiti Kids, um evento para os pequenos com piquenique, brincadeiras ao ar livre, música, contadores de histórias e muita diversão!</p>
+
+                    <p className={Styles.Paragraph}>Por fim, não podemos deixar de lado o sarau de poesia realizado às quintas, pelo jornalista João do Corujão, personagem emblemático da cidade de Niterói. O evento é gratuito e aberto a todos os interessados. </p>
+                </div>
+
+                <div className={Styles.Subject}>
+                    <h2 className={Styles.Subtitle}>Um conceito de cinema que se torna referência no Brasil</h2>
+
+                    <p className={Styles.Paragraph}>Com mais de 1o anos de existência, o conceito único do cinema Reserva Cultural fez desta marca uma referência em São Paulo e agora no Brasil, não somente pela qualidade dos filmes exibidos, como também pelos espaços gastronômicos e eventos que oferece ao seu público, além da excelência dos seus serviços nas cidades onde atua. Definitivamente, o Reserva Cultural é bem mais que um cinema e a fidelidade dos seus frequentadores demostra isso todo dia.</p>
+
+                    <img className={Styles.Logo} src="/images/Logo_reserva01.png" alt="Logo do cinema reserva cultural" />
+                </div>
             </article>
             <Info />
             <Footer />
@@ -109,3 +175,4 @@ const Concept = () => {
 }
 
 export default Concept;
+

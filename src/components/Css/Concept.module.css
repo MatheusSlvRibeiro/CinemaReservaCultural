@@ -45,21 +45,9 @@
 }
 
 .SideBySide{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    width: 100%;
 }
 
-.SideBySide div{
-    width: 100%;
-    padding-right: 1.5rem;
-}
-
-.SideBySide img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
 .Slider {
     width: 100%;
     height: auto;
@@ -74,3 +62,23 @@
     border-radius: 1rem;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); 
 }
+
+.Logo{
+    width: 20rem;
+    margin: 5% auto;
+    display: flex;
+}
+
+@media (max-width: 550px) {
+    .Article{
+        width: 100%;
+        margin: 0;
+        padding: 7rem 2rem 2rem 2rem;
+    }
+
+    .Title{font-size: 1.6rem;}
+    .Subtitle{font-size: 1.2rem;}
+    .Paragraph{font-size: 1rem;}
+    .Logo{width: 15rem;}
+}
+
