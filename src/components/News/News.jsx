@@ -9,9 +9,9 @@ const News = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 400) {
+            if (window.innerWidth <= 500) {
                 setSlidesToShow(1);
-            } else if (window.innerWidth <= 605) {
+            } else if (window.innerWidth <= 705) {
                 setSlidesToShow(2);
             } else {
                 setSlidesToShow(3);

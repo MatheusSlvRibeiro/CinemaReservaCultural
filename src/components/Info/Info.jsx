@@ -9,7 +9,7 @@ function Info() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 400) {
+            if (window.innerWidth <= 500) {
                 setSlidesToShow(1);
             } else if (window.innerWidth <= 700) {
                 setSlidesToShow(2);

@@ -76,19 +76,19 @@ const Concept = () => {
                     {/* Slider aqui */}
                     <Slider className={Styles.Slider} {...sliderSettings}>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/FileDePeixeNaCrostaDeAlho.jpg')} alt="Slide 1" />
+                            <img src={require('../components/Images/Gastronomia/FileDePeixeNaCrostaDeAlho.jpg')} alt="Prato gourmet composto por filé de peixe com crosta de alho servido ao lado de risoto cremoso de espinafre, decorado com uma pequena pimenta vermelha no topo. A apresentação está em um prato escuro sobre uma mesa de madeira." />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/PicadinhodeCarne.jpg')} alt="Slide 2" />
+                            <img src={require('../components/Images/Gastronomia/PicadinhodeCarne.jpg')} alt="" />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/Galeto.jpg')} alt="Slide 3" />
+                            <img src={require('../components/Images/Gastronomia/Galeto.jpg')} alt="" />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/Fotografia.jpg')} alt="Slide 3" />
+                            <img src={require('../components/Images/Gastronomia/Fotografia.jpg')} alt="" />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/MenuReserva.jpg')} alt="Slide 3" />
+                            <img src={require('../components/Images/Gastronomia/MenuReserva.jpg')} alt="" />
                         </div>
                     </Slider>
 
@@ -122,9 +122,16 @@ const Concept = () => {
                 </div>
                 
                 <div className={Styles.Subject}>
-                    <h2 className={Styles.Subtitle}>Cursos e Concursos Culturais</h2>
+                    <div className={Styles.SideBySide}>
+                        <div>
+                            <h2 className={Styles.Subtitle}>Cursos e Concursos Culturais</h2>
+                            <p className={Styles.Paragraph}>Há alguns anos, o espaço ampliou as opções para o público e começou a propor semestralmente cursos de filosofia e literatura ligados à sétima arte. Sempre com a preocupação de contemplar seus fiéis frequentadores, o Cinema Reserva Cultural oferece através de concursos culturais a possibilidade de ganhar bolsas de estudos para os cursos, assim como ingressos para as sessões de filmes em cartaz.</p>
+                        </div>
 
-                    <p className={Styles.Paragraph}>Há alguns anos, o espaço ampliou as opções para o público e começou a propor semestralmente cursos de filosofia e literatura ligados à sétima arte. Sempre com a preocupação de contemplar seus fiéis frequentadores, o Cinema Reserva Cultural oferece através de concursos culturais a possibilidade de ganhar bolsas de estudos para os cursos, assim como ingressos para as sessões de filmes em cartaz.</p>
+                        <a href="#">
+                            <img className={Styles.Image} src={require('../components/Images/Conceito/Poemaria.jpg')} alt="Pessoas participando de um evento cultural em um espaço interno aconchegante. Um homem fala ao microfone enquanto uma mulher ao lado dele participa da apresentação. O público, sentado ao redor, observa atentamente e algumas pessoas estão mexendo em seus celulares." />
+                        </a>
+                    </div>
                 </div>
 
                 <div className={Styles.Subject}>
@@ -144,7 +151,7 @@ const Concept = () => {
 
                     <p className={Styles.Paragraph}>O Reserva Cultural encontra sucesso junto ao público de São Paulo desde sua inauguração em 2005. Seus clientes fiéis amam o seu conceito. Graças a esse sucesso, o Cinema Reserva Cultural ganhou a licitação pública para administrar por 25 anos um belíssimo prédio concebido e construído pelo mestre Oscar Niemeyer, localizado numa das cidades com um dos melhores IDH do país, Niterói.</p>
 
-                    <img src="" alt="" />
+                    <img className={Styles.Image} src={require('../components/Images/Conceito/ReservaNiteroi.jpg')} alt="Fachada moderna do cinema Reserva Cultural, com uma ampla estrutura de vidro e entrada principal. Pessoas estão sentadas em mesas ao ar livre no terraço do local." />
 
                     <p className={Styles.Paragraph}>Depois de 2 anos de trabalho, esse complexo apresenta-se com cinco salas de cinema com som e imagem para filmes 2D e 3D, uma bomboniere com deck ao ar livre, além de um extraordinário espaço para opções gastronômicas, onde se encontra o Reserva Bistrô, fiel ao conceito de São Paulo, a Mística Pizza, o Bizu Bizu que oferece comidinhas do eixo Paris-Niterói-Nova York, uma livraria Blooks, uma galeria para exposições, e a Clappy Festas, especializada em eventos infantis.</p>
 

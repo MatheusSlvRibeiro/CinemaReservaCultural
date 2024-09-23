@@ -57,7 +57,7 @@ const Footer = () => {
               </ul>
             </div>
             
-            <div className={Styles.column}>
+            <div className={Styles.column_News}>
               
               <NewsletterSignup />
               
