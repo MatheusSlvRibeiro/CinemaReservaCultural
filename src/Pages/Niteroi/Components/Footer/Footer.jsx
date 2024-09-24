@@ -64,14 +64,14 @@ const Footer = () => {
               <div className={Styles.SocialMedia}>
                 <h3 className={Styles.column_title}>Siga-nos</h3>
                 <div className={Styles.SocialMedia_item}>
-                  <a href="https://www.instagram.com/reserva_cultural/" target='blank' rel='noopener noreferrer'>
+                  <a href="https://www.instagram.com/reservaculturalniteroi/" target='blank' rel='noopener noreferrer'>
                     <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faInstagram} />
                   </a>
 
-                  <a href="https://www.facebook.com/ReservaCultural?locale=pt_BR" target='blank' rel='noopener noreferrer'>
+                  <a href="https://www.facebook.com/ReservaCulturalNiteroi" target='blank' rel='noopener noreferrer'>
                     <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faFacebook} />
                   </a>
-                  <a href="https://www.tiktok.com/@reservaculturalsp?_t=8oxvb6yoyzu&_r=1" target='blank' rel='noopener noreferrer'>
+                  <a href="https://www.tiktok.com/@reservaculturalniteroi" target='blank' rel='noopener noreferrer'>
                     <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faTiktok} />
                   </a>
                 </div>
@@ -82,10 +82,10 @@ const Footer = () => {
 
         <div className={Styles.institucional}>
           <div>
-              <a href='https://www.google.com.br/maps/place/Reserva+Cultural/@-23.5655019,-46.6538209,17z/data=!3m2!4b1!5s0x94ce59b87c0b5d29:0x60f9c4ac5c968669!4m6!3m5!1s0x94ce59b87796941b:0xd50eab4c6b2373a4!8m2!3d-23.5655068!4d-46.651246!16s%2Fg%2F1vrqbs12?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D' target='blank'>
+              <a href='https://www.google.com/maps/place/Cinema+Reserva+Cultural+Niter%C3%B3i/@-22.898391,-43.1307519,15z/data=!4m2!3m1!1s0x0:0xbcab540fbcede176?sa=X&ved=1t:2428&ictx=111' target='blank'>
                 <p><FontAwesomeIcon icon={faMapMarkerAlt}
                                   className={Styles.icon} />
-              Avenida Paulista, 900 - Térreo Baixo</p>
+              Av. Visconde do Rio Branco, 880 - São Domingos</p>
               </a>
           </div>
 

@@ -15,16 +15,12 @@ const getMovieIds = async () => {
     const moviesInTheaters = [
         'Deixe-me',
         'Golpe de Sorte em Paris',
-        'Ligação Sombria',
         'A Substância',
         'sidonie no japão',
         'O bastardo',
         'Um silêncio',
-        'Beetlejuice Beetlejuice',
         'Bernadette - a mulher do presidente',
         'A viuva Clicquot - a mulher que formou um imperio',
-        'Motel Destino',
-        'Alien: Romulus',
     ];
 
     const ids = [];

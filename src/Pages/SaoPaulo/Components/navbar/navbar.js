@@ -55,15 +55,19 @@ const NavBar = () => {
 
                 {dropdownOpen && (
                     <div className={styles.Dropdown}>
-                        <a href="/saoPaulo" className={styles.LocationItem}>
-                            <h4>São Paulo - SP</h4>
-                            <p>Avenida Paulista, 900 - Térreo Baixo</p>
-                        </a>
+                        <div  className={styles.LocationItem}>
+                            <a href="/saoPaulo" className={styles.LocationItem}>
+                                <h4>São Paulo - SP</h4>
+                                <p>Avenida Paulista, 900 - Térreo Baixo</p>
+                            </a>
+                        </ div>
 
-                        <a href="/niteroi" className={styles.LocationItem}>
-                            <h4>Niterói - RJ</h4>
-                            <p>Avenida Visconde do Rio Branco 880</p>
-                        </a>
+                        <div  className={styles.LocationItem}>
+                            <a href="/niteroi">
+                                <h4>Niterói - RJ</h4>
+                                <p>Avenida Visconde do Rio Branco 880</p>
+                            </a>
+                        </div>
                     </div>
                 )}
             </div>
