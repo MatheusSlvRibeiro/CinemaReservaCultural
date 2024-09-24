@@ -1,0 +1,22 @@
+
+.logoReserva {
+    padding: 0.2rem;
+    width: 10rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px){
+    .logoReserva{
+        width: 40%;
+        position: absolute;
+        left: 30%;
+        transform: translateX(-50%);
+        transform: translateY(-40%);
+    }
+}
+
+@media (max-width: 425px) {
+    .logoReserva{
+        display: none;
+    }
+}

@@ -1,0 +1,24 @@
+.Image{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.Image img{
+    border-radius: 20px;
+    box-shadow: 0 10px 3px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .Image{
+        max-width: 90%;
+        margin: 16% auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .Image{
+        margin: 22% auto;
+    }
+}
