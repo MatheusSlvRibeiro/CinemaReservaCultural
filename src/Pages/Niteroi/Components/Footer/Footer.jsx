@@ -19,7 +19,7 @@ const Footer = () => {
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>Programação</h3>
               <ul>
-                <li><a className={Styles.column_item} href="/#em_cartaz">Em Cartaz</a></li>
+                <li><a className={Styles.column_item} href="/Niteroi/#em_cartaz">Em Cartaz</a></li>
                 <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                       rel='noopener noreferrer' 
                                                       target='blank'>Ingressos</a></li>
