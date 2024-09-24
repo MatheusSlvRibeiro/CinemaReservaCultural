@@ -4,6 +4,7 @@ import style from './location.module.css';
 
 const Location = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [currentCity, setCurrentCity] = useState('São Paulo');
   const navigate = useNavigate();
 
   const handleToggleDropdown = () => {
@@ -11,19 +12,20 @@ const Location = () => {
   };
 
   const handleCitySelection = (city) => {
+    setCurrentCity(city);
     if (city === 'São Paulo') {
-      navigate('/saopaulo'); // Navega para a página de São Paulo
+      navigate('/saopaulo'); 
     } else if (city === 'Niterói') {
-      navigate('/niteroi'); // Navega para a página de Niterói
+      navigate('/niteroi');
     }
-    setDropdownOpen(false); // Fecha o dropdown após a seleção
+    setDropdownOpen(false);
   };
 
   return (
     <div className={style.LocationContainer}>
       <div className={style.Location} onClick={handleToggleDropdown}>
-        <img className={style.Icon} src="/images/location.png" alt="Icone de localização" />
-        <h4 className={style.State}>São Paulo</h4>
+        <img className={style.Icon} src="/images/location.png" alt="Ícone de localização" />
+        <h4 className={style.State}>{currentCity}</h4> 
         <img className={style.Arrow} src="/images/downArrow.png" alt="Seta para baixo" />
       </div>
 
