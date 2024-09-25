@@ -33,8 +33,9 @@ const Footer = () => {
             <div className={Styles.column}>
               <h3 className={Styles.column_title}>Gastronomia</h3>
               <ul>
-                <li><a className={Styles.column_item} href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view" target='blank'>Buffet Pain de France</a></li>
-                <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>Bistro Reserva</a></li>
+                <li><a className={Styles.column_item} href="https://www.reservacultural.com.br/niteroi/mistica-pizza/" target='blank'>MAHATMA pizza</a></li>
+                <li><a className={Styles.column_item} href="https://www.reservacultural.com.br/niteroi/bistro-reserva/" target='blank'>Brasserie Reserva</a></li>
+                <li><a className={Styles.column_item} href="https://www.reservacultural.com.br/niteroi/bizubizu/" target='blank'>DropBurger</a></li>
               </ul>
             </div>
 
