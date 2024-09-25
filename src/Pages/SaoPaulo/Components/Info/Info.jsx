@@ -67,7 +67,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="/GUIDE_SP">
+                        <a href="/guide_sp">
                             <img
                                 src="/images/Guide.jpg"
                                 alt="Banner Guia do Bom Espectador com ícones de cinema e botão 'Saiba Mais"
