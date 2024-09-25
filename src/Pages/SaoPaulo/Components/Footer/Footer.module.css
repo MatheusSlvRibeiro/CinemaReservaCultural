@@ -165,6 +165,10 @@
         flex-direction: column;
         margin: 0;
     }
+    .SocialMedia_icon{
+    height: 2rem;
+    padding: 1rem 1.2rem;
+    }
     .institucional{
         display: flex;
         flex-direction: column;
