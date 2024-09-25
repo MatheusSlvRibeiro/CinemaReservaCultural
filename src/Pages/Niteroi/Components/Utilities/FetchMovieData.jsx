@@ -107,7 +107,7 @@ const MovieSlider = () => {
             <Slider {...settings}>
                 {movies.map(movie => (
                     <div className={styles.MovieCard} key={movie.id}>
-                        <a href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" target='blank' className={styles.movieLink}>
+                        <a href="https://www.ingresso.com/cinema/cinema-reserva-cultural-niteroi?city=niteroi&fbclid=PAAaZB24B0WsL6h5UzGOKszZ6a41OFflpwijRlKQjVP6mboggyYeZucZ5RiIU_aem_AZz3fNqnLrN-RenAQi7V-CQy_yPkgKGewWRa0bKJA5Yu0mohXX3JSACnM7CHL6f49dE%23%21%23data%3D20230615" target='blank' className={styles.movieLink}>
                             <img className={styles.moviePoster} 
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                                 alt={movie.title} 
