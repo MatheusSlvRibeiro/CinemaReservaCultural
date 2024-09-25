@@ -70,8 +70,12 @@ const MovieSlider = () => {
     
             const baseWidth = width < 500 ? 200 : 250;
     
-            const quantidade = Math.floor(width / baseWidth);
+            let quantidade = Math.floor(width / baseWidth);
             
+            if (width> 550){
+                quantidade += 1;
+            }
+
             setSlidesToShow(quantidade > 0 ? quantidade : 1);
         };
     

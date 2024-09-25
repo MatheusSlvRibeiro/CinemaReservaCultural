@@ -129,9 +129,9 @@ const Concept = () => {
                             <p className={Styles.Paragraph}>Há alguns anos, o espaço ampliou as opções para o público e começou a propor semestralmente cursos de filosofia e literatura ligados à sétima arte. Sempre com a preocupação de contemplar seus fiéis frequentadores, o Cinema Reserva Cultural oferece através de concursos culturais a possibilidade de ganhar bolsas de estudos para os cursos, assim como ingressos para as sessões de filmes em cartaz.</p>
                         </div>
 
-                        <a href="#">
+                        <div>
                             <img className={Styles.Image} src={require('../Components/Images/Conceito/Poemaria.jpg')} alt="Pessoas participando de um evento cultural em um espaço interno aconchegante. Um homem fala ao microfone enquanto uma mulher ao lado dele participa da apresentação. O público, sentado ao redor, observa atentamente e algumas pessoas estão mexendo em seus celulares." />
-                        </a>
+                        </div>
                     </div>
                 </div>
 

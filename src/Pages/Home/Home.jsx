@@ -6,8 +6,7 @@ function Home () {
         <div>
             <article className={Styles.Article}>
             <div>
-                <h1 className={Styles.Title}> O Cinema Reserva Cultural</h1>
-                <h2 className={Styles.subtitle}>Mais do que um Cinema</h2>
+                <img className={Styles.image} src="/images/Logo_reserva01.png" alt="Logo reserva cultural" />
                 <h2 className={Styles.subtitle}>Escolha sua unidade de preferência </h2>
                 <div className={Styles.SideBySide}>
                     <div className={Styles.Object}>

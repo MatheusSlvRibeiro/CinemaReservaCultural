@@ -11,10 +11,9 @@
 }
 
 .moviePoster {
-    margin: 4px 0;
     width: 100%;
     height: 15rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
 }
 
 .movieContent {
@@ -22,7 +21,7 @@
     grid-template-rows: repeat(2, 1f);
     height: 6em;
     padding: 0.4em;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background-color: #1f1f1f;
     flex-direction: column;
     text-align: center;
@@ -35,7 +34,7 @@
 .movieTitle {
     text-transform: uppercase;
     color: white;
-    padding: 5px;
+    padding: 0.2rem;
     font-weight: 500;
     font-size: 12px;
     margin: 5px;
@@ -52,7 +51,7 @@
 
 
 .description {
-    padding: 0 5px;
+    padding: 0 0.5rem;
     justify-content: space-between;
     display: flex;
     align-items: center;
