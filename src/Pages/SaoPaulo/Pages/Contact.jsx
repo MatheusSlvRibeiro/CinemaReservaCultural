@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import Styles from '../components/Css/Contact.module.css';
+import Styles from '../Components/Css/Contact.module.css';
 import NavBar from "../Components/navbar/navbar";
-import Footer from "../../../components/Footer/Footer";
+import Footer from "../Components/Footer/Footer";
 
-const FormContact = () => {
+const FormContactSP = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -184,4 +184,4 @@ const FormContact = () => {
   );
 };
 
-export default FormContact;
+export default FormContactSP;

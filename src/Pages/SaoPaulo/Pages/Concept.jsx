@@ -1,13 +1,13 @@
 import React from "react";
-import Styles from '../components/Css/Concept.module.css';
+import Styles from '../Components/Css/Concept.module.css';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 import Navbar from "../Components/navbar/navbar"; 
-import Footer from '../../../components/Footer/Footer';
-import Info from '../../../components/Info/Info'
+import Footer from '../Components/Footer/Footer';
+import Info from '../Components/Info/Info'
 
-const Concept = () => {
+const ConceptSP = () => {
     const sliderSettings = {
         dots: false,
         infinite: true,
@@ -31,7 +31,7 @@ const Concept = () => {
                     <p className={Styles.Paragraph}>O cinema Reserva Cultural foi inaugurado em junho de 2005. Localizado no centro de São Paulo, se consagrou como um complexo inovador. No histórico prédio da Fundação Cásper Líbero, o cinema Reserva Cultural destaca-se não só pela exibição dos melhores filmes em cartaz, mas também por ser um cinema com diferentes opções de cultura, lazer e gastronomia em um espaço único e charmoso, em plena Avenida Paulista. O Reserva Cultural conta com 4 salas de cinema, uma bomboniere, um café-boulangerie, uma livraria, e um lobby multimídia que recebe também exposições e eventos além de ser um confortável lounge para os seus frequentadores.</p>
                     <img 
                         className={Styles.Image}
-                        src={require("../components/Images/Conceito/20230703_183843917_iOS-1536x748.jpg")} 
+                        src={require("../Components/Images/Conceito/20230703_183843917_iOS-1536x748.jpg")} 
                         alt="Entrada da Sala 1 do cinema, com portas decoradas com arte abstrata em tons de amarelo, azul e vermelho. Ao lado, uma bilheteria com balcão vermelho e pôsteres de filmes na parede." />
                     <p className={Styles.Paragraph}>Seu cinema favorito passou por um remake nas mãos do talentoso arquiteto <a className={Styles.Links} href="https://www.instagram.com/miliari/" target="blank"><em>Rafael Miliari</em></a> e agora estreia ainda mais bonito, mais colorido e mais confortável.</p>
                     <p className={Styles.Paragraph}>São cenários renovados, com destaque para as pinturas do artista <a className={Styles.Links} href="https://www.tumblr.com/cristophergegembauer"><em>Cristopher Gegembauer</em></a>. Venha conhecer esse novo e lindo figurino. Reserva, o seu Cinema, Novo.</p>
@@ -49,7 +49,7 @@ const Concept = () => {
                     <p className={Styles.Paragraph}>No Cinema Reserva Cultural, você assiste aos melhores filmes 2D e 3D em quatro salas stadium, equipadas com sistema de projeção digital (DCP) e áudio Dolby Digital, totalizando 580 lugares. A programação se dedica a filmes de qualidade, nacionais e estrangeiros, privilegiando títulos independentes e fora do circuito comercial que se destacam em festivais pelo mundo. Esta seleção feita por amantes do cinema rendeu ao Reserva Cultural, por cinco anos consecutivos, o Prêmio de “Melhor Programação” no Oscar das Salas de Cinema (Guia do Estado de São Paulo). O Reserva Cultural também foi eleito “Melhor Cinema” pelos leitores da Revista Época e “Melhor Ambiente” pela Folha de São Paulo.</p>
                     <img 
                         className={Styles.Image}
-                        src={require("../components/Images/Conceito/SalasDeCinema.jpg")} 
+                        src={require("../Components/Images/Conceito/SalasDeCinema.jpg")} 
                         alt="Interior de uma sala de cinema vazia, com fileiras de assentos vermelhos e pretos em uma sala com tela branca iluminada, destacando a escada com luzes verdes ao longo do corredor." />                        
                 </div>
                 
@@ -76,19 +76,19 @@ const Concept = () => {
                     {/* Slider aqui */}
                     <Slider className={Styles.Slider} {...sliderSettings}>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/FileDePeixeNaCrostaDeAlho.jpg')} alt="Prato gourmet composto por filé de peixe com crosta de alho servido ao lado de risoto cremoso de espinafre, decorado com uma pequena pimenta vermelha no topo. A apresentação está em um prato escuro sobre uma mesa de madeira." />
+                            <img src={require('../Components/Images/Gastronomia/FileDePeixeNaCrostaDeAlho.jpg')} alt="Prato gourmet composto por filé de peixe com crosta de alho servido ao lado de risoto cremoso de espinafre, decorado com uma pequena pimenta vermelha no topo. A apresentação está em um prato escuro sobre uma mesa de madeira." />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/PicadinhodeCarne.jpg')} alt="" />
+                            <img src={require('../Components/Images/Gastronomia/PicadinhodeCarne.jpg')} alt="" />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/Galeto.jpg')} alt="" />
+                            <img src={require('../Components/Images/Gastronomia/Galeto.jpg')} alt="" />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/Fotografia.jpg')} alt="" />
+                            <img src={require('../Components/Images/Gastronomia/Fotografia.jpg')} alt="" />
                         </div>
                         <div>
-                            <img src={require('../components/Images/Gastronomia/MenuReserva.jpg')} alt="" />
+                            <img src={require('../Components/Images/Gastronomia/MenuReserva.jpg')} alt="" />
                         </div>
                     </Slider>
 
@@ -128,9 +128,9 @@ const Concept = () => {
                             <p className={Styles.Paragraph}>Há alguns anos, o espaço ampliou as opções para o público e começou a propor semestralmente cursos de filosofia e literatura ligados à sétima arte. Sempre com a preocupação de contemplar seus fiéis frequentadores, o Cinema Reserva Cultural oferece através de concursos culturais a possibilidade de ganhar bolsas de estudos para os cursos, assim como ingressos para as sessões de filmes em cartaz.</p>
                         </div>
 
-                        <a href="#">
-                            <img className={Styles.Image} src={require('../components/Images/Conceito/Poemaria.jpg')} alt="Pessoas participando de um evento cultural em um espaço interno aconchegante. Um homem fala ao microfone enquanto uma mulher ao lado dele participa da apresentação. O público, sentado ao redor, observa atentamente e algumas pessoas estão mexendo em seus celulares." />
-                        </a>
+                        <div>
+                            <img className={Styles.Image} src={require('../Components/Images/Conceito/Poemaria.jpg')} alt="Pessoas participando de um evento cultural em um espaço interno aconchegante. Um homem fala ao microfone enquanto uma mulher ao lado dele participa da apresentação. O público, sentado ao redor, observa atentamente e algumas pessoas estão mexendo em seus celulares." />
+                        </div>
                     </div>
                 </div>
 
@@ -151,7 +151,7 @@ const Concept = () => {
 
                     <p className={Styles.Paragraph}>O Reserva Cultural encontra sucesso junto ao público de São Paulo desde sua inauguração em 2005. Seus clientes fiéis amam o seu conceito. Graças a esse sucesso, o Cinema Reserva Cultural ganhou a licitação pública para administrar por 25 anos um belíssimo prédio concebido e construído pelo mestre Oscar Niemeyer, localizado numa das cidades com um dos melhores IDH do país, Niterói.</p>
 
-                    <img className={Styles.Image} src={require('../components/Images/Conceito/ReservaNiteroi.jpg')} alt="Fachada moderna do cinema Reserva Cultural, com uma ampla estrutura de vidro e entrada principal. Pessoas estão sentadas em mesas ao ar livre no terraço do local." />
+                    <img className={Styles.Image} src={require('../Components/Images/Conceito/ReservaNiteroi.jpg')} alt="Fachada moderna do cinema Reserva Cultural, com uma ampla estrutura de vidro e entrada principal. Pessoas estão sentadas em mesas ao ar livre no terraço do local." />
 
                     <p className={Styles.Paragraph}>Depois de 2 anos de trabalho, esse complexo apresenta-se com cinco salas de cinema com som e imagem para filmes 2D e 3D, uma bomboniere com deck ao ar livre, além de um extraordinário espaço para opções gastronômicas, onde se encontra o Reserva Bistrô, fiel ao conceito de São Paulo, a Mística Pizza, o Bizu Bizu que oferece comidinhas do eixo Paris-Niterói-Nova York, uma livraria Blooks, uma galeria para exposições, e a Clappy Festas, especializada em eventos infantis.</p>
 
@@ -186,5 +186,5 @@ const Concept = () => {
     );
 }
 
-export default Concept;
+export default ConceptSP;
 

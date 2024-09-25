@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "../Components/navbar/navbar";
-import Footer from "../../../components/Footer/Footer";
-import Styles from '../components/Css/ReducedFare.module.css';
-import Info from "../../../components/Info/Info";
+import Footer from "../Components/Footer/Footer";
+import Styles from '../Components/Css/ReducedFare.module.css';
+import Info from "../Components/Info/Info";
 
 
-function reducedFare () {
+function reducedFareSP () {
     return (
         <div>
             <NavBar />
@@ -19,4 +19,4 @@ function reducedFare () {
     );
 };
 
-export default reducedFare;
+export default reducedFareSP;

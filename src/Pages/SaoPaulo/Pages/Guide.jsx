@@ -1,10 +1,10 @@
 import React from "react";
-import Styles from '../components/Css/Guide.module.css'
+import Styles from '../Components/Css/Guide.module.css'
 import NavBar from "../Components/navbar/navbar";
-import Footer from "../../../components/Footer/Footer";
-import Info from "../../../components/Info/Info";
+import Footer from "../Components/Footer/Footer";
+import Info from "../Components/Info/Info";
 
-function Guide () {
+function GuideSP () {
       return (
             <div className={Styles.Guide}>
                   <NavBar />
@@ -70,4 +70,4 @@ function Guide () {
       );
 };
 
-export default Guide;
+export default GuideSP;

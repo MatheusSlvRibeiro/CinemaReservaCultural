@@ -90,7 +90,9 @@
 .Developer a:hover::after{
     width: 100%;
 }
-
+.arrow{
+    display: none;
+}
 
 @media (max-width: 1200px) {
     .footer{
@@ -121,11 +123,39 @@
 
 @media (max-width: 580px){
     .column{
+        background-color: var(--main-bg-color);
+        width: 100%;
         padding: 4rem 2rem 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .column ul{
+        display: none;
+        padding-left: 0;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+    .column ul.active{
+        display: block;
+        max-height: 700px;
+    }
+    .column_title{
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .arrow {
+        margin-left: 10px; /* Espaçamento entre o título e a seta */
+        transition: transform 0.3s ease; /* Animação suave para a rotação */
+    }
+    .column_item{
+        font-size: 1.3rem;
+        padding: 0.5rem 0;
     }
     .Links{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
         margin: 0;
     }
     .institucional{
