@@ -44,36 +44,36 @@ const News = () => {
     return (
         <section className={styles.PostGrid}>
             <h3 className={styles.sectionTitle}>
-                Conceito, sabores e novidades 
+                Sabores e novidades 
             </h3>
         
             <div className={styles.PostSection}>
                 <Slider {...settings}>
                     <div>
-                        <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view">
+                        <a href="https://www.reservacultural.com.br/niteroi/bistro-reserva/">
                             <img className={styles.Post}
-                            src="/images/post-250x250.jpg" 
+                            src="/images/Brasserie.jpg" 
                             alt="teste"/>
                         </a>
                     </div>
                     <div>
-                        <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view?usp=sharing" target="blank" rel="noopener noreferrer">
+                        <a href="https://www.reservacultural.com.br/niteroi/bizubizu/" target="blank" rel="noopener noreferrer">
                             <img className={styles.Post}
-                            src="/images/Post-250x240-2.jpg"
+                            src="/images/DropBurger.jpg"
                             alt="teste"/>
                         </a>
                     </div>
                     <div>
-                        <a href="/Concept">
+                        <a href="https://www.reservacultural.com.br/niteroi/mistica-pizza/">
                             <img className={styles.Post}
-                            src="/images/post-1000x1000.jpg"
+                            src="/images/MAHATMA.jpg"
                             alt="teste"/>
                         </a>
                     </div>
                     <div>
                         <a href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank" rel="noopener noreferrer">
                             <img className={styles.Post}
-                            src="/images/estacionamento.jpg"
+                            src="/images/estacionamentoNiteroi.jpg"
                             alt="teste"/>
                         </a>
                     </div>

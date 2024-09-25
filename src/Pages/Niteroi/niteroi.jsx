@@ -4,6 +4,7 @@ import Footer from './Components/Footer/Footer';
 import Slider from './Components/Slider/Slider';
 import News from './Components/News/News'
 import NowPlayingRj from './Components/PlayingNow/PlayingNow';
+import Info from './Components/Info/Info'
 
 const Niteroi = () => {
   return (
@@ -12,6 +13,7 @@ const Niteroi = () => {
       <Slider />
       <NowPlayingRj />
       <News />
+      <Info />
       <Footer />
     </div>
   );
