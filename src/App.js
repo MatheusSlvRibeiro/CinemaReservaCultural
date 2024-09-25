@@ -17,27 +17,27 @@ import FormContact from './Pages/Niteroi/Pages/Contact';
 
 //São Paulo Pages
 import SaoPaulo from './Pages/SaoPaulo/SãoPaulo'
-import FaresSP from './Pages/SaoPaulo/Pages/Fares';
-import LoyaltySP from './Pages/SaoPaulo/Pages/Loyalty';
-import GuideSP from './Pages/SaoPaulo/Pages/Guide';
-import ReducedFareSP from './Pages/SaoPaulo/Pages/ReducedFare';
-import ConceptSP from './Pages/SaoPaulo/Pages/Concept';
-import TrabalheConoscoSP from './Pages/SaoPaulo/Pages/WorkWithUs';
-import FormContactSP from './Pages/SaoPaulo/Pages/Contact';
+import FARES_SP from './Pages/SaoPaulo/Pages/FARES_SP';
+import LOYALTY_SP from './Pages/SaoPaulo/Pages/LOYALTY_SP';
+import GUIDE_SP from './Pages/SaoPaulo/Pages/GUIDE_SP.JSX';
+import REDUCED_FARE_SP from './Pages/SaoPaulo/Pages/REDUCED_FARE_SP';
+import CONCEPT_SP from './Pages/SaoPaulo/Pages/CONCEPT_SP';
+import WORK_WITH_US_SP from './Pages/SaoPaulo/Pages/WORK_WITH_US_SP';
+import FORM_CONTACT_SP from './Pages/SaoPaulo/Pages/CONTACT_SP';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/Saopaulo" element={<SaoPaulo/>} />
-        <Route path="/Fares" element={<FaresSP />} />
-        <Route path="/Guide" element={<GuideSP />} />
-        <Route path="/Loyalty" element={<LoyaltySP />} />
-        <Route path="/ReducedFare" element={<ReducedFareSP />} />
-        <Route path="/Concept" element={<ConceptSP />} />
-        <Route path="/TrabalheConosco" element={<TrabalheConoscoSP/>} />
-        <Route path="/Contact" element={<FormContactSP/>} />
+        <Route path="/SãoPaulo" element={<SaoPaulo/>} />
+        <Route path="/FARES_SP" element={<FARES_SP />} />
+        <Route path="/GUIDE_SP" element={<GUIDE_SP />} />
+        <Route path="/LOYALTY_SP" element={<LOYALTY_SP />} />
+        <Route path="/REDUCED_FARE_SP" element={<REDUCED_FARE_SP />} />
+        <Route path="/CONCEPT_SP" element={<CONCEPT_SP />} />
+        <Route path="/WORK_WITH_US_SP" element={<WORK_WITH_US_SP/>} />
+        <Route path="/CONTACT_SP" element={<FORM_CONTACT_SP/>} />
 
         <Route path="/niteroi" element={<Niteroi/>} />
         <Route path="/Fares" element={<Fares />} />

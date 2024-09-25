@@ -28,13 +28,13 @@ const Footer = () => {
                 Programação
               </h3>
               <ul className={openColumn === 0 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="#em_cartaz">Em Cartaz</a></li>
+                <li><a className={Styles.column_item} href="/SãoPaulo/#em_cartaz">Em Cartaz</a></li>
                 <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                             rel='noopener noreferrer' 
                                                             target='blank'>Ingressos</a></li>
-                <li><a className={Styles.column_item} href='/Fares'>Tarifas</a></li>
-                <li><a className={Styles.column_item} href='/reducedFare'>Meia-Entrada</a></li>
-                <li><a className={Styles.column_item} href="/Guide">Guia do Bom Espectador</a></li>
+                <li><a className={Styles.column_item} href='/Fares_SP'>Tarifas</a></li>
+                <li><a className={Styles.column_item} href='/REDUCED_FARE_SP'>Meia-Entrada</a></li>
+                <li><a className={Styles.column_item} href="/Guide_SP">Guia do Bom Espectador</a></li>
               </ul>
             </div>
 
@@ -63,11 +63,11 @@ const Footer = () => {
                 O Reserva
               </h3>
               <ul className={openColumn === 3 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="/Concept">O Conceito</a></li>
-                <li><a className={Styles.column_item} href="/Loyalty">Fidelidade</a></li>
+                <li><a className={Styles.column_item} href="/CONCEPT_SP">O Conceito</a></li>
+                <li><a className={Styles.column_item} href="/LOYALTY_SP">Fidelidade</a></li>
                 <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento</a></li>
-                <li><a className={Styles.column_item} href="/TrabalheConosco">Trabalhe Conosco</a></li>
-                <li><a className={Styles.column_item} href="/Contact">Contato</a></li>
+                <li><a className={Styles.column_item} href="/WORK_WITH_US_SP">Trabalhe Conosco</a></li>
+                <li><a className={Styles.column_item} href="/CONTACT_SP">Contato</a></li>
               </ul>
             </div>
 

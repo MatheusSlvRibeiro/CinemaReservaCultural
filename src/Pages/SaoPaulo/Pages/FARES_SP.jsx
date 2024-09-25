@@ -4,7 +4,7 @@ import Footer from "../Components/Footer/Footer";
 import Styles from "../Components/Css/Fares.module.css"
 import Info from "../Components/Info/Info";
 
-function TarifasSP () {
+function FARES_SP() {
     return (
         <div>
             <NavBar />
@@ -18,4 +18,4 @@ function TarifasSP () {
     )
 }
 
-export default TarifasSP;
+export default FARES_SP;

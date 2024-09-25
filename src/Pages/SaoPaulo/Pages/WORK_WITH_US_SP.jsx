@@ -3,7 +3,7 @@ import Styles from '../Components/Css/WorkWithUs.module.css';
 import NavBar from "../Components/navbar/navbar";
 import Footer from "../Components/Footer/Footer";
 
-function TrabalheConoscoSP (){
+function WORK_WITH_US_SP (){
   // Estado para controlar se o formulário foi enviado
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -52,4 +52,4 @@ function TrabalheConoscoSP (){
   );
 }
 
-export default TrabalheConoscoSP;
+export default WORK_WITH_US_SP;

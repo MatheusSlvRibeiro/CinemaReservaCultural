@@ -4,7 +4,7 @@ import Styles from '../Components/Css/Contact.module.css';
 import NavBar from "../Components/navbar/navbar";
 import Footer from "../Components/Footer/Footer";
 
-const FormContactSP = () => {
+const FORM_CONTACT_SP = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
@@ -184,4 +184,4 @@ const FormContactSP = () => {
   );
 };
 
-export default FormContactSP;
+export default FORM_CONTACT_SP;

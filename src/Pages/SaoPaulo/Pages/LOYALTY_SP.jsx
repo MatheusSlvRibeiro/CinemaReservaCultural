@@ -4,7 +4,7 @@ import Footer from "../Components/Footer/Footer";
 import NavBar from "../Components/navbar/navbar";
 import Info from "../Components/Info/Info";
 
-function LoyaltySP() {
+function LOYALTY_SP() {
     return (
         <div className="Guide">
             <NavBar />
@@ -60,4 +60,4 @@ function LoyaltySP() {
     );
 }
 
-export default LoyaltySP;
+export default LOYALTY_SP;

@@ -11,7 +11,7 @@ function Home () {
                 <div className={Styles.SideBySide}>
                     <div className={Styles.Object}>
                         <img className={Styles.Image} src="./images/ReservaSaopaulo.jpg" alt="Imagem da fachada do Reserva Cultural são paulo" />
-                        <a href="/SaoPaulo"><p>sao paulo - sp</p></a>
+                        <a href="/SãoPaulo"><p>sao paulo - sp</p></a>
                     </div>
                     
                     <div className={Styles.Object}>

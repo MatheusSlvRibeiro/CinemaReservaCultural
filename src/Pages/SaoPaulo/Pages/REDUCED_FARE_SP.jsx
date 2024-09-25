@@ -5,7 +5,7 @@ import Styles from '../Components/Css/ReducedFare.module.css';
 import Info from "../Components/Info/Info";
 
 
-function reducedFareSP () {
+function REDUCED_FARE_SP () {
     return (
         <div>
             <NavBar />
@@ -19,4 +19,4 @@ function reducedFareSP () {
     );
 };
 
-export default reducedFareSP;
+export default REDUCED_FARE_SP;

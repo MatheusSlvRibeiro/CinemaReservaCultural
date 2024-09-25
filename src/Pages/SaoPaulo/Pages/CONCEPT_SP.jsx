@@ -7,7 +7,7 @@ import Navbar from "../Components/navbar/navbar";
 import Footer from '../Components/Footer/Footer';
 import Info from '../Components/Info/Info'
 
-const ConceptSP = () => {
+const CONCEPT_SP = () => {
     const sliderSettings = {
         dots: false,
         infinite: true,
@@ -186,5 +186,5 @@ const ConceptSP = () => {
     );
 }
 
-export default ConceptSP;
+export default CONCEPT_SP;
 
