@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -6,6 +6,21 @@ import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-
 import NewsletterSignup from '../NewsletterSignup/NewsletterSignup';
 
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState({
+    programacao: false,
+    gastronomia: false,
+    eventos: false,
+    reserva: false
+  });
+
+  // Function to toggle dropdown visibility
+  const toggleDropdown = (column) => {
+    setIsOpen((prevState) => ({
+      ...prevState,
+      [column]: !prevState[column]
+    }));
+  };
+
   return (
     <footer className={Styles.footer}>
       <div className={Styles.footer_container}>
@@ -17,64 +32,69 @@ const Footer = () => {
         <div className={Styles.footerBottom}>
           <div className={Styles.Links}>
             <div className={Styles.column}>
-              <h3 className={Styles.column_title}>Programação</h3>
-              <ul>
-                <li><a className={Styles.column_item} href="/#em_cartaz">Em Cartaz</a></li>
-                <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
+              <h3 className={Styles.column_title} onClick={() => toggleDropdown('programacao')}>Programação</h3>
+              {isOpen.programacao && (
+                <ul>
+                  <li><a className={Styles.column_item} href="/#em_cartaz">Em Cartaz</a></li>
+                  <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                       rel='noopener noreferrer' 
                                                       target='blank'>Ingressos</a></li>
-                <li><a className={Styles.column_item} href='/Fares'>Tarifas</a></li>
-                <li><a className={Styles.column_item} href='/reducedFare'>Meia-Entrada</a></li>
-                <li><a className={Styles.column_item} href="/Guide">Guia do Bom Espectador</a></li>
-              </ul>
-            </div>
-
-
-            <div className={Styles.column}>
-              <h3 className={Styles.column_title}>Gastronomia</h3>
-              <ul>
-                <li><a className={Styles.column_item} href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view" target='blank'>Buffet Pain de France</a></li>
-                <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>Bistro Reserva</a></li>
-              </ul>
+                  <li><a className={Styles.column_item} href='/Fares'>Tarifas</a></li>
+                  <li><a className={Styles.column_item} href='/reducedFare'>Meia-Entrada</a></li>
+                  <li><a className={Styles.column_item} href="/Guide">Guia do Bom Espectador</a></li>
+                </ul>
+              )}
             </div>
 
             <div className={Styles.column}>
-              <h3 className={Styles.column_title}>Eventos</h3>
-              <ul>
-                <li><a className={Styles.column_item} href="#em_cartaz">Eventos Realizados</a></li>
-                <li><a className={Styles.column_item} href="#em_cartaz">Parcerias</a></li>
-              </ul>
+              <h3 className={Styles.column_title} onClick={() => toggleDropdown('gastronomia')}>Gastronomia</h3>
+              {isOpen.gastronomia && (
+                <ul>
+                  <li><a className={Styles.column_item} href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view" target='blank'>Buffet Pain de France</a></li>
+                  <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>Bistro Reserva</a></li>
+                </ul>
+              )}
             </div>
 
             <div className={Styles.column}>
-              <h3 className={Styles.column_title}>O Reserva</h3>
-              <ul>
-                <li><a className={Styles.column_item} href="/Concept">O Conceito</a></li>
-                <li><a className={Styles.column_item} href="/Loyalty">Fidelidade</a></li>
-                <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento</a></li>
-                <li><a className={Styles.column_item} href="/TrabalheConosco">Trabalhe Conosco</a></li>
-                <li><a className={Styles.column_item} href="/Contact">Contato</a></li>
-              </ul>
+              <h3 className={Styles.column_title} onClick={() => toggleDropdown('eventos')}>Eventos</h3>
+              {isOpen.eventos && (
+                <ul>
+                  <li><a className={Styles.column_item} href="#em_cartaz">Eventos Realizados</a></li>
+                  <li><a className={Styles.column_item} href="#em_cartaz">Parcerias</a></li>
+                </ul>
+              )}
             </div>
-            
-            <div className={Styles.column_News}>
-              
-              <NewsletterSignup />
-              
-              <div className={Styles.SocialMedia}>
-                <h3 className={Styles.column_title}>Siga-nos</h3>
-                <div className={Styles.SocialMedia_item}>
-                  <a href="https://www.instagram.com/reserva_cultural/" target='blank' rel='noopener noreferrer'>
-                    <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faInstagram} />
-                  </a>
 
-                  <a href="https://www.facebook.com/ReservaCultural?locale=pt_BR" target='blank' rel='noopener noreferrer'>
-                    <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faFacebook} />
-                  </a>
-                  <a href="https://www.tiktok.com/@reservaculturalsp?_t=8oxvb6yoyzu&_r=1" target='blank' rel='noopener noreferrer'>
-                    <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faTiktok} />
-                  </a>
-                </div>
+            <div className={Styles.column}>
+              <h3 className={Styles.column_title} onClick={() => toggleDropdown('reserva')}>O Reserva</h3>
+              {isOpen.reserva && (
+                <ul>
+                  <li><a className={Styles.column_item} href="/Concept">O Conceito</a></li>
+                  <li><a className={Styles.column_item} href="/Loyalty">Fidelidade</a></li>
+                  <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento</a></li>
+                  <li><a className={Styles.column_item} href="/TrabalheConosco">Trabalhe Conosco</a></li>
+                  <li><a className={Styles.column_item} href="/Contact">Contato</a></li>
+                </ul>
+              )}
+            </div>
+          </div>
+
+          <div className={Styles.column_News}>
+            <NewsletterSignup />
+            <div className={Styles.SocialMedia}>
+              <h3 className={Styles.column_title}>Siga-nos</h3>
+              <div className={Styles.SocialMedia_item}>
+                <a href="https://www.instagram.com/reserva_cultural/" target='blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faInstagram} />
+                </a>
+
+                <a href="https://www.facebook.com/ReservaCultural?locale=pt_BR" target='blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faFacebook} />
+                </a>
+                <a href="https://www.tiktok.com/@reservaculturalsp?_t=8oxvb6yoyzu&_r=1" target='blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faTiktok} />
+                </a>
               </div>
             </div>
           </div>
