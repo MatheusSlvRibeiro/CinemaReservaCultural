@@ -8,6 +8,7 @@
 .newsletterLabel{
     color: var(--main-color);
     text-transform: uppercase;
+    font-size: 1.3rem;
     border: none;
     width: 100%;
     
@@ -41,4 +42,11 @@
     background-color: var(--main-color);
     border: none;
     cursor: pointer;
+}
+
+@media (Max-width: 580px) {
+    .newsletterForm{
+        width: 50%;
+        padding: 2rem 1rem;
+    }
 }

@@ -29,7 +29,7 @@ const Footer = () => {
               </h3>
               <ul className={openColumn === 0 && isSmallScreen ? Styles.active : ''}>
                 <li><a className={Styles.column_item} href="/Niteroi/#em_cartaz">Em Cartaz</a></li>
-                <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
+                <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-niteroi?city=niteroi&fbclid=PAAaZB24B0WsL6h5UzGOKszZ6a41OFflpwijRlKQjVP6mboggyYeZucZ5RiIU_aem_AZz3fNqnLrN-RenAQi7V-CQy_yPkgKGewWRa0bKJA5Yu0mohXX3JSACnM7CHL6f49dE%23%21%23data%3D20230615" 
                                                             rel='noopener noreferrer' 
                                                             target='blank'>Ingressos</a></li>
                 <li><a className={Styles.column_item} href='/Fares'>Tarifas</a></li>
@@ -43,7 +43,7 @@ const Footer = () => {
                 Gastronomia
               </h3>
               <ul className={openColumn === 1 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view" target='blank'>Mahatman Pizza</a></li>
+                <li><a className={Styles.column_item} href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view" target='blank'>Mahatma Pizza</a></li>
                 <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>Brasserie Reserva</a></li>
                 <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>DropBurger</a></li>
               </ul>
@@ -78,13 +78,13 @@ const Footer = () => {
               <div className={Styles.SocialMedia}>
                 <h3 className={Styles.column_title}>Siga-nos</h3>
                 <div className={Styles.SocialMedia_item}>
-                  <a href="https://www.instagram.com/reserva_cultural/" target='blank' rel='noopener noreferrer'>
+                  <a href="https://www.instagram.com/reservaculturalniteroi/" target='blank' rel='noopener noreferrer'>
                     <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faInstagram} />
                   </a>
-                  <a href="https://www.facebook.com/ReservaCultural?locale=pt_BR" target='blank' rel='noopener noreferrer'>
+                  <a href="https://www.facebook.com/ReservaCulturalNiteroi?locale=pt_BR" target='blank' rel='noopener noreferrer'>
                     <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faFacebook} />
                   </a>
-                  <a href="https://www.tiktok.com/@reservaculturalsp?_t=8oxvb6yoyzu&_r=1" target='blank' rel='noopener noreferrer'>
+                  <a href="https://www.tiktok.com/@reservaculturalniteroi" target='blank' rel='noopener noreferrer'>
                     <FontAwesomeIcon className={Styles.SocialMedia_icon} icon={faTiktok} />
                   </a>
                 </div>

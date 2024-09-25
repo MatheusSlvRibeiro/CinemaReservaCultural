@@ -71,7 +71,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className={Styles.column_News}>
+            <div className={Styles.column}>
               <NewsletterSignup />
               
               <div className={Styles.SocialMedia}>

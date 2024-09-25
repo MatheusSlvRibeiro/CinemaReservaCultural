@@ -43,3 +43,9 @@
     border: none;
     cursor: pointer;
 }
+@media (Max-width: 580px) {
+    .newsletterForm{
+        width: 50%;
+        padding: 2rem 1rem;
+    }
+}
