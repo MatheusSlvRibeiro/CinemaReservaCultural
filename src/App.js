@@ -19,7 +19,7 @@ import FormContact from './Pages/Niteroi/Pages/Contact';
 import SaoPaulo from './Pages/SaoPaulo/SãoPaulo'
 import FARES_SP from './Pages/SaoPaulo/Pages/FARES_SP';
 import LOYALTY_SP from './Pages/SaoPaulo/Pages/LOYALTY_SP';
-import GUIDE_SP from './Pages/SaoPaulo/Pages/guide_sp';
+import guia_sp from './Pages/SaoPaulo/Pages/guia_sp';
 import REDUCED_FARE_SP from './Pages/SaoPaulo/Pages/REDUCED_FARE_SP';
 import CONCEPT_SP from './Pages/SaoPaulo/Pages/CONCEPT_SP';
 import WORK_WITH_US_SP from './Pages/SaoPaulo/Pages/WORK_WITH_US_SP';
@@ -32,7 +32,7 @@ function App() {
         <Route path="/" element={<Home/>} />
         <Route path="/SãoPaulo" element={<SaoPaulo/>} />
         <Route path="/FARES_SP" element={<FARES_SP />} />
-        <Route path="/GUIDE_SP" element={<GUIDE_SP />} />
+        <Route path="/guia_sp" element={<guia_sp />} />
         <Route path="/LOYALTY_SP" element={<LOYALTY_SP />} />
         <Route path="/REDUCED_FARE_SP" element={<REDUCED_FARE_SP />} />
         <Route path="/CONCEPT_SP" element={<CONCEPT_SP />} />
