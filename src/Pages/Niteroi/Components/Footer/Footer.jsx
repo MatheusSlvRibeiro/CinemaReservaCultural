@@ -28,7 +28,7 @@ const Footer = () => {
                 Programação
               </h3>
               <ul className={openColumn === 0 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="/#em_cartaz">Em Cartaz</a></li>
+                <li><a className={Styles.column_item} href="/Niteroi/#em_cartaz">Em Cartaz</a></li>
                 <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                             rel='noopener noreferrer' 
                                                             target='blank'>Ingressos</a></li>
@@ -66,13 +66,13 @@ const Footer = () => {
               <ul className={openColumn === 3 && isSmallScreen ? Styles.active : ''}>
                 <li><a className={Styles.column_item} href="/Concept">O Conceito</a></li>
                 <li><a className={Styles.column_item} href="/Loyalty">Fidelidade</a></li>
-                <li><a className={Styles.column_item} href="https://www.google.com/maps/place/Av.+Visconde+do+Rio+Branco,+880+-+S%C3%A3o+Domingos,+Niter%C3%B3i+-+RJ,+24210-200/@-22.8982811,-43.1332801,17z/data=!3m1!4b1!4m6!3m5!1s0x9983e476739ca3:0x100a0ab61b58ef51!8m2!3d-22.8982861!4d-43.1307052!16s%2Fg%2F11pvbz_pzn?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D" target="blank">Estacionamento Conveniado</a></li>
+                <li><a className={Styles.column_item} href="https://www.google.com/maps/place/Av.+Visconde+do+Rio+Branco,+880+-+S%C3%A3o+Domingos,+Niter%C3%B3i+-+RJ,+24210-200/@-22.8982811,-43.1332801,17z/data=!3m1!4b1!4m6!3m5!1s0x9983e476739ca3:0x100a0ab61b58ef51!8m2!3d-22.8982861!4d-43.1307052!16s%2Fg%2F11pvbz_pzn?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D" target="blank">Estacionamento</a></li>
                 <li><a className={Styles.column_item} href="/TrabalheConosco">Trabalhe Conosco</a></li>
                 <li><a className={Styles.column_item} href="/Contact">Contato</a></li>
               </ul>
             </div>
 
-            <div className={Styles.column_News}>
+            <div className={Styles.column}>
               <NewsletterSignup />
               
               <div className={Styles.SocialMedia}>

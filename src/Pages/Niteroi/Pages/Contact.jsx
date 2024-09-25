@@ -9,7 +9,7 @@ const FormContact = () => {
     nome: '',
     email: '',
     telefone: '',
-    unidade: 'sp',
+    unidade: 'rj',
     assunto: '',
     mensagem: '',
     filme: '',
@@ -127,8 +127,8 @@ const FormContact = () => {
             value={formData.unidade} 
             onChange={handleChange} 
           >
-            <option value="sp">São Paulo</option>
             <option value="rj">Rio de Janeiro</option>
+            <option value="sp">São Paulo</option>
           </select>
         </label>
         <label>

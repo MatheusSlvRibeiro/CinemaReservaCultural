@@ -56,7 +56,7 @@ const NavBar = () => {
                 {dropdownOpen && (
                     <div className={styles.Dropdown}>
                         <div  className={styles.LocationItem}>
-                            <a href="/saoPaulo" className={styles.LocationItem}>
+                            <a href="/SãoPaulo" className={styles.LocationItem}>
                                 <h4>São Paulo - SP</h4>
                                 <p>Avenida Paulista, 900 - Térreo Baixo</p>
                             </a>

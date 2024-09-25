@@ -7,6 +7,7 @@
 
 .newsletterLabel{
     color: var(--main-color);
+    font-size: 1.5rem;
     text-transform: uppercase;
     border: none;
     width: 100%;

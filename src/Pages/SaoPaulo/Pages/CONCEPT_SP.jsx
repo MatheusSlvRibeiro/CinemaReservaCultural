@@ -60,7 +60,7 @@ const CONCEPT_SP = () => {
                             <p className={Styles.Paragraph}>O Cinema Reserva Cultural oferece aos seus frequentadores um Cartão Fidelidade. A cada dez ingressos adquiridos, o cliente ganha um. Desde maio de 2011, foi implementado o Cine Social, projeto vinculado ao cartão de fidelidade que funciona da seguinte maneira: uma vez ao ano, computa-se o total de ingressos cortesia entregues dentro do programa de fidelidade e o mesmo número será disponibilizado para instituições e associações beneficiadas pelo projeto. O programa de fidelidade também permite que o frequentador receba notícias e promoções exclusivas sobre o cinema e os filmes em cartaz, além de uma newsletter semanal informando sobre as novidades e os vários eventos que o complexo organiza e recebe.</p>
                         </div>
 
-                        <a href="/loyalty">
+                        <a href="/LOYALTY_SP">
                             <img 
                                 className={Styles.Image}
                                 src="/images/Fidelidade.jpg" 

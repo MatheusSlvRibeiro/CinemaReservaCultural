@@ -64,7 +64,7 @@ const News = () => {
                         </a>
                     </div>
                     <div>
-                        <a href="/Concept">
+                        <a href="/CONCEPT_SP">
                             <img className={styles.Post}
                             src="/images/post-1000x1000.jpg"
                             alt="teste"/>
