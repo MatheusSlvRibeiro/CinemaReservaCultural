@@ -19,7 +19,7 @@ import FormContact from './Pages/Niteroi/Pages/Contact';
 import SaoPaulo from './Pages/SaoPaulo/SãoPaulo'
 import FARES_SP from './Pages/SaoPaulo/Pages/FARES_SP';
 import LOYALTY_SP from './Pages/SaoPaulo/Pages/LOYALTY_SP';
-import GUIDE_SP from './Pages/SaoPaulo/Pages/GUIDE_SP';
+import GUIDE_SP from './Pages/SaoPaulo/Pages/guide_sp';
 import REDUCED_FARE_SP from './Pages/SaoPaulo/Pages/REDUCED_FARE_SP';
 import CONCEPT_SP from './Pages/SaoPaulo/Pages/CONCEPT_SP';
 import WORK_WITH_US_SP from './Pages/SaoPaulo/Pages/WORK_WITH_US_SP';
