@@ -73,7 +73,7 @@ const News = () => {
                     <div>
                         <a href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank" rel="noopener noreferrer">
                             <img className={styles.Post}
-                            src="/images/estacionamentoNiteroi.jpg"
+                            src="/images/EstacionamentoNiteroi.jpg"
                             alt="teste"/>
                         </a>
                     </div>
