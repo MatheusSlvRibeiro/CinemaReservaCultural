@@ -4,7 +4,7 @@ import NavBar from "../Components/navbar/navbar";
 import Footer from "../Components/Footer/Footer";
 import Info from "../Components/Info/Info";
 
-function guia_sp () {
+function GUIA_SP () {
       return (
             <div className={Styles.Guide}>
                   <NavBar />
@@ -70,4 +70,4 @@ function guia_sp () {
       );
 };
 
-export default guia_sp;
+export default GUIA_SP;

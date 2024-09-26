@@ -172,6 +172,7 @@
   }
 
   .Dropdown {
+    top: 2.9rem;
     left: -150%; 
   }
 }
