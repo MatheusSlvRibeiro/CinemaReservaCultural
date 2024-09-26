@@ -43,9 +43,9 @@ const Footer = () => {
                 Gastronomia
               </h3>
               <ul className={openColumn === 1 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view" target='blank'>Mahatma Pizza</a></li>
-                <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>Brasserie Reserva</a></li>
-                <li><a className={Styles.column_item} href="https://api.whatsapp.com/send?phone=5511914339374" target='blank'>DropBurger</a></li>
+                <li><a className={Styles.column_item} href="https://www.instagram.com/mahatmapizza/" target='blank'>Mahatma Pizza</a></li>
+                <li><a className={Styles.column_item} href="https://www.instagram.com/brasseriereserva/" target='blank'>Brasserie Reserva</a></li>
+                <li><a className={Styles.column_item} href="https://www.instagram.com/dropburger/" target='blank'>DropBurger</a></li>
               </ul>
             </div>
 
