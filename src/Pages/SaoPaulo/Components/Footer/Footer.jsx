@@ -34,7 +34,7 @@ const Footer = () => {
                                                             target='blank'>Ingressos</a></li>
                 <li><a className={Styles.column_item} href='/Fares_SP'>Tarifas</a></li>
                 <li><a className={Styles.column_item} href='/REDUCED_FARE_SP'>Meia-Entrada</a></li>
-                <li><a className={Styles.column_item} href="/guide_sp">Guia do Bom Espectador</a></li>
+                <li><a className={Styles.column_item} href="/GUIA_SP">Guia do Bom Espectador</a></li>
               </ul>
             </div>
 
