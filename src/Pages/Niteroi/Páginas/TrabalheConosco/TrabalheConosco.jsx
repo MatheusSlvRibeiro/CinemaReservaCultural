@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from './TrabalheConosco.css';
+import Styles from './TrabalheConosco.module.css';
 import Navbar from "../../Componentes/navbar/navbar";
 import Footer from '../../Componentes/Footer/Footer';
 

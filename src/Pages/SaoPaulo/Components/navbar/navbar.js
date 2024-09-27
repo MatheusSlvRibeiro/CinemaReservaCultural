@@ -84,7 +84,7 @@ const NavBar = () => {
             <div className={styles.LocationContainer}>
                 <div className={styles.Location} onClick={() => setDropdownOpen(!dropdownOpen)}>
                     <img className={styles.Icon} src="/images/location.png" alt="Ícone de localização" />
-                    <h4 className={styles.State}>Niterói</h4>
+                    <h4 className={styles.State}>São Paulo</h4>
                     <img className={styles.Arrow} src="/images/downArrow.png" alt="Seta para baixo" />
                 </div>
 
