@@ -22,9 +22,13 @@
 }
 
 .navItem {
+  position: relative;
   padding: 10px 20px;
   cursor: pointer;
-  margin: 0px;
+}
+
+.navItem:hover .subMenu{
+  display: block;
 }
 
 .navLink {
@@ -42,6 +46,36 @@
 
 .menuIcon {
   display: none;
+}
+
+.subMenu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.subMenu li {
+  list-style: none;
+}
+
+.subNavLink {
+  text-transform: uppercase;
+  display: block;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: var(--main-text-color);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.subNavLink:hover {
+  background-color: var(--main-color);
+  color: white;
 }
 
 /*Css Location*/
@@ -117,7 +151,6 @@
 
 @media (max-width: 1200px) {
   .navbar {
-    width: 100%;
     padding: 2rem;
   }
 
@@ -173,8 +206,8 @@
   }
 
   .Dropdown {
-    left: -100%; 
     top: 2.9rem;
+    left: -150%; 
   }
 }
 
