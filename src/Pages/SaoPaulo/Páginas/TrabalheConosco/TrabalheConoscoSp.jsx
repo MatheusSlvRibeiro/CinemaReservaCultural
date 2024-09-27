@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Styles from '../Components/Css/WorkWithUs.module.css';
-import NavBar from "../Components/navbar/navbar";
-import Footer from "../Components/Footer/Footer";
+import Styles from './trabalheConoscoSp.module.css';
+import NavBar from "../../Components/navbar/navbar";
+import Footer from "../../Components/Footer/Footer";
 
-function WORK_WITH_US_SP (){
+function TrabalheConoscoSp (){
   // Estado para controlar se o formulário foi enviado
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -52,4 +52,4 @@ function WORK_WITH_US_SP (){
   );
 }
 
-export default WORK_WITH_US_SP;
+export default TrabalheConoscoSp;

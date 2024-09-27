@@ -1,10 +1,10 @@
 import React from "react";
-import Styles from '../Components/Css/Loyalty.module.css';
-import Footer from "../Components/Footer/Footer";
-import Navbar from '../Components/navbar/navbar';
-import Info from "../Components/Info/Info";
+import Styles from './Fidelidade.module.css';
+import Footer from "../../Componentes/Footer/Footer";
+import Navbar from '../../Componentes/navbar/navbar';
+import Info from "../../Componentes/Info/Info";
 
-function Loyalty() {
+function Fidelidade() {
     return (
         <div className="Guide">
             <Navbar />
@@ -60,4 +60,4 @@ function Loyalty() {
     );
 }
 
-export default Loyalty;
+export default Fidelidade;

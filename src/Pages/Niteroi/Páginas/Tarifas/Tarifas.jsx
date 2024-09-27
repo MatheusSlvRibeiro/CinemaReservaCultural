@@ -1,8 +1,8 @@
 import React from "react";
-import Styles from "../Components/Css/Fares.module.css"
-import Navbar from '../Components/navbar/navbar';
-import Footer from "../Components/Footer/Footer";
-import Info from "../Components/Info/Info";
+import Styles from './Tarifas.module.css';
+import Navbar from '../../Componentes/navbar/navbar';
+import Footer from "../../Componentes/Footer/Footer";
+import Info from "../../Componentes/Info/Info";
 
 function Tarifas () {
     return (

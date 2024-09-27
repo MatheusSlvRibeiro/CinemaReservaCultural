@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Styles from '../Components/Css/WorkWithUs.module.css';
-import Navbar from "../Components/navbar/navbar";
-import Footer from '../Components/Footer/Footer';
+import Styles from './TrabalheConosco.css';
+import Navbar from "../../Componentes/navbar/navbar";
+import Footer from '../../Componentes/Footer/Footer';
 
 function TrabalheConosco() {
   const [formSubmitted, setFormSubmitted] = useState(false);

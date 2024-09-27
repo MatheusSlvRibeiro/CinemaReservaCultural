@@ -1,15 +1,15 @@
 import React, { useState, useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
-import Styles from '../Components/Css/Contact.module.css';
-import NavBar from "../Components/navbar/navbar";
-import Footer from "../Components/Footer/Footer";
+import ReCAPTCHA from "react-google-recaptcha"; 
+import Styles from './Contato.module.css';
+import Navbar from '../../Componentes/navbar/navbar';
+import Footer from "../../Componentes/Footer/Footer";
 
-const FORM_CONTACT_SP = () => {
+const Contato = () => {
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
     telefone: '',
-    unidade: 'sp',
+    unidade: 'rj',
     assunto: '',
     mensagem: '',
     filme: '',
@@ -21,19 +21,15 @@ const FORM_CONTACT_SP = () => {
   const [captchaErro, setCaptchaErro] = useState(null);
   const [mensagemSucesso, setMensagemSucesso] = useState(""); 
 
-  // Referência para o componente do reCAPTCHA
   const reCaptchaRef = useRef(null);
 
-  // Chave do reCAPTCHA
   const reCaptchaSiteKey = "6LfcrUkqAAAAAEhuMjrfNJKAzBk2-4opWA3RDtfp"; 
 
-  // Função para lidar com as mudanças nos inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Função para validar o reCAPTCHA
   const handleCaptchaChange = (value) => {
     if (value) {
       setCaptchaValido(true);
@@ -66,28 +62,23 @@ const FORM_CONTACT_SP = () => {
       metodoPagamento: ''
     });
 
-    // Exibe a mensagem de sucesso
     setMensagemSucesso("Mensagem enviada com sucesso! Obrigado pelo contato!!");
 
-    // Rolando a página para o topo
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Resetando o reCAPTCHA
     if (reCaptchaRef.current) {
       reCaptchaRef.current.reset();
     }
 
-    // Resetar o estado do captcha
     setCaptchaValido(false);
   };
 
   return (
     <div className={Styles.formWrapper}>
-      <NavBar />
+      <Navbar />
 
       <h1 className={Styles.Title}>FALE CONOSCO</h1>
 
-      {/* Exibe a mensagem de sucesso diretamente */}
       {mensagemSucesso && (
         <div className={Styles.Sucess}>
           <strong>{mensagemSucesso.split('!')[0]}!</strong><br />
@@ -136,8 +127,8 @@ const FORM_CONTACT_SP = () => {
             value={formData.unidade} 
             onChange={handleChange} 
           >
-            <option value="sp">São Paulo</option>
             <option value="rj">Rio de Janeiro</option>
+            <option value="sp">São Paulo</option>
           </select>
         </label>
         <label>
@@ -167,12 +158,11 @@ const FORM_CONTACT_SP = () => {
           />
         </label>
 
-        {/* Componente reCAPTCHA */}
         <div className={Styles.captchaContainer}>
           <ReCAPTCHA
             sitekey={reCaptchaSiteKey}
             onChange={handleCaptchaChange}
-            ref={reCaptchaRef} // Adicionando referência ao reCAPTCHA
+            ref={reCaptchaRef} 
           />
         </div>
         {captchaErro && <p style={{ color: "red" }}>{captchaErro}</p>}
@@ -184,4 +174,4 @@ const FORM_CONTACT_SP = () => {
   );
 };
 
-export default FORM_CONTACT_SP;
+export default Contato;

@@ -32,8 +32,8 @@ const Footer = () => {
                 <li><a className={Styles.column_item} href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
                                                             rel='noopener noreferrer' 
                                                             target='blank'>Ingressos</a></li>
-                <li><a className={Styles.column_item} href='/Fares_SP'>Tarifas</a></li>
-                <li><a className={Styles.column_item} href='/REDUCED_FARE_SP'>Meia-Entrada</a></li>
+                <li><a className={Styles.column_item} href='/TarifasSp'>Tarifas</a></li>
+                <li><a className={Styles.column_item} href='/MeiaEntradaSp'>Meia-Entrada</a></li>
                 <li><a className={Styles.column_item} href="/guiaSp">Guia do Bom Espectador</a></li>
               </ul>
             </div>
@@ -63,11 +63,11 @@ const Footer = () => {
                 O Reserva
               </h3>
               <ul className={openColumn === 3 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="/CONCEPT_SP">O Conceito</a></li>
-                <li><a className={Styles.column_item} href="/LOYALTY_SP">Fidelidade</a></li>
+                <li><a className={Styles.column_item} href="/ConceitoSp">O Conceito</a></li>
+                <li><a className={Styles.column_item} href="/FidelidadeSp">Fidelidade</a></li>
                 <li><a className={Styles.column_item} href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank">Estacionamento</a></li>
-                <li><a className={Styles.column_item} href="/WORK_WITH_US_SP">Trabalhe Conosco</a></li>
-                <li><a className={Styles.column_item} href="/CONTACT_SP">Contato</a></li>
+                <li><a className={Styles.column_item} href="/TrabalheConoscoSp">Trabalhe Conosco</a></li>
+                <li><a className={Styles.column_item} href="/ContatoSp">Contato</a></li>
               </ul>
             </div>
 

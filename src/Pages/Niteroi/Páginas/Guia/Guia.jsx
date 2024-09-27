@@ -1,13 +1,13 @@
 import React from "react";
-import Styles from '../Components/Css/Guide.module.css'
-import NavBar from "../Components/navbar/navbar";
-import Footer from "../Components/Footer/Footer";
-import Info from "../Components/Info/Info";
+import Styles from './Guia.module.css'
+import Navbar from '../../Componentes/navbar/navbar';
+import Footer from "../../Componentes/Footer/Footer";
+import Info from "../../Componentes/Info/Info";
 
-function guiaSp () {
+function Guia () {
       return (
             <div className={Styles.Guide}>
-                  <NavBar />
+                  <Navbar />
                   <article className={Styles.Article}>
                         <div>
                               <h1 className={Styles.title}>Guia do bom espectador</h1>
@@ -70,4 +70,4 @@ function guiaSp () {
       );
 };
 
-export default guiaSp;
+export default Guia;

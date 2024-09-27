@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "../Components/navbar/navbar";
-import Footer from "../Components/Footer/Footer";
-import Styles from "../Components/Css/Fares.module.css"
-import Info from "../Components/Info/Info";
+import NavBar from "../../Components/navbar/navbar";
+import Footer from "../../Components/Footer/Footer";
+import Styles from "./Tarifas.module.css"
+import Info from "../../Components/Info/Info";
 
-function FARES_SP() {
+function TarifasSp() {
     return (
         <div>
             <NavBar />
@@ -18,4 +18,4 @@ function FARES_SP() {
     )
 }
 
-export default FARES_SP;
+export default TarifasSp;

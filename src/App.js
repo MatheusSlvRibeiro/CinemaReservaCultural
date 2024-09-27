@@ -6,27 +6,24 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 
 //Niterói Pages
-import Niteroi from './Pages/Niteroi/niteroi'
-import Fares from './Pages/Niteroi/Pages/Fares';
-import Loyalty from './Pages/Niteroi/Pages/Loyalty';
-import Guide from './Pages/Niteroi/Pages/Guide';
-import ReducedFare from './Pages/Niteroi/Pages/ReducedFare';
-import Concept from './Pages/Niteroi/Pages/Concept';
-import TrabalheConosco from './Pages/Niteroi/Pages/WorkWithUs';
-import FormContact from './Pages/Niteroi/Pages/Contact';
+import Niteroi from './Pages/Niteroi/niteroi';
+import Conceito from './Pages/Niteroi/Páginas/Conceito/Conceito';
+import Tarifas from './Pages/Niteroi/Páginas/Tarifas/Tarifas';
+import Fidelidade from './Pages/Niteroi/Páginas/Fidelidade/Fidelidade';
+import Guia from './Pages/Niteroi/Páginas/Guia/Guia';
+import MeiaEntrada from './Pages/Niteroi/Páginas/MeiaEntrada/MeiaEntrada';
+import TrabalheConosco from './Pages/Niteroi/Páginas/TrabalheConosco/TrabalheConosco';
+import Contato from './Pages/Niteroi/Páginas/Contato/Contato';
 
 //São Paulo Pages
-import SaoPaulo from './Pages/SaoPaulo/SãoPaulo'
-import FARES_SP from './Pages/SaoPaulo/Pages/FARES_SP';
-import LOYALTY_SP from './Pages/SaoPaulo/Pages/LOYALTY_SP';
-// eslint-disable-next-line no-unused-vars
-import guiaSp from './Pages/SaoPaulo/Pages/guiaSp';
-import REDUCED_FARE_SP from './Pages/SaoPaulo/Pages/REDUCED_FARE_SP';
-import CONCEPT_SP from './Pages/SaoPaulo/Pages/CONCEPT_SP';
-import WORK_WITH_US_SP from './Pages/SaoPaulo/Pages/WORK_WITH_US_SP';
-import FORM_CONTACT_SP from './Pages/SaoPaulo/Pages/CONTACT_SP';
-
-// eslint-disable-next-line
+import SaoPaulo from './Pages/SaoPaulo/SãoPaulo';
+import ConceitoSp from './Pages/SaoPaulo/Páginas/Conceito/ConceitoSp';
+import TarifasSp from './Pages/SaoPaulo/Páginas/Tarifas/TarifasSp';
+import FidelidadeSp from './Pages/SaoPaulo/Páginas/Fidelidade/FidelidadeSp';
+import GuiaSp from './Pages/SaoPaulo/Páginas/Guia/guiaSp';
+import MeiaEntradaSp from './Pages/SaoPaulo/Páginas/MeiaEntrada/MeiaEntradaSp';
+import TrabalheConoscoSp from './Pages/SaoPaulo/Páginas/TrabalheConosco/TrabalheConoscoSp';
+import ContatoSp from './Pages/SaoPaulo/Páginas/Contato/ContatoSp';
 
 function App() {
   return (
@@ -34,22 +31,23 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/SãoPaulo" element={<SaoPaulo/>} />
-        <Route path="/FARES_SP" element={<FARES_SP />} />
-        <Route path="/guiaSp" element={<guiaSp />} />
-        <Route path="/LOYALTY_SP" element={<LOYALTY_SP />} />
-        <Route path="/REDUCED_FARE_SP" element={<REDUCED_FARE_SP />} />
-        <Route path="/CONCEPT_SP" element={<CONCEPT_SP />} />
-        <Route path="/WORK_WITH_US_SP" element={<WORK_WITH_US_SP/>} />
-        <Route path="/CONTACT_SP" element={<FORM_CONTACT_SP/>} />
+        <Route path='/ConceitoSp' element={<ConceitoSp />} />
+        <Route path='/tarifasSp' element={<TarifasSp />}/>
+        <Route path='/FidelidadeSp' element={<FidelidadeSp />} />
+        <Route path='/GuiaSp' element={<GuiaSp />} />
+        <Route path='/MeiaEntradaSp' element={<MeiaEntradaSp />} />
+        <Route path='/TrabalheConoscoSp' element={<TrabalheConoscoSp />} />
+        <Route path='/ContatoSp' element={<ContatoSp />} />
+        
 
         <Route path="/niteroi" element={<Niteroi/>} />
-        <Route path="/Fares" element={<Fares />} />
-        <Route path="/Guide" element={<Guide />} />
-        <Route path="/Loyalty" element={<Loyalty />} />
-        <Route path="/ReducedFare" element={<ReducedFare />} />
-        <Route path="/Concept" element={<Concept />} />
-        <Route path="/TrabalheConosco" element={<TrabalheConosco/>} />
-        <Route path="/Contact" element={<FormContact/>} />
+        <Route path='/Conceito' element={<Conceito />} />
+        <Route path='/tarifas' element={<Tarifas />}/>
+        <Route path='/Fidelidade' element={<Fidelidade />} />
+        <Route path='/Guia' element={<Guia />} />
+        <Route path='/MeiaEntrada' element={<MeiaEntrada />} />
+        <Route path='/TrabalheConosco' element={<TrabalheConosco />} />
+        <Route path='/Contato' element={<Contato />} />
       </Routes>
     </Router>
   );
