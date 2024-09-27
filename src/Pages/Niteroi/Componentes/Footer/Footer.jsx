@@ -97,7 +97,7 @@ const Footer = () => {
           <div>
               <a href='https://www.google.com.br/maps/place/Reserva+Cultural/' target='_blank'>
                 <p><FontAwesomeIcon icon={faMapMarkerAlt} className={Styles.icon} />
-              Avenida Paulista, 900 - Térreo Baixo</p>
+                Avenida Visconde do Rio Branco 880, Niteroi</p>
               </a>
           </div>
 
