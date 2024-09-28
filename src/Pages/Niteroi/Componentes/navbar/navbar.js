@@ -10,38 +10,38 @@ const NavBar = () => {
 
     const navItems = [
         { 
-            id: 1, text: 'Programação', url: '#', 
+            id: 1, text: 'Programação', url: '#em_cartaz', target: '_self',
             subItems: [
-                { text: 'Em Cartaz', url: '/Niteroi/#em_cartaz' },
-                { text: 'Ingressos', url: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-niteroi?city=niteroi' },
-                { text: 'Tarifas', url: '/Tarifas' },
-                { text: 'Meia-entrada', url: '/MeiaEntrada' },
-                { text: 'Guia do Bom Espectador', url: '/Guia' }
+                { text: 'Em Cartaz', url: '/Niteroi/#em_cartaz', target: '_self'},
+                { text: 'Ingressos', url: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-niteroi?city=niteroi', target: '_blank'},
+                { text: 'Tarifas', url: '/Tarifas', target: '_self' },
+                { text: 'Meia-entrada', url: '/MeiaEntrada', target: '_self' },
+                { text: 'Guia do Bom Espectador', url: '/Guia', target: '_self' }
             ]
         },
         { 
-            id: 2, text: 'Gastronomia', url: '#', 
+            id: 2, text: 'Gastronomia', url: '#', target: '_self',
             subItems: [
-                { text: 'Mahatma Pizza', url: 'https://www.instagram.com/mahatmapizza/' },
-                { text: 'Brasserie Reserva', url: 'https://www.instagram.com/brasseriereserva/' },
-                { text: 'Dropburger', url: 'https://www.instagram.com/dropburger/' }
+                { text: 'Mahatma Pizza', url: 'https://www.instagram.com/mahatmapizza/', target: '_blank' },
+                { text: 'Brasserie Reserva', url: 'https://www.instagram.com/brasseriereserva/', target: '_blank' },
+                { text: 'Dropburger', url: 'https://www.instagram.com/dropburger/', target: '_blank' }
             ]
         },
         { 
-            id: 3, text: 'Eventos', url: '#', 
+            id: 3, text: 'Eventos', url: '#', target: '_self', 
             subItems: [
-                { text: 'Eventos Realizados', url: '#realizados' },
-                { text: 'Parcerias', url: '#parcerias' }
+                { text: 'Eventos Realizados', url: '#realizados', target: '_self' },
+                { text: 'Parcerias', url: '#parcerias', target: '_self' }
             ]
         },
         { 
-            id: 4, text: 'O Reserva', url: '/Conceito', 
+            id: 4, text: 'O Reserva', url: '/Conceito', target: '_self', 
             subItems: [
-                { text: 'O Conceito', url: '/Conceito' },
-                { text: 'Fidelidade', url: '/Fidelidade' },
-                { text: 'Estacionamento', url: 'https://www.google.com/maps/place/Av.+Visconde+do+Rio+Branco,+880+-+S%C3%A3o+Domingos,+Niter%C3%B3i+-+RJ,+24210-200/@-22.8982811,-43.1332801,17z/data=!3m1!4b1!4m6!3m5!1s0x9983e476739ca3:0x100a0ab61b58ef51!8m2!3d-22.8982861!4d-43.1307052!16s%2Fg%2F11pvbz_pzn?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D' },
-                { text: 'Trabalhe Conosco', url: 'TrabalheConosco' },
-                { text: 'Contato', url: '/Contato' }
+                { text: 'O Conceito', url: '/Conceito', target: '_self' },
+                { text: 'Fidelidade', url: '/Fidelidade', target: '_self' },
+                { text: 'Estacionamento', url: 'https://www.google.com/maps/place/Av.+Visconde+do+Rio+Branco,+880+-+S%C3%A3o+Domingos,+Niter%C3%B3i+-+RJ,+24210-200/@-22.8982811,-43.1332801,17z/data=!3m1!4b1!4m6!3m5!1s0x9983e476739ca3:0x100a0ab61b58ef51!8m2!3d-22.8982861!4d-43.1307052!16s%2Fg%2F11pvbz_pzn?entry=ttu&g_ep=EgoyMDI0MDkyMi4wIKXMDSoASAFQAw%3D%3D', target: '_blank' },
+                { text: 'Trabalhe Conosco', url: 'TrabalheConosco', target: '_self' },
+                { text: 'Contato', url: '/Contato', target: '_self' }
             ]
         }
     ];
@@ -56,7 +56,7 @@ const NavBar = () => {
                     <ul className={styles.subMenu}>
                         {item.subItems.map((subItem, index) => (
                             <li key={index}>
-                                <a className={styles.subNavLink} href={subItem.url}>
+                                <a className={styles.subNavLink} href={subItem.url} target={subItem.target}>
                                     {subItem.text}
                                 </a>
                             </li>
