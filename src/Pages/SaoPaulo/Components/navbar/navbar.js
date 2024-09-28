@@ -10,7 +10,7 @@ const NavBar = () => {
 
     const navItems = [
         { 
-            id: 1, text: 'Programação', url: '#em_cartaz', target: '_self',
+            id: 1, text: 'Programação', url: '/SãoPaulo#em_cartaz', target: '_self',
             subItems: [
                 { text: 'Em Cartaz', url: '/SãoPaulo/#em_cartaz', target: '_self',},
                 { text: 'Ingressos', url: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo', target: '_blank',},

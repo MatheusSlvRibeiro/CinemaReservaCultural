@@ -24,6 +24,7 @@ import GuiaSp from './Pages/SaoPaulo/Páginas/Guia/guiaSp';
 import MeiaEntradaSp from './Pages/SaoPaulo/Páginas/MeiaEntrada/MeiaEntradaSp';
 import TrabalheConoscoSp from './Pages/SaoPaulo/Páginas/TrabalheConosco/TrabalheConoscoSp';
 import ContatoSp from './Pages/SaoPaulo/Páginas/Contato/ContatoSp';
+import ParceriasSp from './Pages/SaoPaulo/Páginas/Parcerias/ParceriasSp';
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
         <Route path='/MeiaEntradaSp' element={<MeiaEntradaSp />} />
         <Route path='/TrabalheConoscoSp' element={<TrabalheConoscoSp />} />
         <Route path='/ContatoSp' element={<ContatoSp />} />
-        
+        <Route path='/ParceriasSp' element={<ParceriasSp />} />        
 
         <Route path="/niteroi" element={<Niteroi/>} />
         <Route path='/Conceito' element={<Conceito />} />
