@@ -4,8 +4,10 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import Home from './Pages/main/home/Home';
+import Admin from './Pages/admin';
 import Niteroi from './Pages/main/niteroi';
 import SaoPaulo from './Pages/main/SaoPaulo';
+
 import Conceito from './Pages/secondary/Conceito/Conceito';
 import Tarifas from './Pages/secondary/Tarifas/Tarifas';
 import Fidelidade from './Pages/secondary/Fidelidade/Fidelidade';
@@ -20,8 +22,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path='/Admin' element={<Admin/>}/>
           <Route path="/SãoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
+          
           <Route path='/Conceito' element={<Conceito />} />
           <Route path='/tarifas' element={<Tarifas />} />
           <Route path='/Fidelidade' element={<Fidelidade />} />

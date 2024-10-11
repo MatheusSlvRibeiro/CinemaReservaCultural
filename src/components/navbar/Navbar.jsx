@@ -14,9 +14,9 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
             subItems: [
                 { text: 'Em Cartaz', url: '/SãoPaulo/#em_cartaz', target: '_self',},
                 { text: 'Ingressos', url: ingressos, target: '_blank',},
-                { text: 'Tarifas', url: '/TarifasSp', target: '_self',},
-                { text: 'Meia-entrada', url: '/MeiaEntradaSp', target: '_self',},
-                { text: 'Guia do Bom Espectador', url: '/GuiaSp', target: '_self',}
+                { text: 'Tarifas', url: '/Tarifas', target: '_self',},
+                { text: 'Meia-entrada', url: '/MeiaEntrada', target: '_self',},
+                { text: 'Guia do Bom Espectador', url: '/Guia', target: '_self',}
             ]
         },
         { 

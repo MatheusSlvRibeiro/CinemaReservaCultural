@@ -1,0 +1,36 @@
+.AdminContainer{
+      width: 100%;
+      margin: 0;
+      padding: 2rem;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+}
+
+.Lista{
+      justify-content: flex-start;
+}
+
+.Title{
+      align-items: center;
+      padding: 1rem 1rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+}
+
+.navItem{
+      font-size: 1.2rem;
+      padding: 1rem;
+      border-radius: 0.3rem;
+}
+
+.navItem:hover{
+      background-color: var(--main-bg-color);
+      cursor: pointer;
+}
+
+.NavIcon{
+      font-size: 1rem;
+      margin-right: 1rem;
+}
