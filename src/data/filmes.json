@@ -1,0 +1,11 @@
+{
+    "saoPaulo": [
+        {"titulo": "coringa: delírio a dois", "faixaEtaria": "16"},
+        {"titulo": "banel & adama", "faixaEtaria": "14"},
+        {"titulo": "pasárgada", "faixaEtaria": "14"}
+    ],
+
+    "niteroi": [
+        {"titulo": "coringa: delirio a dois", "faixaEtaria": "16"}
+    ]
+}

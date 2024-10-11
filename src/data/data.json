@@ -1,0 +1,50 @@
+{
+  "saoPaulo": {
+    "cidade": "São Paulo",
+    "gastronomia": [
+      {
+        "titulo": "Buffet Pain de France",
+        "link": "https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view"
+      },
+      {
+        "titulo": "Bistrô Reserva",
+        "link": "https://api.whatsapp.com/send?phone=5511914339374"
+      }
+    ],
+    "redesSociais": {
+      "facebook": "https://www.facebook.com/ReservaCultural",
+      "instagram": "https://www.instagram.com/reserva_cultural/",
+      "tikTok": "https://www.tiktok.com/@reservaculturalsp?_t=8oxvb6yoyzu&_r=1"
+    },
+    "estacionamento": "https://maps.app.goo.gl/kcZUxG6SD2hTwkK57",
+    "endereço": "Avenida Paulista, 900 - Térreo Baixo",
+    "endereçoUrl": "https://www.google.com.br/maps/place/Reserva+Cultural/",
+    "ingressos": "https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo"
+  },
+
+  "niteroi": {
+    "cidade": "Niterói",
+    "gastronomia": [
+        {
+            "titulo": "Brasserie Reserva",
+            "link": "https://www.instagram.com/brasseriereserva/"
+        },
+        {
+            "titulo": "Mahatma pizza",
+            "link": "https://www.instagram.com/mahatmapizza/"
+        },
+        {
+            "titulo": "DropBurger",
+            "link": "https://www.instagram.com/dropburger/"
+        }
+    ],
+    "redesSociais": {
+        "facebook": "https://www.facebook.com/ReservaCulturalNiteroi/",
+        "instagram": "https://www.instagram.com/reservaculturalniteroi/",
+        "tikTok": "https://www.tiktok.com/@reservaculturalniteroi"
+    },
+    "estacionamento": "https://maps.app.goo.gl/UBhk3zh8Jaenuhv27",
+    "endereço": "Av. Visconde do Rio Branco, 880 - São Domingos",
+    "ingressos": "https://www.ingresso.com/cinema/cinema-reserva-cultural-niteroi?city=niteroi"
+  }
+}
