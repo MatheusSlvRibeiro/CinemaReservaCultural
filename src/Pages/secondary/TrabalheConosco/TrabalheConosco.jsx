@@ -16,7 +16,7 @@ function TrabalheConosco (){
   return (
     <div>
       <Navbar 
-                cidade={data.saoPaulo.cidade}/>
+        cidade={data.saoPaulo.cidade}/>
       <div className={Styles.content}>
         <div className={Styles.aside}>
           <img src="images/Logo_reserva01.png" alt="" />

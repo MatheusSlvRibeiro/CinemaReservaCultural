@@ -4,7 +4,9 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import Home from './Pages/main/home/Home';
-import Admin from './Pages/admin';
+import Admin from './Pages/admin/admin';
+import Login from './Pages/admin/login/login'
+
 import Niteroi from './Pages/main/niteroi';
 import SaoPaulo from './Pages/main/SaoPaulo';
 
@@ -21,8 +23,10 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path='/Admin' element={<Admin/>}/>
+          <Route path='/LoginAdmin' element={<Login/>}/>
+
+          <Route path="/" element={<Home />} />
           <Route path="/SãoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
           

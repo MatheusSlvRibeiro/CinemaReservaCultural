@@ -1,0 +1,12 @@
+{
+    "admins":[
+        {
+            "username": "reservaSaopaulo",
+            "password": "@Admin2002"
+        },
+        {
+            "username": "reservaNiteroi",
+            "password": "@Admin2022"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 .AdminContainer{
       width: 100%;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       height: 100vh;
       display: flex;
       flex-direction: row;
@@ -9,7 +9,7 @@
 }
 
 .Lista{
-      justify-content: flex-start;
+      padding: 2rem;
 }
 
 .Title{
@@ -21,7 +21,7 @@
 
 .navItem{
       font-size: 1.2rem;
-      padding: 1rem;
+      padding: 1.5rem 0.5rem;
       border-radius: 0.3rem;
 }
 
@@ -33,4 +33,20 @@
 .NavIcon{
       font-size: 1rem;
       margin-right: 1rem;
+}
+
+.buttonLeave{
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0.5rem;
+}
+.buttonLeave:hover{
+      cursor: pointer;
+      color: rgb(145, 145, 145);
+}
+
+.bside{
+      background-color: #fff;
+      width: 80%;
 }

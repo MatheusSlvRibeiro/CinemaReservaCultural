@@ -1,0 +1,54 @@
+.loginContainer{
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    padding: 3rem;
+}
+
+.loginContainer img{
+    width: 15rem;
+}
+
+.subtitle{
+    margin: 1rem;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.labelForm{
+    font-size: 1.4rem;
+}
+
+.inputGroup{
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+input[type="text"],
+input[type="password"]{
+    width: 100%;
+    margin: 1rem 0;
+    outline: none;
+}
+
+.submit {
+    margin-top: 1rem;
+    width: 50%;
+    padding: 0.8rem 2rem;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #dfbe05;
+}

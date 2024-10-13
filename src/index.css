@@ -71,6 +71,40 @@ article{
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
+span {
+  background-color: var(--main-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  color: black;
+}
+
+span a {
+  color: black;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+form {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
 /*==================== SCROLLBAR ====================*/
 ::-webkit-scrollbar{
   width: 10px;
