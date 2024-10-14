@@ -52,3 +52,14 @@ input[type="password"]{
 .submit:hover {
     background-color: #dfbe05;
 }
+
+@media (max-width: 400px) {
+    .loginContainer{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 3rem;
+    }
+}

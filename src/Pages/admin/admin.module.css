@@ -1,17 +1,31 @@
 .AdminContainer{
+      display: flex;
+      flex-direction: row;
       width: 100%;
       margin: 0;
       padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+}
+
+.Nav{
+      background-color: var(--main-bg-color-dark);
       height: 100vh;
+      position: fixed;
+      left: 0;
       display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
 }
 
 .Lista{
-      padding: 2rem;
+     padding: 2rem;
 }
 
+.logoReserva{
+      margin: 2rem;
+      max-width: 160px;
+}
 .Title{
       align-items: center;
       padding: 1rem 1rem;
@@ -19,15 +33,22 @@
       margin-bottom: 1rem;
 }
 
-.navItem{
-      font-size: 1.2rem;
-      padding: 1.5rem 0.5rem;
-      border-radius: 0.3rem;
+.NavButton{
+      width: 100%;
+      border-radius: 0.5rem;
+      background: none;
+      border: none;
+      color: var(--main-text-color);
+      font: inherit;
+      cursor: pointer;
+      padding: 1.5rem 1rem;
+      text-align: left;
+      display: flex;
+      align-items: center;
 }
 
-.navItem:hover{
+.NavButton:hover{
       background-color: var(--main-bg-color);
-      cursor: pointer;
 }
 
 .NavIcon{
@@ -35,18 +56,7 @@
       margin-right: 1rem;
 }
 
-.buttonLeave{
-      border: none;
-      border-radius: 0.5rem;
-      padding: 1rem;
-      margin: 1rem 0.5rem;
-}
-.buttonLeave:hover{
-      cursor: pointer;
-      color: rgb(145, 145, 145);
-}
-
 .bside{
-      background-color: #fff;
-      width: 80%;
+      margin-left: 250px;
+      width: 100%;
 }
