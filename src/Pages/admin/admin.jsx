@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faFilm, faClock, faInfoCircle, faUserCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Styles from "./admin.module.css";
 import EmCartazAdmin from "./em cartaz/emcartaz"; 
+import Administradores from "./administradores/administradores";
 
 function Admin() {
    const navigate = useNavigate();
@@ -80,10 +81,7 @@ function Admin() {
                </div>}
             
             {activeSection === "administradores" && 
-               <div>
-                  <h2>Administradores</h2>
-                  <p>Gerenciamento de administradores.</p>
-               </div>}
+               <Administradores />}
          </div>
       </article>
    );

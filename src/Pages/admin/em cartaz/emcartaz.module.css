@@ -2,21 +2,95 @@
     background-color: var(--main-bg-color);
     border-radius: 0;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
 .navBar{
-    justify-content: space-between;
+    justify-content: flex-end;
     display: flex;
     flex-direction: row;
     background-color: var(--main-bg-color-dark);
     padding: 1.3rem;
-    position: fixed;
     top: 0;
-    width: 1100px;
 }
 
-.navBar h2{
+.citySelect label{
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.citySelect select{
+    border-radius: 0.2rem;
+    border: 0;
+    outline: 0;
+    padding: 0.2rem;
+    color: var(--main-bg-color-dark);
+}
+
+.tabela{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabela h2{
+    padding: 1.5rem;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.movieTable {
+    width: 60%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.tableRow {
+        font-size: 1.1rem;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.tableHeaderCell, .tableCell {
+    padding: 1rem;
+    text-align: center;
+}
+
+.tableHeaderCell {
+    font-weight: bold;
+    background-color: #fff;
+    color: var(--main-bg-color-dark);
+}
+
+.tableCell {
+    font-size: 1.1rem;
+    background-color: var(--main-bg-color);
+}
+
+.button{
+    padding: 0.3rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: auto 0.4rem;
+}
+
+.button:hover{
+    background-color: var(--main-color);
+}
+
+.AddButton{
+    border: none;
+    border-radius: 0.3rem;
+    font-weight: 550;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 1.5rem 0.2rem;
+    cursor: pointer;
+}
+
+.AddButton:hover{
+    background-color: var(--main-color);
 }

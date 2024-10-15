@@ -1,0 +1,15 @@
+.divContainer{
+    background-color: var(--main-bg-color);
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-bg-color-dark);
+    padding: 1.3rem;
+}
