@@ -1,12 +1,13 @@
 {
     "saoPaulo": [
-      { "titulo": "Coringa: Delírio a Dois", "faixaEtaria": "16" },
-      { "titulo": "Banel & Adama", "faixaEtaria": "14" },
-      { "titulo": "Pasárgada", "faixaEtaria": "14" }
+      { "titulo": "Coringa: Delírio a Dois", "faixaEtaria": "16", "status": "Habilitado" },
+      { "titulo": "Banel & Adama", "faixaEtaria": "14", "status": "Habilitado"},
+      { "titulo": "Pasárgada", "faixaEtaria": "14", "status": "Habilitado" }
     ],
     "niteroi": [
-      { "titulo": "Coringa: Delírio a Dois", "faixaEtaria": "16" },
-      { "titulo": "Banel & Adama", "faixaEtaria": "14" }
+      { "titulo": "Coringa: Delírio a Dois", "faixaEtaria": "16", "status": "Habilitado" },
+      { "titulo": "Banel & Adama", "faixaEtaria": "14", "status": "Habilitado" },
+      { "titulo": "Pasárgada", "faixaEtaria": "14", "status": "Desabilitado" }
     ]
   }
   

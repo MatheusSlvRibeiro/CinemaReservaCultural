@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserShield, faFilm, faClock, faInfoCircle, faUserCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUserShield, faFilm, faInfoCircle, faUserCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Styles from "./admin.module.css";
 import EmCartazAdmin from "./em cartaz/emcartaz"; 
 import Administradores from "./administradores/administradores";
@@ -28,14 +28,6 @@ function Admin() {
                         onClick={() => setActiveSection("emCartaz")}
                      >
                         <FontAwesomeIcon icon={faFilm} className={Styles.NavIcon}/> Em cartaz
-                     </button>
-                  </li>
-                  <li className={Styles.navItem}>
-                     <button 
-                        className={Styles.NavButton} 
-                        onClick={() => setActiveSection("emBreve")}
-                     >
-                        <FontAwesomeIcon icon={faClock} className={Styles.NavIcon}/> Em breve
                      </button>
                   </li>
                   <li className={Styles.navItem}>
@@ -68,11 +60,6 @@ function Admin() {
             {activeSection === "emCartaz" && 
                <EmCartazAdmin />
                }
-            
-            {activeSection === "emBreve" && 
-               <div><h2>Em breve</h2>
-                  <p>Conteúdo de lançamentos futuros.</p>
-               </div>}
             
             {activeSection === "infoGerais" && 
                <div>

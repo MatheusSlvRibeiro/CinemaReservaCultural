@@ -1,31 +1,68 @@
-import React, { useState } from "react";
-import NowPlaying from "../../../components/PlayingNow/PlayingNow";
-import Styles from './emcartaz.module.css';
-import filmes from '../../../data/filmes.json';
+import React, { useState, useEffect } from 'react';
+import { DataTable } from 'primereact/datatable';
+import { Column } from 'primereact/column';
+import { InputText } from 'primereact/inputtext';
+import { Dropdown } from 'primereact/dropdown';
+import { Tag } from 'primereact/tag';
+import Styles from './emcartaz.module.css'; 
+import filmesJson from '../../../data/filmes.json';
 
-function EmCartazAdmin() {
-    const [selectedCity, setSelectedCity] = useState("saoPaulo");
+export default function FilmesAdmin() {
+    const [filmes, setFilmes] = useState([]);
+    const [statuses] = useState(['Habilitado', 'Desabilitado']);
+    const [selectedCity, setSelectedCity] = useState('saoPaulo');
+
+    useEffect(() => {
+        if (selectedCity in filmesJson) {
+            setFilmes(filmesJson[selectedCity]);
+        }
+    }, [selectedCity]);
 
     const handleCityChange = (city) => {
         setSelectedCity(city);
     };
 
-    const handleAdd = () => {
-        console.log("Adicionar filme");
+    const getSeverity = (value) => {
+        switch (value) {
+            case 'Habilitado':
+                return 'success';
+            case 'Desabilitado':
+                return 'danger';
+            default:
+                return null;
+        }
     };
 
-    const handleEdit = () => {
-        console.log("Editar filme");
+    const onRowEditComplete = (e) => {
+        let _filmes = [...filmes];
+        let { newData, index } = e;
+
+        _filmes[index] = newData;
+        setFilmes(_filmes);
     };
 
-    const handleDelete = () => {
-        console.log("Excluir filme");
+    const textEditor = (options) => {
+        return <InputText type="text" value={options.value} onChange={(e) => options.editorCallback(e.target.value)} />;
     };
 
-    const filmesCidade = filmes[selectedCity] || [];
+    const statusEditor = (options) => {
+        return (
+            <Dropdown
+                value={options.value}
+                options={statuses}
+                onChange={(e) => options.editorCallback(e.value)}
+                placeholder="Selecione o Status"
+                itemTemplate={(option) => <Tag value={option} severity={getSeverity(option)} />}
+            />
+        );
+    };
+
+    const statusBodyTemplate = (rowData) => {
+        return <Tag value={rowData.status} severity={getSeverity(rowData.status)} />;
+    };
 
     return (
-        <article className={Styles.divContainer}>
+        <div className="card p-fluid">
             <nav className={Styles.navBar}>
                 <div className={Styles.citySelect}>
                     <label htmlFor="city">Selecione a unidade: </label>
@@ -37,55 +74,37 @@ function EmCartazAdmin() {
                 </div>
             </nav>
 
-            <div className={Styles.tabela}>  
-                <h2>Filmes cadastrados no sistema</h2>
-                {filmesCidade.length > 0 ? (
-                    <table className={Styles.movieTable}>
-                        <thead className={Styles.tableHeader}>
-                            <tr className={Styles.tableRow}>
-                                <th className={Styles.tableHeaderCell}>Título</th>
-                                <th className={Styles.tableHeaderCell}>Faixa Etária</th>
-                                <th className={Styles.tableHeaderCell}>Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody className={Styles.tableBody}>
-                            {filmesCidade.map((filme, index) => (
-                                <tr key={index} className={Styles.tableRow}>
-                                    <td className={Styles.tableCellTitle}>{filme.titulo}</td>
-                                    <td className={Styles.tableCell}>{filme.faixaEtaria}</td>
-                                    <td className={Styles.tableCell}>
-                                    <button 
-                                            className={Styles.button} 
-                                            onClick={() => handleEdit(filme)}
-                                        >
-                                            Editar
-                                        </button>
-                                        <button 
-                                            className={Styles.button} 
-                                            onClick={() => handleDelete(filme)}
-                                        >
-                                            Remover
-                                        </button> 
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                ) : (
-                    <p>Nenhum filme disponível para a cidade selecionada.</p>
-                )}
-                <div className={Styles.buttonContainer}>
-        <button 
-            className={Styles.AddButton} 
-            onClick={() => handleAdd()}
-        >
-            Adicionar filmes
-        </button>
-    </div>
-            </div>
-            <NowPlaying cidade={selectedCity} />
-        </article>
+            <DataTable 
+                value={filmes} 
+                editMode="row" 
+                dataKey="titulo" 
+                onRowEditComplete={onRowEditComplete} 
+                tableStyle={{ minWidth: '50rem' }}>
+                
+                    <Column 
+                        field="titulo" 
+                        header="Título" 
+                        editor={(options) => textEditor(options)} 
+                        style={{ width: '40%' }} />
+
+                    <Column 
+                        field="faixaEtaria" 
+                        header="Faixa Etária" 
+                        editor={(options) => textEditor(options)} 
+                        style={{ width: '20%' }} />
+                
+                    <Column 
+                        field="status" 
+                        header="Status" 
+                        body={statusBodyTemplate} 
+                        editor={(options) => statusEditor(options)} 
+                        style={{ width: '20%' }} />
+                
+                    <Column 
+                        rowEditor 
+                        headerStyle={{ width: '10%' }} 
+                        bodyStyle={{ textAlign: 'center' }} />
+            </DataTable>
+        </div>
     );
 }
-
-export default EmCartazAdmin;
