@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faFilm, faInfoCircle, faUserCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Styles from "./admin.module.css";
-import EmCartazAdmin from "./em cartaz/emcartaz"; 
-import Administradores from "./administradores/administradores";
+import DataTableMovies from "../../components/DataTable/DataTable";
 
 function Admin() {
    const navigate = useNavigate();
@@ -58,17 +57,12 @@ function Admin() {
          </div>
          <div className={Styles.bside}>
             {activeSection === "emCartaz" && 
-               <EmCartazAdmin />
+               <DataTableMovies />
                }
             
-            {activeSection === "infoGerais" && 
-               <div>
-                  <h2>Informações Gerais</h2>
-                  <p>Informações sobre o cinema.</p>
-               </div>}
+            {activeSection === "infoGerais"}
             
-            {activeSection === "administradores" && 
-               <Administradores />}
+            {activeSection === "administradores"}
          </div>
       </article>
    );
