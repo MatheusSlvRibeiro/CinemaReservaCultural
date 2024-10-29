@@ -48,7 +48,7 @@ function Login() {
                 src={require('../../../images/reservaCultural/logoReservaCultural.png')} 
                 alt="Logo Reserva Cultural" 
             />
-            <h2 className={Styles.subtitle}>Login</h2>
+            <h2 className={Styles.subtitle}>Entrar</h2>
             <form className={Styles.form} onSubmit={handleSubmit} noValidate>
                 <div className={Styles.inputGroup}>
                     <label 

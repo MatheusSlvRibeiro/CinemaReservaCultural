@@ -13,11 +13,15 @@
 
 .subtitle{
     margin: 1rem;
+    font-weight: 400;
+    color: var(--main-text-color);
 }
 
 .form{
+    color: var(--main-text-color);
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }

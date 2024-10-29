@@ -26,11 +26,11 @@ export default function DataTableMovies() {
     const [filmes, setFilmes] = useState(null);
     const [selectedCity, setSelectedCity] = useState('saoPaulo');
 
-    const [productDialog, setProductDialog] = useState(false);
-    const [deleteProductDialog, setDeleteProductDialog] = useState(false);
-    const [deleteProductsDialog, setDeleteProductsDialog] = useState(false);
+    const [movieDialog, setmovieDialog] = useState(false);
+    const [deletemovieDialog, setDeletemovieDialog] = useState(false);
+    const [deletemoviesDialog, setDeletemoviesDialog] = useState(false);
     const [filme, setFilme] = useState(filmeVazio);
-    const [selectedProducts, setSelectedProducts] = useState(null);
+    const [selectedmovies, setSelectedmovies] = useState(null);
     const [submitted, setSubmitted] = useState(false);
     const [globalFilter, setGlobalFilter] = useState(null);
     const toast = useRef(null);
@@ -45,33 +45,27 @@ export default function DataTableMovies() {
     const handleCityChange = (city) => {
         setSelectedCity(city);
     }
-    
-    useEffect(() => {
-        if (selectedCity in filmesJson) {
-            setFilmes(filmesJson[selectedCity]);
-        }
-    }, [selectedCity]);
 
     const openNew = () => {
         setFilme(filmeVazio);
         setSubmitted(false);
-        setProductDialog(true);
+        setmovieDialog(true);
     };
 
     const hideDialog = () => {
         setSubmitted(false);
-        setProductDialog(false);
+        setmovieDialog(false);
     };
 
-    const hideDeleteProductDialog = () => {
-        setDeleteProductDialog(false);
+    const hideDeletemovieDialog = () => {
+        setDeletemovieDialog(false);
     };
 
-    const hideDeleteProductsDialog = () => {
-        setDeleteProductsDialog(false);
+    const hideDeletemoviesDialog = () => {
+        setDeletemoviesDialog(false);
     };
 
-    const saveProduct = () => {
+    const savemovie = () => {
         setSubmitted(true);
 
         if (filme.titulo.trim()) {
@@ -90,19 +84,19 @@ export default function DataTableMovies() {
             }
 
             setFilmes(_filmes);
-            setProductDialog(false);
+            setmovieDialog(false);
             setFilme(filmeVazio);
         }
     };
 
     const editFilme = (filme) => {
         setFilme({ ...filme });
-        setProductDialog(true);
+        setmovieDialog(true);
     };
 
-    const confirmDeleteProduct = (filme) => {
+    const confirmDeletemovie = (filme) => {
         setFilme(filme);
-        setDeleteProductDialog(true);
+        setDeletemovieDialog(true);
     };
 
     const statusEditor = (options) => {
@@ -113,11 +107,11 @@ export default function DataTableMovies() {
         );
     };    
 
-    const deleteProduct = () => {
+    const deletemovie = () => {
         let _filmes = filmes.filter((val) => val.id !== filme.id);
 
         setFilmes(_filmes);
-        setDeleteProductDialog(false);
+        setDeletemovieDialog(false);
         setFilme(filmeVazio);
         toast.current.show({ severity: 'success', summary: 'bem-sucedido', detail: 'Filme deletado', life: 3000 });
     };
@@ -151,15 +145,15 @@ export default function DataTableMovies() {
     };
 
     const confirmDeleteSelected = () => {
-        setDeleteProductsDialog(true);
+        setDeletemoviesDialog(true);
     };
 
-    const deleteSelectedProducts = () => {
-        let _filmes = filmes.filter((val) => !selectedProducts.includes(val));
+    const deleteSelectedmovies = () => {
+        let _filmes = filmes.filter((val) => !selectedmovies.includes(val));
 
         setFilmes(_filmes);
-        setDeleteProductsDialog(false);
-        setSelectedProducts(null);
+        setDeletemoviesDialog(false);
+        setSelectedmovies(null);
         toast.current.show({ severity: 'success', summary: 'Bem-sucedido', detail: 'Filmes deletados', life: 3000 });
     };
 
@@ -185,7 +179,7 @@ export default function DataTableMovies() {
         return (
             <div className="flex flex-wrap gap-2">
                 <Button label="Adicionar" icon="pi pi-plus" severity="success" onClick={openNew} />
-                <Button label="Excluir" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedProducts || !selectedProducts.length} />
+                <Button label="Excluir" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedmovies || !selectedmovies.length} />
             </div>
         );
     };
@@ -202,7 +196,7 @@ export default function DataTableMovies() {
         return (
             <React.Fragment>
                 <Button icon="pi pi-pencil" rounded outlined className="mr-2" onClick={() => editFilme(rowData)} />
-                <Button icon="pi pi-trash" rounded outlined severity="danger" onClick={() => confirmDeleteProduct(rowData)} />
+                <Button icon="pi pi-trash" rounded outlined severity="danger" onClick={() => confirmDeletemovie(rowData)} />
             </React.Fragment>
         );
     };
@@ -222,29 +216,29 @@ export default function DataTableMovies() {
 
     const header = (
         <div className="flex flex-wrap gap-2 align-items-center justify-content-between">
-            <h4 className="m-0">Gestão do catálogo</h4>
+            <h4 className="m-0">Gestão do catálogo - {selectedCity}</h4>
             <IconField iconPosition="left">
                 <InputIcon className="pi pi-search" />
                 <InputText type="search" onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Pesquisar..." />
             </IconField>
         </div>
     );
-    const productDialogFooter = (
+    const movieDialogFooter = (
         <React.Fragment>
             <Button label="Cancelar" icon="pi pi-times" outlined onClick={hideDialog} />
-            <Button label="Salvar" icon="pi pi-check" onClick={saveProduct} />
+            <Button label="Salvar" icon="pi pi-check" onClick={savemovie} />
         </React.Fragment>
     );
-    const deleteProductDialogFooter = (
+    const deletemovieDialogFooter = (
         <React.Fragment>
-            <Button label="Não" icon="pi pi-times" outlined onClick={hideDeleteProductDialog} />
-            <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deleteProduct} />
+            <Button label="Não" icon="pi pi-times" outlined onClick={hideDeletemovieDialog} />
+            <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deletemovie} />
         </React.Fragment>
     );
-    const deleteProductsDialogFooter = (
+    const deletemoviesDialogFooter = (
         <React.Fragment>
-            <Button label="Não" icon="pi pi-times" outlined onClick={hideDeleteProductsDialog} />
-            <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deleteSelectedProducts} />
+            <Button label="Não" icon="pi pi-times" outlined onClick={hideDeletemoviesDialog} />
+            <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deleteSelectedmovies} />
         </React.Fragment>
     );
 
@@ -269,14 +263,14 @@ export default function DataTableMovies() {
                 <DataTable 
                     ref={dt} 
                     value={filmes} 
-                    selection={selectedProducts} 
-                    onSelectionChange={(e) => setSelectedProducts(e.value)}
+                    selection={selectedmovies} 
+                    onSelectionChange={(e) => setSelectedmovies(e.value)}
                     dataKey="id"  
                     paginator 
                     rows={5} 
                     rowsPerPageOptions={[5, 10, 25]}
                     paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} products" 
+                    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} movies" 
                     globalFilter={globalFilter} 
                     header={header}>
                     
@@ -286,20 +280,22 @@ export default function DataTableMovies() {
                     
                     <Column field="titulo" header="Titulo" sortable style={{ minWidth: '16rem' }}></Column>
                     
-                    <Column field="status" header="Status" body={statusBodyTemplate} sortable style={{ minWidth: '12rem' }}></Column>
+                    <Column field="status" header="Status" body={statusBodyTemplate} sortable style={{ minWidth: '8rem' }}></Column>
                     
+                    <Column field="faixaEtaria" header="Classificação" sortable style={{ minWidth: '10rem'}}></Column>
+
                     <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '12rem' }}></Column>
                 </DataTable>
             </div>
 
             <Dialog 
-                visible={productDialog} 
+                visible={movieDialog} 
                 style={{ width: '32rem' }} 
                 breakpoints={{ '960px': '75vw', '641px': '90vw' }} 
                 header="Detalhes do filme" 
                 modal 
                 className="p-fluid" 
-                footer={productDialogFooter} 
+                footer={movieDialogFooter} 
                 onHide={hideDialog}>
                 
                 <div className="field">
@@ -320,16 +316,24 @@ export default function DataTableMovies() {
                     <label htmlFor="status" className="font-bold">
                         Status
                     </label>
-                    <InputText
-                        id="status" 
-                        value={filme.status} 
-                        onChange={(e) => onInputChange(e, 'status')} 
-                        required 
-                        autoFocus
-                        editor={(options) => statusEditor(options)} 
-                        className={classNames({ 'p-invalid': submitted && !filme.status})} />
-                    {submitted && !filme.status&& <small className="p-error">Nome é obrigatório</small>}
+                    <select
+                        id="status"
+                        value={filme.status}
+                        onChange={(e) => onInputChange(e, 'status')}
+                        required
+                        editor={(options) => statusEditor(options)}
+                        className={classNames({ 'p-invalid': submitted && !filme.status })}
+                        style={{display: 'flex', padding: '0.5rem', outline: 'none',}}
+                    >
+                        <option value="">Selecione o status</option>
+                        <option value="Habilitado">Habilitado</option>
+                        <option value="Desabilitado">Desabilitado</option>
+                    </select>
+                    {submitted && !filme.status && (
+                        <small className="p-error">Status é obrigatório</small>
+                    )}
                 </div>
+
 
                 <div className="formgrid grid">
                     <div className="field col">
@@ -346,13 +350,13 @@ export default function DataTableMovies() {
             </Dialog>
 
             <Dialog 
-                visible={deleteProductDialog} 
+                visible={deletemovieDialog} 
                 style={{ width: '32rem' }} 
                 breakpoints={{ '960px': '75vw', '641px': '90vw' }} 
                 header="Confirmar exclusão" 
                 modal 
-                footer={deleteProductDialogFooter} 
-                onHide={hideDeleteProductDialog}>
+                footer={deletemovieDialogFooter} 
+                onHide={hideDeletemovieDialog}>
                 
                 <div className="confirmation-content">
                     <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
@@ -365,13 +369,13 @@ export default function DataTableMovies() {
             </Dialog>
 
             <Dialog 
-                visible={deleteProductsDialog} 
+                visible={deletemoviesDialog} 
                 style={{ width: '32rem' }} 
                 breakpoints={{ '960px': '75vw', '641px': '90vw' }} 
                 header="Confirmar exclusões" 
                 modal 
-                footer={deleteProductsDialogFooter} 
-                onHide={hideDeleteProductsDialog}>
+                footer={deletemoviesDialogFooter} 
+                onHide={hideDeletemoviesDialog}>
                 
                 <div className="confirmation-content">
                     <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />

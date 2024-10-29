@@ -9,6 +9,7 @@
 }
 
 .Nav{
+      color: white;
       background-color: var(--main-bg-color-dark);
       height: 100vh;
       position: fixed;

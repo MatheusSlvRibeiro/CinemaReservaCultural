@@ -56,9 +56,7 @@ function Admin() {
             </nav>
          </div>
          <div className={Styles.bside}>
-            {activeSection === "emCartaz" && 
-               <DataTableMovies />
-               }
+            {activeSection === "emCartaz" && <DataTableMovies />}
             
             {activeSection === "infoGerais"}
             
