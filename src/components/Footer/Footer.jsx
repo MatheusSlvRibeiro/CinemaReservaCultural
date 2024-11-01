@@ -62,8 +62,8 @@ const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastrono
                 Eventos
               </h3>
               <ul className={openColumn === 2 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="#em_cartaz">Eventos Realizados</a></li>
-                <li><a className={Styles.column_item} href="#em_cartaz">Parcerias</a></li>
+                <li><a className={Styles.column_item} href="/">Eventos Realizados</a></li>
+                <li><a className={Styles.column_item} href="/">Parcerias</a></li>
               </ul>
             </div>
 

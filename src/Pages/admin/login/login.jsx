@@ -45,7 +45,7 @@ function Login() {
     return (
         <article className={Styles.loginContainer}>
             <img 
-                src={require('../../../images/reservaCultural/logoReservaCultural.png')} 
+                src="/images/logoReservaCultural.png" 
                 alt="Logo Reserva Cultural" 
             />
             <h2 className={Styles.subtitle}>Login</h2>

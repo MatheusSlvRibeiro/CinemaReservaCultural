@@ -27,7 +27,7 @@ function App() {
           <Route path='/LoginAdmin' element={<Login/>}/>
 
           <Route path="/" element={<Home />} />
-          <Route path="/SãoPaulo" element={<SaoPaulo />} />
+          <Route path="/SaoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
           
           <Route path='/Conceito' element={<Conceito />} />

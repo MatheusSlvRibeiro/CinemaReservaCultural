@@ -1,0 +1,57 @@
+[33mc0b83a4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: pull --rebase origin main: Fast-forward
+[33maf2c453[m HEAD@{1}: reset: moving to c0b83a4bbef2abb2fb53ea86f6c662fa0bf2eb11^
+[33maf2c453[m HEAD@{2}: reset: moving to HEAD~1
+[33m1117fe9[m[33m ([m[1;31morigin/release[m[33m, [m[1;32mrelease[m[33m)[m HEAD@{3}: checkout: moving from release to main
+[33m1117fe9[m[33m ([m[1;31morigin/release[m[33m, [m[1;32mrelease[m[33m)[m HEAD@{4}: checkout: moving from main to release
+[33m1117fe9[m[33m ([m[1;31morigin/release[m[33m, [m[1;32mrelease[m[33m)[m HEAD@{5}: commit: Corrigindo bugs
+[33maf2c453[m HEAD@{6}: reset: moving to af2c453f670313d3c1a8fc3d30e8fccae066d085
+[33mc0b83a4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{7}: commit: Criando server
+[33maf2c453[m HEAD@{8}: commit: Criando tabela de dados via React Prime
+[33mb3a39c3[m HEAD@{9}: commit: alterando tabela html para tabela react
+[33mb3d64bd[m HEAD@{10}: commit: Estilizando página admin/seção > embreve
+[33m4af143a[m HEAD@{11}: commit: Corrigindo bugs
+[33m91c326b[m HEAD@{12}: commit: Criando funcionalidades à página login
+[33m816ef43[m HEAD@{13}: pull: Fast-forward
+[33mef26f7c[m HEAD@{14}: commit: Reestruturando o site
+[33m3d51b02[m HEAD@{15}: commit: Criando página ParceriasSp-SP
+[33m2adea3d[m HEAD@{16}: commit: Adicionando Target em cada endereço na Navbar/RJ-SP
+[33mc72c6b7[m HEAD@{17}: commit: Corrigindo Href's no componente Info/RJ
+[33m9f508d4[m HEAD@{18}: commit: Corrigindo Footer
+[33me3b5a79[m HEAD@{19}: commit: Corrigindo Bugs
+[33m0c8720c[m HEAD@{20}: commit: Criando SubMenu para Navbar/RJ-SP
+[33mc09ae97[m HEAD@{21}: commit: Corrigindo endereço do cinema no footer/NITEROI
+[33m20fcbb4[m HEAD@{22}: commit: Organizando páginas e componentes
+[33m08b9851[m HEAD@{23}: commit: Corrigindo endereço de Gatronomia/NITEROI
+[33m8d3f5da[m HEAD@{24}: commit: Corrigind busg
+[33m1cf9d51[m HEAD@{25}: commit: Corrigindo componente News
+[33m6ee4def[m HEAD@{26}: commit: Corrigindo Estilização do componente location
+[33m18c9caa[m HEAD@{27}: pull: Fast-forward
+[33mc2032a8[m HEAD@{28}: commit: corrigindo estilo footer/RJ
+[33m57fc46f[m HEAD@{29}: commit: Corrigindo estilo de Slider/RJ-SP
+[33m66ba285[m HEAD@{30}: commit: Atualizando Footer/Niteroi
+[33m5eefa16[m HEAD@{31}: commit: Atualizando Artes de Componentes News/Niteroi
+[33m7d640cf[m HEAD@{32}: commit: Corrigindo Estilização página Home e componente navbar Rj/Sp
+[33m044e3fa[m HEAD@{33}: pull: Fast-forward
+[33m7fee13f[m HEAD@{34}: commit: Criando Variáveis para o site
+[33mf88ba03[m HEAD@{35}: commit: Criango página Home e estilizando
+[33m9c140c5[m HEAD@{36}: commit: Estilizando página
+[33m957e988[m HEAD@{37}: commit: Corrigindo Img loyalty
+[33m52e82b4[m HEAD@{38}: commit: Adicionando conteúdo à página Conceito e estilizando mudanças
+[33md1fbd10[m HEAD@{39}: commit: Concertando erros no estilo
+[33ma7406d8[m HEAD@{40}: commit: Estilizando página Conceito
+[33m58ff585[m HEAD@{41}: commit: recriando página conceito
+[33m252d9a9[m HEAD@{42}: commit: Integrando reCaptcha Google ao formulário 'Contato
+[33mf86af18[m HEAD@{43}: commit: Criando divisão para são paulo e niteroi
+[33mb7016af[m HEAD@{44}: commit: Criando funcionalidade para o componente Location
+[33m5b18cd9[m HEAD@{45}: commit: Estilizando página Contato para mobile
+[33m38c7b2e[m HEAD@{46}: commit: Criando e estilizando página contato
+[33mf924268[m HEAD@{47}: commit: Atualizando Slider principal
+[33m8d0addb[m HEAD@{48}: pull: Fast-forward
+[33m751c10d[m HEAD@{49}: commit: Corrigindo Links Footer
+[33m170bbea[m HEAD@{50}: commit: Estilizando página Meia-entrada
+[33m0a93111[m HEAD@{51}: pull: Fast-forward
+[33m02cc64f[m HEAD@{52}: commit: Adicionando novas informações à página Tarifas
+[33m3176418[m HEAD@{53}: pull: Fast-forward
+[33ma8cee14[m HEAD@{54}: commit: Criando a nova página 'Tarifas'
+[33m90d3ba0[m HEAD@{55}: commit: Ajustes na Navbar e na página Home
+[33mcb42904[m HEAD@{56}: clone: from https://github.com/MatheusSlvRibeiro/CinemaReservaCultural.git

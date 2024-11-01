@@ -5,9 +5,9 @@
     display: flex;
     flex-direction: row;
     bottom: 0;
-    margin-top: 5rem;
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.3);
+    padding: 5rem auto;
     justify-content: center;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.3);
 }
 
 /*footerTop{}*/
@@ -39,6 +39,10 @@
 
 .column_item:hover{
     color: var(--main-color);
+}
+
+.SocialMedia{
+    width: 100%;
 }
 
 .SocialMedia_icon{
@@ -130,30 +134,30 @@
         width: 100%;
     }
     .column{
-        background-color: var(--main-bg-color);
         width: 100%;
-        padding: 2rem 1rem;
+        margin: 0.2rem;
+        padding: 1.5rem 1rem;
         display: flex;
         flex-direction: column;
     }
+
     .column ul{
+        margin: -20px 0;
         padding: 1rem;
         display: none;
         padding-left: 0;
         transition: max-height 0.3s ease-out;
-        overflow: hidden;
-        max-height: 0;
     }
     .column ul.active{
         display: block;
-        max-height: 700px;
+        max-height: 260px;
     }
     .column_title{
         margin: 0;
         padding: 0rem 1rem;
         display: flex;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .column_item{
         margin: 1rem 0;

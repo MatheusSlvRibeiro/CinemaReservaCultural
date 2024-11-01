@@ -6,17 +6,17 @@ function Home () {
         <div>
             <article className={Styles.Article}>
             <div>
-                <img className={Styles.image} src={require("../../../images/reservaCultural/logoReservaCultural.png")} alt="Logo reserva cultural" />
+                <img className={Styles.image} src="/images/logoReservaCultural.png" alt="Logo reserva cultural" />
                 <h2 className={Styles.subtitle}>Escolha sua unidade de preferência </h2>
                 <div className={Styles.SideBySide}>
                     <div className={Styles.Object}>
                         <img className={Styles.Image} src="./images/ReservaSaopaulo.jpg" alt="Imagem da fachada do Reserva Cultural são paulo" />
-                        <a href="/SãoPaulo"><p>sao paulo - sp</p></a>
+                        <a href="/SaoPaulo"><p>sao paulo - sp</p></a>
                     </div>
                     
                     <div className={Styles.Object}>
                         <img className={Styles.Image} src="./images/ReservaNiteroi.jpg" alt="Imagem da fachada do Reserva Cultural niterói" />
-                        <a href="/niteroi">Niteroi - RJ</a>
+                        <a href="/Niteroi"><p>Niteroi - RJ</p></a>
                     </div>
                 </div>
             </div>

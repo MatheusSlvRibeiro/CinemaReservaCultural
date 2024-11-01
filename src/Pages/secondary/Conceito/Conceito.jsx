@@ -179,7 +179,7 @@ const Conceito = () => {
 
                     <p className={Styles.Paragraph}>Com mais de 1o anos de existência, o conceito único do cinema Reserva Cultural fez desta marca uma referência em São Paulo e agora no Brasil, não somente pela qualidade dos filmes exibidos, como também pelos espaços gastronômicos e eventos que oferece ao seu público, além da excelência dos seus serviços nas cidades onde atua. Definitivamente, o Reserva Cultural é bem mais que um cinema e a fidelidade dos seus frequentadores demostra isso todo dia.</p>
 
-                    <img className={Styles.Logo} src="/images/Logo_reserva01.png" alt="Logo do cinema reserva cultural" />
+                    <img className={Styles.Logo} src="/images/logoReservaCultural.png" alt="Logo do cinema reserva cultural" />
                 </div>
             </article>
             <Info />

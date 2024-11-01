@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from './navbar.module.css';
 import Logo from '../logo/logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faCaretDown, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -81,18 +81,17 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
                 {renderNavItems()}
             </ul>
 
-            {/* Código do Location diretamente aqui */}
             <div className={styles.LocationContainer}>
                 <div className={styles.Location} onClick={() => setDropdownOpen(!dropdownOpen)}>
-                    <img className={styles.Icon} src="/images/location.png" alt="Ícone de localização" />
+                <FontAwesomeIcon className={styles.Icon} icon={faLocationDot} aria-label="Ícone de localização" />
                     <h4 className={styles.State}>{cidade}</h4>
-                    <img className={styles.Arrow} src="/images/downArrow.png" alt="Seta para baixo" />
+                    <FontAwesomeIcon className={styles.Arrow} icon={faCaretDown} aria-label="Seta para baixo" />
                 </div>
 
                 {dropdownOpen && (
                     <div className={styles.Dropdown}>
                         <div className={styles.LocationItem}>
-                            <a href="/SãoPaulo" className={styles.LocationItem}>
+                            <a href="/saoPaulo">
                                 <h4>São Paulo - SP</h4>
                                 <p>Avenida Paulista, 900 - Térreo Baixo</p>
                             </a>

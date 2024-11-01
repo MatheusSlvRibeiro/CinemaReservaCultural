@@ -49,7 +49,7 @@ function Info() {
             <div className={Styles.Content}>
                 <Slider {...settings}>
                     <div className={Styles.Img}>
-                        <a href="/TarifasSp">
+                        <a href="/Tarifas">
                             <img
                                 src="/images/Meiaentrada.jpg"
                                 alt="Cartaz do cinema Reserva Cultural informando sobre o direito à meia-entrada de acordo com a Lei N° 12.933/2013, com ícones de pipoca, refrigerante, ingresso e um botão escrito Saiba Mais"
@@ -58,7 +58,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="/FidelidadeSp">
+                        <a href="/Fidelidade">
                             <img
                                 src="/images/Fidelidade.jpg"
                                 alt="Cartaz do programa de fidelidade do cinema Reserva Cultural com as seguintes informações: Ganhe 1 ingresso a cada 10 comprados; Adquira descontos em sessões especiais; Receba a programação semanal com novidades exclusivas."
@@ -67,7 +67,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="/guiaSp">
+                        <a href="/Guia">
                             <img
                                 src="/images/Guide.jpg"
                                 alt="Banner Guia do Bom Espectador com ícones de cinema e botão 'Saiba Mais"
@@ -76,7 +76,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="/ConceitoSp">
+                        <a href="/Conceito">
                             <img
                                 src="/images/post-1000x1000.jpg"
                                 alt="teste"/>

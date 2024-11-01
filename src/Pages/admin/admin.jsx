@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faFilm, faInfoCircle, faUserCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Styles from "./admin.module.css";
-import DataTableMovies from "../../components/DataTable/DataTable";
 
 function Admin() {
    const navigate = useNavigate();
@@ -16,7 +15,7 @@ function Admin() {
             <nav className={Styles.Nav}>
                <img 
                   className={Styles.logoReserva}
-                  src={require('../../images/reservaCultural/logoReservaCultural.png')} alt="" srcset="" />
+                  src="/images/logoReservaCultural.png" alt="Logo Reserva Cultural"/>
                <ul className={Styles.Lista}>
                   <h3 className={Styles.Title}>
                      Admin <FontAwesomeIcon icon={faUserShield} className={Styles.NavIcon}/>
@@ -56,9 +55,7 @@ function Admin() {
             </nav>
          </div>
          <div className={Styles.bside}>
-            {activeSection === "emCartaz" && 
-               <DataTableMovies />
-               }
+            {activeSection === "emCartaz"}
             
             {activeSection === "infoGerais"}
             
