@@ -7,12 +7,13 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    max-width: 160px;
+    min-width: 160px;
+    max-width: 250px;
 }
 
 .moviePoster {
     width: 100%;
-    height: 15rem;
+    height: 23rem;
     border-radius: 0.5rem;
 }
 
@@ -36,7 +37,7 @@
     color: white;
     padding: 0.2rem;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 1rem;
     margin: 5px;
     color: white;
     text-align: left;
@@ -58,26 +59,23 @@
 }
 
 .description p {
-    font-size: 10pt;
+    font-size: 1rem;
     margin: 0;
     color: white;
 }
 
 .movieLink {
   text-decoration: none; 
-  
 }
 
 /* Estilização de certificação */
 
 .certification {
     border-radius: 5px;
-    width: 1.2rem;
-    height: 1.2rem;
-    padding: 5px;
+    padding: 0.4rem;
     color: white;
     font-weight: 700;
-    font-size: 10pt;
+    font-size: 1.2rem;
     text-align: center;
     align-items: center;
 }
@@ -111,17 +109,17 @@
     background-color: rgb(105, 105, 105);
 }
 
-@media (max-width: 1200px){
-    .moviePoster{
-        max-height: 15rem;
-    }
-}
-
 @media (max-width: 768px) {
     .movieContent{
         padding: 0.1rem;
     }
     .movieTitle{
         font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .moviePoster{
+        height: 18rem;
     }
 }

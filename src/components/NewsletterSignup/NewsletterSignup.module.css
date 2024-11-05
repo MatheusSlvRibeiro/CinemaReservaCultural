@@ -48,7 +48,17 @@
 
 @media (Max-width: 580px) {
     .newsletterForm{
-        width: 50%;
+        width: 60%;
         padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .newsletterForm{
+        width: 80%;
+    }
+    
+    .newsletterButton{
+        font-size: 6pt;
     }
 }

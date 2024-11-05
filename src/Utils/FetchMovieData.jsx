@@ -49,6 +49,8 @@ const MovieSlider = ({cidade}) => {
                     let mainGenre = movieData.genres[0]?.name || 'Gênero não disponível';
                     if (mainGenre === 'Crime') {
                         mainGenre = 'Suspense';
+                    } if (mainGenre === 'Ficção científica') {
+                        mainGenre = 'Ficção'
                     }
 
                     return {
@@ -68,7 +70,7 @@ const MovieSlider = ({cidade}) => {
         const handleResize = () => {
             const width = window.innerWidth;
     
-            const baseWidth = width < 500 ? 200 : 250;
+            const baseWidth = width < 500 ? 200 : 400;
     
             let quantidade = Math.floor(width / baseWidth);
             

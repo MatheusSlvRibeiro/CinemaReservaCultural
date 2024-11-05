@@ -16,14 +16,17 @@
       border-bottom: 3px solid var(--main-color);  
 }
 
-@media (max-width: 1200px){
+@media (max-width: 768px) {
       .GridContent{
-       margin: 1rem;     
+            margin: 2.5
+            rem 1rem;
       }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1440px) {
       .GridContent{
-            margin: 1rem;
+            margin: auto;
+            padding: 5rem 0 1rem 0;
+            max-width: 66%;
       }
 }

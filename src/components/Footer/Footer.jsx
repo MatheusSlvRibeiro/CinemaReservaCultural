@@ -6,15 +6,14 @@ import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-
 import NewsletterSignup from '../NewsletterSignup/NewsletterSignup';
 
 const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastronomia, ingressos}) => {
-  // Estado para controlar visibilidade das colunas
+
   const [openColumn, setOpenColumn] = useState(null);
 
-  // Função para alternar a coluna aberta em telas pequenas
   const toggleColumn = (index) => {
     setOpenColumn(openColumn === index ? null : index);
   };
 
-  // Verifica se a tela é pequena
+
   const isSmallScreen = window.innerWidth <= 580;
 
   if(!redesSociais || !gastronomia) return null;
@@ -24,7 +23,6 @@ const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastrono
       <div className={Styles.footer_container}>
         <div className={Styles.footerBottom}>
           <div className={Styles.Links}>
-            {/* Cada coluna recebe uma key para controle individual */}
             <div className={Styles.column}>
               <h3 className={Styles.column_title} onClick={() => isSmallScreen && toggleColumn(0)}>
                 Programação

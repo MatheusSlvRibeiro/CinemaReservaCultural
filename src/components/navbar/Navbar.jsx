@@ -55,11 +55,13 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
                 {item.subItems && (
                     <ul className={styles.subMenu}>
                         {item.subItems.map((subItem, index) => (
-                            <li key={index}>
+                            <ul>
+                                <li key={index}>
                                 <a className={styles.subNavLink} href={subItem.url} target={subItem.target}>
                                     {subItem.text}
                                 </a>
-                            </li>
+                                </li>
+                            </ul>
                         ))}
                     </ul>
                 )}

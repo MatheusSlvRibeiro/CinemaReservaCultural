@@ -25,3 +25,10 @@
     width: 100%;
     cursor: pointer;
 }
+
+@media (min-width: 1440px) {
+    .Container{
+        width: 68%;
+        margin: 4rem auto;
+    }
+}

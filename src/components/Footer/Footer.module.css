@@ -1,12 +1,12 @@
 .footer{
     max-width: 100vw;
     position: relative;
-    background-color: var(--main-bg-color-dark);
     display: flex;
     flex-direction: row;
     bottom: 0;
     padding: 5rem auto;
     justify-content: center;
+    background-color: var(--main-bg-color-dark);
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -19,7 +19,7 @@
 }
 
 .column{
-    padding: 60px 50px 0 0;
+    padding: 60px 15px 0 0;
 }
 
 .column_title{
@@ -99,9 +99,7 @@
 }
 
 @media (max-width: 1200px) {
-    .footer{
-        margin-top: 5rem;
-    }
+    
     .column{
         padding: 4rem 1.6rem;
     }
@@ -117,9 +115,25 @@
 }
 
 @media (max-width:768px) {
+    .Links{
+        padding-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .column{
-        padding: 4rem 0.25rem;
+        padding: 2rem 2rem;
     }    
+
+    .institucional{
+        display: flex;
+        flex-direction: column;
+    }    
+
+    .institucional p{
+        padding: 1.5rem;
+    }
+
     .SocialMedia_icon{
         height: 2.4rem;
     }
@@ -144,12 +158,11 @@
     .column ul{
         margin: -20px 0;
         padding: 1rem;
-        display: none;
         padding-left: 0;
         transition: max-height 0.3s ease-out;
     }
     .column ul.active{
-        display: block;
+        display: flex;
         max-height: 260px;
     }
     .column_title{
@@ -187,5 +200,14 @@
 @media (max-width: 375px) {
     .column{
         padding: 4rem 0 1rem 1rem;
+    }
+}
+
+@media (min-width: 1360px) {
+    .footer{
+        padding: 0;
+    }
+    .column{
+        padding: 60px 47px 0 0;
     }
 }

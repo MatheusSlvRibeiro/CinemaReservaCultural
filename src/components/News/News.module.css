@@ -35,8 +35,26 @@
     transform: scale(1.02)
 }
 
+@media (max-width: 758px) {
+    .PostGrid{
+        margin: 1rem auto;
+    }
+}
+
 @media (max-width: 1200px) {
     .PostGrid{
-        margin: 1rem;
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .PostGrid{
+        width: 68%;
+        margin: 1rem auto;
+    }
+    .Post{
+        margin: 0;
+        width: 100%;
     }
 }

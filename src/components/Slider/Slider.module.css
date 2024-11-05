@@ -4,8 +4,8 @@
   width: 78%;
   margin: 1rem auto;
   overflow: hidden;
-  height: 22rem; /* Altura do slider */
-  border-radius: 25px;
+  height: 26rem; /* Altura do slider */
+  border-radius: 10px;
 }
 
 .slidesContainer {
@@ -27,7 +27,6 @@
   top: 0;
   left: 0;
   transition: opacity 1s ease-in-out;
-  border-radius: 15px;
   display: flex;
   align-items: flex-end; /* Alinha o título no fundo */
 }
@@ -95,6 +94,12 @@
   color: #fff;
   padding: 1rem;
   box-sizing: border-box;
+}
+
+@media (min-width: 1440px) {
+  .slider{
+    width: 65%;
+  }
 }
 
 @media (max-width: 1200px) {
