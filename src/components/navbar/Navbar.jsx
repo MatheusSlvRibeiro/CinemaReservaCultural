@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import styles from './navbar.module.css';
 import Logo from '../logo/logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faLocationDot, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [selectedCity, setSelectedCity] = useState(cidade);
+    const [activeSubMenu, setActiveSubMenu] = useState(null); // Para controlar o submenu ativo
 
     const handleCityChange = (e) => {
         const city = e.target.value;
         setSelectedCity(city);
-        // Navega para a página correspondente com base na cidade selecionada
         if (city === "São Paulo") {
             window.location.href = "/saoPaulo";
         } else if (city === "Niterói") {
@@ -19,9 +19,15 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => 
         }
     };
 
+    const handleNavItemClick = (id) => {
+        if (window.innerWidth <= 1200) {
+            setActiveSubMenu(activeSubMenu === id ? null : id);
+        }
+    };
+
     const navItems = [
         { 
-            id: 1, text: 'Programação', url: `/${cidadeUrl}#em_cartaz`, target: '_self',
+            id: 1, text: 'Programação',
             subItems: [
                 { text: 'Em Cartaz', url: `/${cidadeUrl}#em_cartaz`, target: '_self' },
                 { text: 'Ingressos', url: ingressos, target: '_blank' },
@@ -31,7 +37,7 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => 
             ]
         },
         { 
-            id: 2, text: 'Gastronomia', url: '#', target: '_self', 
+            id: 2, text: 'Gastronomia', 
             subItems: (gastronomia || []).map(item => ({
                 text: item.titulo,
                 url: item.link,
@@ -39,14 +45,14 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => 
             }))
         },
         { 
-            id: 3, text: 'Eventos', url: '#', target: '_self',
+            id: 3, text: 'Eventos',
             subItems: [
                 { text: 'Eventos Realizados', url: '#realizados', target: '_self' },
                 { text: 'Parcerias', url: '/Parcerias', target: '_self' }
             ]
         },
         { 
-            id: 4, text: 'O Reserva', url: '/Conceito', target: '_self', 
+            id: 4, text: 'O Reserva', 
             subItems: [
                 { text: 'O Conceito', url: '/Conceito', target: '_self' },
                 { text: 'Fidelidade', url: '/Fidelidade', target: '_self' },
@@ -59,12 +65,15 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => 
 
     const renderNavItems = () => {
         return navItems.map((item) => (
-            <li key={item.id} className={styles.navItem}>
-                <a className={styles.navLink} href={item.url}>
-                    {item.text}
-                </a>
+            <li key={item.id} className={`${styles.navItem} ${activeSubMenu === item.id ? styles.active : ''}`}>
+                <button 
+                    className={styles.navLink} 
+                    onClick={() => handleNavItemClick(item.id)}
+                >
+                    {item.text} <FontAwesomeIcon icon={faCaretDown} className={styles.IconMobile}/>
+                </button>
                 {item.subItems && (
-                    <ul className={styles.subMenu}>
+                    <ul className={`${styles.subMenu} ${activeSubMenu === item.id ? styles.show : ''}`}>
                         {item.subItems.map((subItem, index) => (
                             <li key={index}>
                                 <a className={styles.subNavLink} href={subItem.url} target={subItem.target}>
