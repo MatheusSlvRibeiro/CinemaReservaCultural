@@ -166,6 +166,7 @@ select .Option {
     padding: 10px 50px 10px 6px;
     width: 100%;
     background-color: var(--main-bg-color);
+    font-size: 1rem;
   }
 
   .navLink {
