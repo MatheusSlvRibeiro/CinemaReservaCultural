@@ -13,6 +13,7 @@ import SaoPaulo from './Pages/main/SaoPaulo';
 import Conceito from './Pages/secondary/Conceito/Conceito';
 import Tarifas from './Pages/secondary/Tarifas/Tarifas';
 import Fidelidade from './Pages/secondary/Fidelidade/Fidelidade';
+import Parcerias from './Pages/secondary/Parcerias/Parcerias'
 import Guia from './Pages/secondary/Guia/Guia';
 import MeiaEntrada from './Pages/secondary/MeiaEntrada/MeiaEntrada';
 import TrabalheConosco from './Pages/secondary/TrabalheConosco/TrabalheConosco';
@@ -30,6 +31,7 @@ function App() {
           <Route path="/SaoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
           
+          <Route path="/Parcerias" element={<Parcerias />} />
           <Route path='/Conceito' element={<Conceito />} />
           <Route path='/tarifas' element={<Tarifas />} />
           <Route path='/Fidelidade' element={<Fidelidade />} />

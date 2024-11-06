@@ -1,88 +1,66 @@
 import React from "react";
-import Navbar from '../../Components/navbar/navbar'
-import Footer from '../../Components/Footer/Footer'
+import Navbar from '../../../components/navbar/Navbar'
+import Footer from '../../../components/Footer/Footer'
 import Styles from './Parcerias.module.css'
-import data from '../../../data/data.json'
 
 const Parcerias = () => {
     return (
         <div>
-            <Navbar 
-                cidade={data.saoPaulo.cidade}/>
-            <article>
+            <Navbar/>
+            <article className={Styles.Article}>
                 <h1 className={Styles.Title}>Parcerias</h1>
-                <div>
-                    <div>
-                        <a  href="https://www.radiotrianon.com.br/"
-                            target="_blank">
-                            <img    src={require('../../Components/Images/Parceiros/08_RADIO_TRIANON_AM_SAO_PAULO.png')} 
-                                    alt="Logo rádio Triano"/>
-                        </a>
-
-                        <a  href="https://www.imovision.com.br/" 
-                            target="_blank">
-                            <img 
-                                    src={require('../../Components/Images/Parceiros/09_Imovision-300x114.png')} 
-                                    alt="Logo Imovision" />
-                        </a>
-
-                        <a  href="https://dancarmarketing.com.br/en/" 
-                            target="_blank">
-                            <img    src={require('../../Components/Images/Parceiros/11_dmkt.png')} 
-                                    alt="Logo empresa dançar" />
-                        </a>
-                    </div>                  
-                    
-                    <div>
-                        <a  href="#"
-                            target="_blank">
-                            <img    src={require('../../Components/Images/Parceiros/01.estadao-300x100.png')} 
-                                    alt="Logo do estadão" />
-                        </a>
-
-                        <a  href="#"
-                            target="_blank">
-                            <img    src="" 
-                                    alt="" />
-                        </a>
-
-                        <a  href="#"
-                            target="_blank">
-                            <img    src="" 
-                                    alt="" />
-                        </a>
-
-                        <a  href="#"
-                            target="_blank">
-                            <img    src="" 
-                                    alt="" />
-                        </a>
-
-                        <a  href="#"
-                            target="_blank">
-                            <img    src="" 
-                                    alt="" />
+                    <div className={Styles.Parcerias}>
+                        <a  href="https://dancarmarketing.com.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img src={require('../../../images/Parceiros/11_dmkt.png')} alt="Logo Dançar Marketing" />
                         </a>
                         
-                        <a  href="#"
-                            target="_blank">
-                            <img    src="" 
-                                    alt="" />
+                        <a  href="https://diplomatique.org.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img src={require('../../../images/Parceiros/logo-le-monde-diplomatique-brasil-300px.png')} alt="Logo le monde Diplomatique" />
                         </a>
 
-                        <a  href="#"
-                            target="_blank">
-                            <img    src="" 
-                                    alt="" />
+                        <a  href="https://reservaimovision.com.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img src={require('../../../images/Parceiros/09_Imovision-300x114.png')} alt="Logo Reserva Imotivision" />
                         </a>
 
-                        <a  href="#"
-                            target="_blank">
-                            <img    src="" 
-                                    alt="" />
+                        <a  href="https://www.radiotrianon.com.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/08_RADIO_TRIANON_AM_SAO_PAULO.png')} 
+                                alt="Logo rádio Triano"/>
                         </a>
-                    </div>                  
-                </div>
+
+                        <a  href="https://www.ctv.ca/discovery-velocity"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/discoveryVelocity.png')} 
+                                alt="Logo Discovery Velocity"/>
+                        </a>
+                        
+                        <a  href="https://pinacoteca.org.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/05_Pinacoteca.png')} 
+                                alt="Logo Pinacoteca de são paulo"/>
+                        </a>
+
+                        <a  href="https://masp.org.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/04_MASP.svg_-300x134.png')} 
+                                alt="Logo Museu de arte de são paulo"/>
+                        </a>
+
+                        <a  href="https://mam.org.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/03_mam-300x90.png')} 
+                                alt="Logo Museu de arte moderna"/>
+                        </a>
+
+                    </div>
             </article>
             <Footer />
         </div>
