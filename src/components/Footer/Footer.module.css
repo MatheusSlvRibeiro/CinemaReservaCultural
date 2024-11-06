@@ -189,7 +189,7 @@
     .institucional{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        text-align: center;
         padding: 1rem;
     }
     .institucional div{

@@ -158,6 +158,11 @@
     .Image{
         width: 100%;
     }
+
+    .Address{
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 320px) {
