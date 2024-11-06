@@ -97,7 +97,7 @@ const MovieSlider = ({cidade}) => {
         speed: 300,
         slidesToShow: slidesToShow,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: true, 
     };
 
     if (movies.length <= 0) {

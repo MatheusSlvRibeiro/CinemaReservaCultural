@@ -1,8 +1,8 @@
 .GridContent{
       max-width: 100%;
-      margin: 0 10%; /* Margem de 20% nas laterais */
-      padding: 20px; /* Opcional: adicionar padding para espaçamento interno */
-      box-sizing: border-box; /* Garante que padding e border não afetem o tamanho total */
+      margin: 0 10%; 
+      padding: 20px;
+      box-sizing: border-box; 
 }
 
 .sectionTitle{
@@ -27,7 +27,7 @@
 
 @media (max-width: 768px) {
       .GridContent{
-            margin: 2.5rem 1rem;
+            margin: 0 10%;
       }
 }
 

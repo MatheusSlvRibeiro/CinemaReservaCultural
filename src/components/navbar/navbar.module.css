@@ -111,15 +111,13 @@ select .Option {
   color: var(--main-text-color);
 }
 
-/* Desktop: Mostrar submenu com :hover */
 @media (min-width: 1200px) {
   .navItem:hover .subMenu {
     display: block;
   }
 }
 
-/* Mobile: Exibir submenu ao clicar no navItem */
-@media (max-width: 1200px) {
+@media (max-width: 1023px) {
   .navbar {
     padding: 2rem;
   }
@@ -140,7 +138,9 @@ select .Option {
     display: block;
     position: absolute;
     top: 10px;
-    left: 650px;  
+    left: 90%;  
+    transform: rotate(0deg);
+    transition: 0.4s ease;
   }
 
   .navList {
@@ -151,10 +151,10 @@ select .Option {
     position: absolute;
     top: 60px;
     left: -100%;
-    width: 100%;
+    width: 50%;
     background-color: var(--nav-color-mobile);
     padding: 15px;
-    transition: left 0.4s ease;
+    transition: left 0.6s ease;
   }
 
   .navList.open {
@@ -162,10 +162,10 @@ select .Option {
   }
 
   .navItem {
-    background-color: var(--main-bg-color-dark);
     border-radius: 0.5rem;
     padding: 10px 50px 10px 6px;
     width: 100%;
+    background-color: var(--main-bg-color);
   }
 
   .navLink {
@@ -186,14 +186,26 @@ select .Option {
     z-index: 1000;
   }
 
-  /* Exibe o submenu quando o item de navegação for clicado */
   .navItem.active .subMenu {
     display: block;
+  }
+
+  .navItem.active .IconMobile{
+    transform: rotate(180deg);
+    transition: 0.4s ease;
   }
 
   .LocationContainer {
     position: absolute;
     top: 20px;
     right: 15px;
+  }
+}
+
+@media (max-width: 778px) {
+  .navList{
+    width: 100%;
+    transition: left 0.4s ease;
+
   }
 }

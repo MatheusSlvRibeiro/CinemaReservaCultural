@@ -41,13 +41,13 @@
     margin: 5px;
     color: white;
     text-align: left;
-    overflow: hidden; /* Oculta o texto que excede o limite */
+    overflow: hidden;
     display: -webkit-box;
     --webkit-box-orient: vertical;
-    --webkit-line-clamp: 2; /* Ajuste o número de linhas conforme necessário */ 
-    line-height: 1.2em; /* Ajuste a altura da linha conforme necessário */
-    max-height: 2.4em; /* Ajuste a altura máxima conforme o número de linhas */
-    text-overflow: ellipsis; /* Adiciona "..." quando o texto é cortado */
+    --webkit-line-clamp: 2;
+    line-height: 1.2em; 
+    max-height: 2.4em; 
+    text-overflow: ellipsis;
 }
 
 
@@ -68,7 +68,6 @@
   text-decoration: none; 
 }
 
-/* Estilização de certificação */
 
 .certification {
     border-radius: 5px;
