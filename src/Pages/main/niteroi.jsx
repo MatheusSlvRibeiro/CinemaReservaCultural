@@ -11,6 +11,7 @@ const Niteroi = () => {
   return (
     <div>
       <Navbar 
+        cidadeUrl="niteroi"
         cidade={data.niteroi.cidade}
         ingressos={data.niteroi.ingressos}
         estacionamento={data.niteroi.estacionamento}
@@ -21,7 +22,7 @@ const Niteroi = () => {
       <News />
       <Info />
       <Footer 
-        cidade={data.niteroi}
+        cidade="niteroi"
         ingressos={data.niteroi.ingressos}
         estacionamento={data.niteroi.estacionamento}
         endereço={data.niteroi.endereço}

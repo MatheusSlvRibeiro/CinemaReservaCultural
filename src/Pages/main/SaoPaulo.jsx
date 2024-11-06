@@ -11,6 +11,7 @@ const SaoPaulo = () => {
   return (
     <div>
       <Navbar 
+        cidadeUrl="saoPaulo"
         cidade={data.saoPaulo.cidade}
         ingressos={data.saoPaulo.ingressos}
         estacionamento={data.saoPaulo.estacionamento}
@@ -21,7 +22,7 @@ const SaoPaulo = () => {
       <News />
       <Info/>
       <Footer 
-        cidade={data.saoPaulo}
+        cidade="saoPaulo"
         ingressos={data.saoPaulo.ingressos}
         estacionamento={data.saoPaulo.estacionamento}
         endereço={data.saoPaulo.endereço}

@@ -24,7 +24,7 @@ const Contato = () => {
 
   const reCaptchaRef = useRef(null);
 
-  const reCaptchaSiteKey = "6LeJEXYqAAAAAOFG9D6n1VpzZ7g6bzkOlIj7r2rj"; 
+  const reCaptchaSiteKey = "6Lc7dXYqAAAAAPHi-169L83jTYyA1kPnQEA3DdB_"; 
 
   const handleChange = (e) => {
     const { name, value } = e.target;

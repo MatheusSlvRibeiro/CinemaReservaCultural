@@ -5,7 +5,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import NewsletterSignup from '../NewsletterSignup/NewsletterSignup';
 
-const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastronomia, ingressos}) => {
+const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastronomia, ingressos, cidade}) => {
 
   const [openColumn, setOpenColumn] = useState(null);
 
@@ -28,7 +28,7 @@ const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastrono
                 Programação
               </h3>
               <ul className={openColumn === 0 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="/SãoPaulo/#em_cartaz">Em Cartaz</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}#em_cartaz`}>Em Cartaz</a></li>
                 <li><a className={Styles.column_item} href={ingressos} 
                                                             rel='noopener noreferrer' 
                                                             target='blank'>Ingressos</a></li>

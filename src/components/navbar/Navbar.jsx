@@ -2,21 +2,32 @@ import React, { useState } from "react";
 import styles from './navbar.module.css';
 import Logo from '../logo/logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faCaretDown, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
-const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
+const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [selectedCity, setSelectedCity] = useState(cidade);
+
+    const handleCityChange = (e) => {
+        const city = e.target.value;
+        setSelectedCity(city);
+        // Navega para a página correspondente com base na cidade selecionada
+        if (city === "São Paulo") {
+            window.location.href = "/saoPaulo";
+        } else if (city === "Niterói") {
+            window.location.href = "/niteroi";
+        }
+    };
 
     const navItems = [
         { 
-            id: 1, text: 'Programação', url: '/SaoPaulo#em_cartaz', target: '_self',
+            id: 1, text: 'Programação', url: `/${cidadeUrl}#em_cartaz`, target: '_self',
             subItems: [
-                { text: 'Em Cartaz', url: '/SaoPaulo/#em_cartaz', target: '_self',},
-                { text: 'Ingressos', url: ingressos, target: '_blank',},
-                { text: 'Tarifas', url: '/Tarifas', target: '_self',},
-                { text: 'Meia-entrada', url: '/MeiaEntrada', target: '_self',},
-                { text: 'Guia do Bom Espectador', url: '/Guia', target: '_self',}
+                { text: 'Em Cartaz', url: `/${cidadeUrl}#em_cartaz`, target: '_self' },
+                { text: 'Ingressos', url: ingressos, target: '_blank' },
+                { text: 'Tarifas', url: '/Tarifas', target: '_self' },
+                { text: 'Meia-entrada', url: '/MeiaEntrada', target: '_self' },
+                { text: 'Guia do Bom Espectador', url: '/Guia', target: '_self' }
             ]
         },
         { 
@@ -25,23 +36,23 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
                 text: item.titulo,
                 url: item.link,
                 target: '_blank'
-            })),
+            }))
         },
         { 
             id: 3, text: 'Eventos', url: '#', target: '_self',
             subItems: [
-                { text: 'Eventos Realizados', url: '#realizados', target: '_self',},
-                { text: 'Parcerias', url: '/Parcerias', target: '_self',}
+                { text: 'Eventos Realizados', url: '#realizados', target: '_self' },
+                { text: 'Parcerias', url: '/Parcerias', target: '_self' }
             ]
         },
         { 
             id: 4, text: 'O Reserva', url: '/Conceito', target: '_self', 
             subItems: [
-                { text: 'O Conceito', url: '/Conceito' , target: '_self',},
-                { text: 'Fidelidade', url: '/Fidelidade' , target: '_self',},
-                { text: 'Estacionamento', url: estacionamento , target: '_blank',},
-                { text: 'Trabalhe Conosco', url: 'TrabalheConosco' , target: '_self',},
-                { text: 'Contato', url: '/Contato' , target: '_self',}
+                { text: 'O Conceito', url: '/Conceito', target: '_self' },
+                { text: 'Fidelidade', url: '/Fidelidade', target: '_self' },
+                { text: 'Estacionamento', url: estacionamento, target: '_blank' },
+                { text: 'Trabalhe Conosco', url: '/TrabalheConosco', target: '_self' },
+                { text: 'Contato', url: '/Contato', target: '_self' }
             ]
         }
     ];
@@ -55,13 +66,11 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
                 {item.subItems && (
                     <ul className={styles.subMenu}>
                         {item.subItems.map((subItem, index) => (
-                            <ul>
-                                <li key={index}>
+                            <li key={index}>
                                 <a className={styles.subNavLink} href={subItem.url} target={subItem.target}>
                                     {subItem.text}
                                 </a>
-                                </li>
-                            </ul>
+                            </li>
                         ))}
                     </ul>
                 )}
@@ -84,28 +93,13 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
             </ul>
 
             <div className={styles.LocationContainer}>
-                <div className={styles.Location} onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <FontAwesomeIcon className={styles.Icon} icon={faLocationDot} aria-label="Ícone de localização" />
-                    <h4 className={styles.State}>{cidade}</h4>
-                    <FontAwesomeIcon className={styles.Arrow} icon={faCaretDown} aria-label="Seta para baixo" />
-                </div>
-
-                {dropdownOpen && (
-                    <div className={styles.Dropdown}>
-                        <div className={styles.LocationItem}>
-                            <a href="/saoPaulo">
-                                <h4>São Paulo - SP</h4>
-                                <p>Avenida Paulista, 900 - Térreo Baixo</p>
-                            </a>
-                        </div>
-                        <div className={styles.LocationItem}>
-                            <a href="/niteroi">
-                                <h4>Niterói - RJ</h4>
-                                <p>Avenida Visconde do Rio Branco 880</p>
-                            </a>
-                        </div>
-                    </div>
-                )}
+                <label className={styles.LocationLabel}>
+                    <select value={selectedCity} onChange={handleCityChange} className={styles.CitySelect}>
+                        <option className={styles.Option} value="São Paulo">São Paulo - SP</option>
+                        <option className={styles.Option} value="Niterói">Niterói - RJ</option>
+                    </select>
+                </label>
             </div>
         </nav>
     );
