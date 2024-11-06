@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar/Navbar';
 import Slider from '../../components/Slider/Slider';
 import PlayingNow from '../../components/PlayingNow/PlayingNow';
 import News from '../../components/News/News'
+import Info from '../../components/Info/Info';
 import Footer from '../../components/Footer/Footer';
 import data from '../../data/data.json'
 
@@ -18,6 +19,7 @@ const SaoPaulo = () => {
       <PlayingNow 
         cidade="saoPaulo"/>
       <News />
+      <Info/>
       <Footer 
         cidade={data.saoPaulo}
         ingressos={data.saoPaulo.ingressos}

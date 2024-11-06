@@ -111,7 +111,7 @@
 
 @media (max-width: 768px) {
     .movieContent{
-        padding: 0.1rem;
+        padding: 0.5rem;
     }
     .movieTitle{
         font-size: 0.75rem;
@@ -120,6 +120,12 @@
 
 @media (max-width: 425px) {
     .moviePoster{
-        height: 14rem;
+        height: 16rem;
     }
+}
+
+@media (max-width: 396px) {
+    .moviePoster{
+        height: 22rem;
+    }   
 }
