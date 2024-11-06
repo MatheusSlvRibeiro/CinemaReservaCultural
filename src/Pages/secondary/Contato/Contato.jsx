@@ -22,19 +22,15 @@ const Contato = () => {
   const [captchaErro, setCaptchaErro] = useState(null);
   const [mensagemSucesso, setMensagemSucesso] = useState(""); 
 
-  // Referência para o componente do reCAPTCHA
   const reCaptchaRef = useRef(null);
 
-  // Chave do reCAPTCHA
-  const reCaptchaSiteKey = "6LfcrUkqAAAAAEhuMjrfNJKAzBk2-4opWA3RDtfp"; 
+  const reCaptchaSiteKey = "6LeJEXYqAAAAAOFG9D6n1VpzZ7g6bzkOlIj7r2rj"; 
 
-  // Função para lidar com as mudanças nos inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Função para validar o reCAPTCHA
   const handleCaptchaChange = (value) => {
     if (value) {
       setCaptchaValido(true);
@@ -67,18 +63,14 @@ const Contato = () => {
       metodoPagamento: ''
     });
 
-    // Exibe a mensagem de sucesso
     setMensagemSucesso("Mensagem enviada com sucesso! Obrigado pelo contato!!");
 
-    // Rolando a página para o topo
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Resetando o reCAPTCHA
     if (reCaptchaRef.current) {
       reCaptchaRef.current.reset();
     }
 
-    // Resetar o estado do captcha
     setCaptchaValido(false);
   };
 
@@ -89,7 +81,6 @@ const Contato = () => {
 
       <h1 className={Styles.Title}>FALE CONOSCO</h1>
 
-      {/* Exibe a mensagem de sucesso diretamente */}
       {mensagemSucesso && (
         <div className={Styles.Sucess}>
           <strong>{mensagemSucesso.split('!')[0]}!</strong><br />
@@ -169,12 +160,12 @@ const Contato = () => {
           />
         </label>
 
-        {/* Componente reCAPTCHA */}
+      
         <div className={Styles.captchaContainer}>
           <ReCAPTCHA
             sitekey={reCaptchaSiteKey}
             onChange={handleCaptchaChange}
-            ref={reCaptchaRef} // Adicionando referência ao reCAPTCHA
+            ref={reCaptchaRef} 
           />
         </div>
         {captchaErro && <p style={{ color: "red" }}>{captchaErro}</p>}

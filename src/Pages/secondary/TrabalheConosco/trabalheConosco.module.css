@@ -48,6 +48,28 @@
       margin-bottom: 1rem;
 }
 
+.Span{
+      margin: 0.5rem 0;
+      color: var(--main-text-color);
+}
+
+.LabelCidade{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 0.5rem 0;
+      color: var(--main-text-color);
+} 
+
+.LabelCidade select{
+      margin: 0.5rem 0;
+      padding: 0.5rem 0.5rem;
+      font-weight: 600;
+      outline: none;
+      border: 0;
+      border-radius: 0.2rem;
+}
+
 .subtmit {
       width: 100%;
       padding: 0.8rem 2rem;

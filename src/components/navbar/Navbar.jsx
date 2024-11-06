@@ -10,9 +10,9 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento}) => {
 
     const navItems = [
         { 
-            id: 1, text: 'Programação', url: '/SãoPaulo#em_cartaz', target: '_self',
+            id: 1, text: 'Programação', url: '/SaoPaulo#em_cartaz', target: '_self',
             subItems: [
-                { text: 'Em Cartaz', url: '/SãoPaulo/#em_cartaz', target: '_self',},
+                { text: 'Em Cartaz', url: '/SaoPaulo/#em_cartaz', target: '_self',},
                 { text: 'Ingressos', url: ingressos, target: '_blank',},
                 { text: 'Tarifas', url: '/Tarifas', target: '_self',},
                 { text: 'Meia-entrada', url: '/MeiaEntrada', target: '_self',},

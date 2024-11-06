@@ -22,11 +22,12 @@
   }
   
   .formulario_contato label {
+    color: var(--main-text-color);
     margin-bottom: 15px;
-    font-weight: bold;
+    font-weight: 400;
     width: 100%;
   }
-  
+
   .formulario_contato input,
   .formulario_contato textarea,
   .formulario_contato select {

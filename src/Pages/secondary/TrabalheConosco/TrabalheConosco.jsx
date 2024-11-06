@@ -5,12 +5,11 @@ import Footer from "../../../components/Footer/Footer";
 import data from '../../../data/data.json'
 
 function TrabalheConosco (){
-  // Estado para controlar se o formulário foi enviado
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevenir o comportamento padrão do formulário
-    setFormSubmitted(true); // Atualiza o estado para mostrar a mensagem
+    e.preventDefault(); 
+    setFormSubmitted(true); 
   };
 
   return (
@@ -19,15 +18,14 @@ function TrabalheConosco (){
         cidade={data.saoPaulo.cidade}/>
       <div className={Styles.content}>
         <div className={Styles.aside}>
-          <img src="images/Logo_reserva01.png" alt="" />
+          <img src="images/logoReservaCultural.png" alt="Logo reserva cultural" />
         </div>
 
         <div className={Styles.bside}>
           <h1 className={Styles.Title}>Trabalhe Conosco</h1>
 
-          <span>
-            ATENÇÃO: Você está no formulário de envio de CV para o Reserva Cultural de São Paulo.
-            Caso queira enviar para o Reserva Niterói, <a href="#embreve">clique aqui</a>.
+          <span className={Styles.Span}>
+            ATENÇÃO: Confira todos os dados para o envio correto do formulário!
           </span>
           
           {formSubmitted ? (
@@ -39,7 +37,15 @@ function TrabalheConosco (){
               <input type="text" name="name" id="name" placeholder="Nome Completo*" required />
               <input type="email" name="email" id="email" placeholder="E-mail*" required />
               <input type="tel" name="number" id="number" placeholder="Telefone Celular*" required />
-              <input type="text" name="city" id="city" placeholder="Cidade*" required />
+              <label className={Styles.LabelCidade}>
+              Selecione a Unidade:
+              <select 
+                name="unidade" 
+              >
+                <option value="sp">São Paulo</option>
+                <option value="rj">Rio de Janeiro</option>
+              </select>
+              </label>
               <input type="file" name="cv" id="cv" accept=".pdf, .docx" required />
               
               <div className={Styles.submitSection}>
