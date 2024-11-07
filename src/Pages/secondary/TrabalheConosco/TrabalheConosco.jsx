@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Styles from './trabalheConosco.module.css';
 import Navbar from "../../../components/navbar/Navbar";
-import Footer from "../../../components/Footer/Footer";
 import data from '../../../data/data.json'
 
 function TrabalheConosco (){
@@ -55,7 +54,6 @@ function TrabalheConosco (){
           )}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

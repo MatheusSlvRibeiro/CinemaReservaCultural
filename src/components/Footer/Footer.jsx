@@ -17,7 +17,7 @@ const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastrono
   const isSmallScreen = window.innerWidth <= 580;
 
   if(!redesSociais || !gastronomia) return null;
-
+  console.log("Footer renderizado");
   return (
     <footer className={Styles.footer}>
       <div className={Styles.footer_container}>
@@ -61,7 +61,7 @@ const Footer = ({estacionamento, endereço, endereçoUrl, redesSociais, gastrono
               </h3>
               <ul className={openColumn === 2 && isSmallScreen ? Styles.active : ''}>
                 <li><a className={Styles.column_item} href="/">Eventos Realizados</a></li>
-                <li><a className={Styles.column_item} href="/">Parcerias</a></li>
+                <li><a className={Styles.column_item} href="/Parcerias">Parcerias</a></li>
               </ul>
             </div>
 

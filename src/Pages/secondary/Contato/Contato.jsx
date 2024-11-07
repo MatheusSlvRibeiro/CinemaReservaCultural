@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Styles from './Contato.module.css';
 import Navbar from "../../../components/navbar/Navbar";
-import Footer from "../../../components/Footer/Footer";
 import data from '../../../data/data.json'
 
 const Contato = () => {
@@ -172,7 +171,6 @@ const Contato = () => {
         
         <button type="submit">Enviar</button>
       </form>
-      <Footer />
     </div>
   );
 };

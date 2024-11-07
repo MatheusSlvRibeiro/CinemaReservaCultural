@@ -3,14 +3,13 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    bottom: 0;
-    padding: 5rem auto;
+    padding: 5rem 0;
+    margin-top: 2rem;
     justify-content: center;
     background-color: var(--main-bg-color-dark);
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.3);
 }
 
-/*footerTop{}*/
 .Links{
     display: flex;
     justify-content: space-between;

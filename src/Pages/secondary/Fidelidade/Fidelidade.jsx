@@ -2,7 +2,6 @@ import React from "react";
 import Styles from './Fidelidade.module.css'
 import Navbar from "../../../components/navbar/Navbar";
 import Info from "../../../components/Info/Info";
-import Footer from "../../../components/Footer/Footer";
 import data from '../../../data/data.json'
 
 function Fidelidade() {
@@ -11,14 +10,11 @@ function Fidelidade() {
             <Navbar 
                 cidade={data.saoPaulo.cidade}/>
             <article className={Styles.Article}>
-                {/* Adicionando a classe title ao h1 */}
                 <h1 className={Styles.title}>Regulamento interno <br /> Programa cartão fidelidade</h1>
                 
                 <div>
-                    {/* Adicionando a classe subtitle a todos os h2 */}
                     <h2 className={Styles.subtitle}>O Regulamento</h2>
 
-                    {/* Adicionando a classe paragraph a todos os p */}
                     <p className={Styles.paragraph}>
                         1. O RESERVA CULTURAL DE CINEMA, empresa privada, com sede na Avenida Paulista, 900 – térreo baixo, CEP: 01310-100, Bela Vista, São Paulo-SP, simplesmente designado “RESERVA CULTURAL”, com base no presente regulamento, institui o PROGRAMA CARTÃO FIDELIDADE – RESERVA CULTURAL com o objetivo de oferecer aos clientes titulares pelos mesmos cartões, um ingresso gratuito para exibição de quaisquer filmes que conste na programação.
                     </p>
@@ -57,7 +53,6 @@ function Fidelidade() {
                 </div>
             </article>
             <Info />
-            <Footer />
         </div>
     );
 }

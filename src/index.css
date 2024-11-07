@@ -52,6 +52,7 @@ code {
 }
 
 article{
+  box-sizing: border-box;
   justify-content: center;
   width: 75%;
   margin: 7rem auto;

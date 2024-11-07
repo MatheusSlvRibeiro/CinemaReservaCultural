@@ -1,12 +1,13 @@
 import React from "react";
 import Navbar from '../../../components/navbar/Navbar'
-import Footer from '../../../components/Footer/Footer'
+import Info from '../../../components/Info/Info'
 import Styles from './Parcerias.module.css'
 
 const Parcerias = () => {
     return (
-        <div>
+        <div className={Styles.PageContainer}>
             <Navbar/>
+
             <article className={Styles.Article}>
                 <h1 className={Styles.Title}>Parcerias</h1>
                     <div className={Styles.Parcerias}>
@@ -39,30 +40,59 @@ const Parcerias = () => {
                                 alt="Logo Discovery Velocity"/>
                         </a>
                         
-                        <a  href="https://pinacoteca.org.br/"
-                            target="_blank" rel="noreferrer noopener">
-                            <img    
-                                src={require('../../../images/Parceiros/05_Pinacoteca.png')} 
-                                alt="Logo Pinacoteca de são paulo"/>
-                        </a>
-
                         <a  href="https://masp.org.br/"
                             target="_blank" rel="noreferrer noopener">
                             <img    
                                 src={require('../../../images/Parceiros/04_MASP.svg_-300x134.png')} 
                                 alt="Logo Museu de arte de são paulo"/>
                         </a>
+                        
+                        <a  href="https://pinacoteca.org.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/Logo-Pinacoteca.jpg')} 
+                                alt="Logo Pinacoteca de são paulo"/>
+                        </a>
 
                         <a  href="https://mam.org.br/"
                             target="_blank" rel="noreferrer noopener">
                             <img    
-                                src={require('../../../images/Parceiros/03_mam-300x90.png')} 
+                                src={require('../../../images/Parceiros/LogoMuseuArteModerna.jpg')} 
                                 alt="Logo Museu de arte moderna"/>
+                        </a>
+                        
+                        <a  href="https://www.cartacapital.com.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/LogoCartaCapital.jpg')} 
+                                alt="Logo Carta Capital"/>
+                        </a>
+                        
+                        <a  href="https://www.estadao.com.br/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/Estadao_logo.jpg')} 
+                                alt="Logo Estadão"/>
+                        </a>
+                        
+                        <a  href="https://auwe.com/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/auwe-qube_green-420x150.jpg')} 
+                                alt="Logo AUWE Digital"/>
+                        </a>
+
+                        <a  href="/"
+                            target="_blank" rel="noreferrer noopener">
+                            <img    
+                                src={require('../../../images/Parceiros/06.jpg')} 
+                                alt="Logo"/>
                         </a>
 
                     </div>
             </article>
-            <Footer />
+            
+            <Info />
         </div>
     );
 };

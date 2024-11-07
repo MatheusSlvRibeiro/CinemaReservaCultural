@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../../components/navbar/Navbar";
-import Footer from "../../../components/Footer/Footer";
 import Styles from './MeiaEntrada.module.css';
 import Info from "../../../components/Info/Info";
 import data from '../../../data/data.json'
@@ -16,7 +15,6 @@ function MeiaEntrada () {
                     src="/images/meia-entrada.png"/>
             </div>
             <Info />
-            <Footer />
         </div>
     );
 };

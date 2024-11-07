@@ -1,7 +1,6 @@
 import React from "react";
 import Styles from './Guia.module.css'
 import Navbar from "../../../components/navbar/Navbar";
-import Footer from "../../../components/Footer/Footer";
 import Info from "../../../components/Info/Info";
 import data from '../../../data/data.json'
 
@@ -67,7 +66,6 @@ function Guia () {
                         </div>
                   </article>
                   <Info />
-                  <Footer />
             </div>
       );
 };

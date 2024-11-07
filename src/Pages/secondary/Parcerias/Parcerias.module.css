@@ -1,9 +1,75 @@
+.PageContainer{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Article{
+    width: 50%;
+}
+
 .Title{
     color: var(--main-color);
     font-size: 2rem;
+    font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 2.5rem;
 }
 
+.Parcerias{
+    margin: auto;
+    padding: 1rem;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
+.Parcerias a{
+    margin: 0;
 
+}
+
+.Parcerias a:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.Parcerias img{
+    width: 15rem;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .Article{
+        width: 100%;
+        margin: 0;
+        margin-top: 4rem;
+    }
+
+    .Parcerias img{
+        width: 10rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .Article{
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Article{
+        width: 50%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .Article{
+        width: 40%;
+    }
+}
