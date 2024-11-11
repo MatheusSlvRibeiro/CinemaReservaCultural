@@ -15,10 +15,10 @@
   <li>Informações Gerais do Cinema: Seções com detalhes sobre localização, história e serviços oferecidos.</li>
 
 <h4>🛠️ Tecnologias Utilizadas</h4>
-React.js: Estrutura principal do front-end, garantindo interatividade e velocidade.
-PrimeReact: Biblioteca de componentes para a visualização de dados.
-React Slick: Biblioteca para o desenvolvimento dos slides de marketing e parcerias.
-FontAwesome: Ícones na navegação e na interface.
+<strong>React.js:</strong> Estrutura principal do front-end, garantindo interatividade e velocidade. <br> 
+<strong>PrimeReact:</strong> Biblioteca de componentes para a visualização de dados. <br>
+<strong>React Slick:</strong> Biblioteca para o desenvolvimento dos slides de marketing e parcerias. <br>
+<strong>FontAwesome:</strong> Ícones na navegação e na interface. <br>
 
 📦 Como Executar o Projeto
 1. Clone o repositório: <br>
