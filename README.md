@@ -1,7 +1,7 @@
 <h4>🎬 Site do Cinema Reserva Cultural<h4>
 <p>Um website responsivo para o Cinema Reserva Cultural, desenvolvido com o objetivo de oferecer uma experiência completa aos visitantes das unidades de São Paulo e Niterói, exibindo a programação de filmes, eventos, parcerias e muito mais.</p>
 
-<strong>Acesse o site em produção:</strong> <a>cinema-reserva-cultural.vercel.app</a>
+<strong>Acesse o site em produção:</strong> <a>https://cinema-reserva-cultural.vercel.app</a>
 
 <h4>📜 Descrição</h4>
 <p>Este projeto, desenvolvido em React.js, é voltado para o cinema Reserva Cultural e visa proporcionar uma experiência rica e intuitiva para os usuários. O site é totalmente responsivo e conta com seções personalizadas para cada unidade (São Paulo e Niterói), facilitando o acesso à programação de filmes e a outras informações importantes.</p>
