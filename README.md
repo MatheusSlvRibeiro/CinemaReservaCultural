@@ -21,17 +21,18 @@ React Slick: Biblioteca para o desenvolvimento dos slides de marketing e parceri
 FontAwesome: Ícones na navegação e na interface.
 
 📦 Como Executar o Projeto
-1. Clone o repositório:
-    git clone https://github.com/seu-usuario/seu-projeto.git
+1. Clone o repositório: <br>
+    git clone https://github.com/seu-usuario/seu-projeto.git<br>
     cd seu-projeto
 
-2. Instale as dependências:
+2. Instale as dependências: <br>
     npm install
 
-3. Execute o projeto:
+3. Execute o projeto: <br>
     npm start
 
-4. http://localhost:3000
+4. Acesse o projeto em seu navegador: <br>
+    http://localhost:3000
 
 📄 Licença
 Este projeto é oferecido sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.  
