@@ -66,6 +66,10 @@ a, p, h1, h2, h3, h4{
   color: var(--main-text-color);
 }
 
+p{
+  font-weight: 200;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],

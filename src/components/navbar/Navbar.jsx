@@ -7,7 +7,7 @@ import { faBars, faTimes, faLocationDot, faCaretDown } from '@fortawesome/free-s
 const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [selectedCity, setSelectedCity] = useState(cidade);
-    const [activeSubMenu, setActiveSubMenu] = useState(null); // Para controlar o submenu ativo
+    const [activeSubMenu, setActiveSubMenu] = useState(null); 
 
     const handleCityChange = (e) => {
         const city = e.target.value;
@@ -15,7 +15,7 @@ const Navbar = ({cidade, gastronomia, ingressos, estacionamento, cidadeUrl}) => 
         if (city === "São Paulo") {
             window.location.href = "/saoPaulo";
         } else if (city === "Niterói") {
-            window.location.href = "/niteroi";
+            window.location.href = "/Niteroi";
         }
     };
 

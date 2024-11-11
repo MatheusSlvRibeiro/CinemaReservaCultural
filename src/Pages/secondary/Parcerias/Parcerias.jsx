@@ -82,11 +82,11 @@ const Parcerias = () => {
                                 alt="Logo AUWE Digital"/>
                         </a>
 
-                        <a  href="/"
+                        <a  href="https://revistacult.uol.com.br/home/"
                             target="_blank" rel="noreferrer noopener">
                             <img    
                                 src={require('../../../images/Parceiros/06.jpg')} 
-                                alt="Logo"/>
+                                alt="Logo revista Cult"/>
                         </a>
 
                     </div>

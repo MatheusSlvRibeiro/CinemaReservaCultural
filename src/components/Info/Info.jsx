@@ -49,7 +49,7 @@ function Info() {
             <div className={Styles.Content}>
                 <Slider {...settings}>
                     <div className={Styles.Img}>
-                        <a href="/Tarifas">
+                        <a href="/MeiaEntrada">
                             <img
                                 src="/images/Meiaentrada.jpg"
                                 alt="Cartaz do cinema Reserva Cultural informando sobre o direito à meia-entrada de acordo com a Lei N° 12.933/2013, com ícones de pipoca, refrigerante, ingresso e um botão escrito Saiba Mais"

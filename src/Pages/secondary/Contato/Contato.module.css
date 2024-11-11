@@ -4,6 +4,7 @@
     margin-top: 6.5rem;
     margin-bottom: 2rem;
     font-size: 2rem;
+    font-weight: 600;
     border-bottom: 3px solid var(--main-color);
     color: var(--main-color);
     text-transform: uppercase;
