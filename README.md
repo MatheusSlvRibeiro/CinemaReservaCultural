@@ -1,16 +1,18 @@
-🎬 Site do Cinema Reserva Cultural
-Um website responsivo para o Cinema Reserva Cultural, desenvolvido com o objetivo de oferecer uma experiência completa aos visitantes das unidades de São Paulo e Niterói, exibindo a programação de filmes, eventos, parcerias e muito mais.
+🎬 <h1>Site do Cinema Reserva Cultural<h1>
+<p>Um website responsivo para o Cinema Reserva Cultural, desenvolvido com o objetivo de oferecer uma experiência completa aos visitantes das unidades de São Paulo e Niterói, exibindo a programação de filmes, eventos, parcerias e muito mais.</p>
 
-📜 Descrição
-Este projeto, desenvolvido em React.js, é voltado para o cinema Reserva Cultural e visa proporcionar uma experiência rica e intuitiva para os usuários. O site é totalmente responsivo e conta com seções personalizadas para cada unidade (São Paulo e Niterói), facilitando o acesso à programação de filmes e a outras informações importantes.
+<h2>📜 Descrição</h2>
+<p>Este projeto, desenvolvido em React.js, é voltado para o cinema Reserva Cultural e visa proporcionar uma experiência rica e intuitiva para os usuários. O site é totalmente responsivo e conta com seções personalizadas para cada unidade (São Paulo e Niterói), facilitando o acesso à programação de filmes e a outras informações importantes.</p>
 
-🚀 Funcionalidades
-  - Programação de Filmes: Páginas dedicadas com a programação atualizada para cada unidade.
-  - Slides de Marketing e Parcerias: Componente de slide para destacar campanhas e parceiros.
-  - Páginas de Gastronomia e Eventos:
-    Gastronomia: Informações sobre as opções gastronômicas disponíveis nas unidades.
-    Eventos: Exibição de eventos especiais e sessões temáticas.
-  - Informações Gerais do Cinema: Seções com detalhes sobre localização, história e serviços oferecidos.
+<h2>🚀 Funcionalidades</h2>
+  <li>Programação de Filmes: Páginas dedicadas com a programação atualizada para cada unidade.</li>
+  <li>Slides de Marketing e Parcerias: Componente de slide para destacar campanhas e parceiros.</li>
+  <ul>
+  <li>Páginas de Gastronomia e Eventos:</li>
+    <ul><li>Gastronomia: Informações sobre as opções gastronômicas disponíveis nas unidades.</li>
+    <li>Eventos: Exibição de eventos especiais e sessões temáticas.</li></ul>
+  </ul>
+  <li>Informações Gerais do Cinema: Seções com detalhes sobre localização, história e serviços oferecidos.</li>
 
 🛠️ Tecnologias Utilizadas
 React.js: Estrutura principal do front-end, garantindo interatividade e velocidade.
