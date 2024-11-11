@@ -20,6 +20,7 @@
 <strong>React Slick:</strong> Biblioteca para o desenvolvimento dos slides de marketing e parcerias. <br>
 <strong>FontAwesome:</strong> Ícones na navegação e na interface. <br>
 
+<br>
 📦 Como Executar o Projeto
 1. Clone o repositório: <br>
     git clone https://github.com/seu-usuario/seu-projeto.git<br>
