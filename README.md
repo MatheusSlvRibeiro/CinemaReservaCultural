@@ -9,8 +9,8 @@
   <li>Slides de Marketing e Parcerias: Componente de slide para destacar campanhas e parceiros.</li>
   <li>Páginas de Gastronomia e Eventos:</li>
   <ul>
-    <li>Gastronomia: Informações sobre as opções gastronômicas disponíveis nas unidades.</li>
-    <li>Eventos: Exibição de eventos especiais e sessões temáticas.</li>
+    <p>Gastronomia: Informações sobre as opções gastronômicas disponíveis nas unidades.</p>
+    <p>Eventos: Exibição de eventos especiais e sessões temáticas.</p>
   </ul>
   <li>Informações Gerais do Cinema: Seções com detalhes sobre localização, história e serviços oferecidos.</li>
 
