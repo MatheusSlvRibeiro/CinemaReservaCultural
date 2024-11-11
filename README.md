@@ -23,7 +23,7 @@
 <strong>FontAwesome:</strong> Ícones na navegação e na interface. <br>
 
 <br>
-📦 Como Executar o Projeto <br> cinema-reserva-cultural.vercel.app
+<h4>📦 Como Executar o Projeto <br></h4>
 
 1. Clone o repositório: <br>
     git clone https://github.com/seu-usuario/seu-projeto.git<br>
