@@ -8,6 +8,7 @@ function Fidelidade() {
     return (
         <div className="Guide">
             <Navbar 
+                estacionamento="/"
                 cidade={data.saoPaulo.cidade}/>
             <article className={Styles.Article}>
                 <h1 className={Styles.title}>Regulamento interno <br /> Programa cartão fidelidade</h1>

@@ -76,7 +76,8 @@ const Contato = () => {
   return (
     <div className={Styles.formWrapper}>
       <Navbar 
-                cidade={data.saoPaulo.cidade}/>
+        estacionamento="/"
+        cidade={data.saoPaulo.cidade}/>
 
       <h1 className={Styles.Title}>FALE CONOSCO</h1>
 

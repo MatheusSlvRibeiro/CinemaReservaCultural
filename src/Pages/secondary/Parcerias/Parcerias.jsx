@@ -6,7 +6,8 @@ import Styles from './Parcerias.module.css'
 const Parcerias = () => {
     return (
         <div className={Styles.PageContainer}>
-            <Navbar/>
+            <Navbar
+                estacionamento="/"/>
 
             <article className={Styles.Article}>
                 <h1 className={Styles.Title}>Parcerias</h1>

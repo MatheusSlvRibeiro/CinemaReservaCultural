@@ -18,13 +18,10 @@ const News = () => {
             }
         };
 
-        // Set initial value
         handleResize();
 
-        // Add event listener
         window.addEventListener('resize', handleResize);
 
-        // Clean up event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -44,11 +41,12 @@ const News = () => {
     return (
         <section className={styles.PostGrid}>
             <h3 className={styles.sectionTitle}>
-                Conceito, sabores e novidades 
+                Sabores e Novidades 
             </h3>
         
             <div className={styles.PostSection}>
                 <Slider {...settings}>
+                
                     <div>
                         <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view">
                             <img className={styles.Post}
@@ -56,6 +54,7 @@ const News = () => {
                             alt="teste"/>
                         </a>
                     </div>
+
                     <div>
                         <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view?usp=sharing" target="blank" rel="noopener noreferrer">
                             <img className={styles.Post}
@@ -63,13 +62,7 @@ const News = () => {
                             alt="teste"/>
                         </a>
                     </div>
-                    <div>
-                        <a href="/ConceitoSp">
-                            <img className={styles.Post}
-                            src="/images/post-1000x1000.jpg"
-                            alt="teste"/>
-                        </a>
-                    </div>
+
                     <div>
                         <a href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank" rel="noopener noreferrer">
                             <img className={styles.Post}
@@ -77,6 +70,7 @@ const News = () => {
                             alt="teste"/>
                         </a>
                     </div>
+
                 </Slider>
             </div>
         </section>

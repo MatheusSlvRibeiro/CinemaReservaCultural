@@ -8,6 +8,7 @@ function Guia () {
       return (
             <div className={Styles.Guide}>
                   <Navbar 
+                        estacionamento="/"
                         cidade={data.saoPaulo.cidade}/>
                   <article className={Styles.Article}>
                         <div>

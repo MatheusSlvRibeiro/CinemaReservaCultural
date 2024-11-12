@@ -13,8 +13,8 @@ function TrabalheConosco (){
 
   return (
     <div>
-      <Navbar 
-        cidade={data.saoPaulo.cidade}/>
+      <Navbar
+        estacionamento="/"/>
       <div className={Styles.content}>
         <div className={Styles.aside}>
           <img src="images/logoReservaCultural.png" alt="Logo reserva cultural" />
