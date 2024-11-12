@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from './Movies.module.css';
 
 import getMovieIds from './fetchMovieId'
-import filmes from '../data/filmes.json'
+import filmesSaoPaulo from '../data/filmesSaoPaulo.json';
+import filmesNiteroi from '../data/filmesNiteroi.json';
 
 const truncateTitle = (title, maxLength) => {
     if (title.length > maxLength) {
@@ -36,13 +37,15 @@ const MovieSlider = ({cidade}) => {
     useEffect(() => {
         const fetchMovieDetails = async () => {
             const ids = await getMovieIds(cidade);
+
+            const localMovies = cidade === 'saoPaulo' ? filmesSaoPaulo : filmesNiteroi;
+
             const movieDetails = await Promise.all(
                 ids.map(async (id) => {
                     const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=pt-BR`);
                     const movieData = await movieResponse.json();
                     
                     const movieTitle = movieData.title.toLowerCase();
-                    const localMovies = filmes[cidade] || [];
                     const localMovie = localMovies.find(movie => movie.titulo.toLowerCase() === movieTitle);
                     const certification = localMovie ? localMovie.faixaEtaria : 'Não disponível';
 

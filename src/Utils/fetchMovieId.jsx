@@ -1,4 +1,5 @@
-import dados from '../data/filmes.json'
+import filmesSaoPaulo from '../data/filmesSaoPaulo.json'
+import filmesNiteroi from '../data/filmesNiteroi.json'
 
 const API_KEY = 'd69cb7e92473b2944af9f61f30ebf1a4';
 
@@ -15,11 +16,13 @@ const fetchMovieId = async (title) => {
 };
 
 const getMovieIds = async (cidade) => {
-    const moviesInTheaters = dados[cidade].map(movie => movie.titulo);
+
+    const dados = cidade === 'saoPaulo' ? filmesSaoPaulo : filmesNiteroi;
 
     const ids = [];
-    for (const title of moviesInTheaters) {
-        const id = await fetchMovieId(title);
+
+    for (const movie of dados) {
+        const id = await fetchMovieId(movie.titulo);
         if (id) ids.push(id);
     }
     return ids;

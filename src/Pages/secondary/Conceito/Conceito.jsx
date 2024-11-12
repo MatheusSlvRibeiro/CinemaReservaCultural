@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import Navbar from "../../../components/navbar/Navbar"; 
 import Info from '../../../components/Info/Info'
-import data from '../../../data/data.json'
 
 const Conceito = () => {
     const sliderSettings = {
@@ -23,8 +22,8 @@ const Conceito = () => {
 
     return (
         <div>
-            <Navbar 
-                cidade={data.saoPaulo.cidade}/>
+            <Navbar
+                estacionamento="/"/>
             <article className={Styles.Article}>
                 <h1 className={Styles.Title}>Conceito</h1>
                 <div>
