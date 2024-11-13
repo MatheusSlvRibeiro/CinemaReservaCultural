@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faFilm, faInfoCircle, faUserCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Styles from "./admin.module.css";
+import EmCartaz from "./emCartaz/emCartaz";
+
 
 function Admin({ onLogout }) {
 
@@ -53,7 +55,7 @@ function Admin({ onLogout }) {
             </nav>
          </div>
          <div className={Styles.bside}>
-            {activeSection === "emCartaz"}
+            {activeSection === "emCartaz" && <EmCartaz />}
             
             {activeSection === "infoGerais"}
             
