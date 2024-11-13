@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../../components/navbar/Navbar";
 import Styles from "./Tarifas.module.css"
 import Info from "../../../components/Info/Info";
-import data from '../../../data/data.json'
 
 function Tarifas() {
     return (

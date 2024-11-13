@@ -19,7 +19,8 @@ const SaoPaulo = () => {
       <Slider />
       <PlayingNow 
         cidade="saoPaulo"/>
-      <News />
+      <News 
+        cidade="saoPaulo"/>
       <Info/>
       <Footer 
         cidade="saoPaulo"

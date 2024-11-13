@@ -1,5 +1,5 @@
 // src/App.js
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
@@ -20,12 +20,22 @@ import TrabalheConosco from './Pages/secondary/TrabalheConosco/TrabalheConosco';
 import Contato from './Pages/secondary/Contato/Contato';
 
 function App() {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => setIsAuthenticated(true);
+  const handleLogout = () => setIsAuthenticated(false);
+
+  const PrivateRoute = ({element}) => {
+    return isAuthenticated ? element : <Navigate to="/LoginAdmin" />;
+  };
+
   return (
 
       <Router>
         <Routes>
-          <Route path='/Admin' element={<Admin/>}/>
-          <Route path='/LoginAdmin' element={<Login/>}/>
+          <Route path='/Admin' element={<PrivateRoute element={<Admin onLogout={handleLogout}/>} /> } />
+          <Route path='/LoginAdmin' element={<Login onLogin={handleLogin} /> } />
 
           <Route path="/" element={<Home />} />
           <Route path="/SaoPaulo" element={<SaoPaulo />} />

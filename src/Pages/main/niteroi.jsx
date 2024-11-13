@@ -19,7 +19,8 @@ const Niteroi = () => {
       <Slider />
       <NowPlaying  
         cidade="niteroi"/>
-      <News />
+      <News 
+        cidade="niteroi"/>
       <Info />
       <Footer 
         cidade="niteroi"

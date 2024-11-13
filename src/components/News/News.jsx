@@ -3,8 +3,10 @@ import Slider from "react-slick";
 import styles from './News.module.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
+import postSaoPaulo from "../../data/saoPaulo/postSaoPaulo.json"
+import postNiteroi from "../../data/niteroi/postNiteroi.json"
 
-const News = () => {
+const News = ({cidade}) => {
     const [slidesToShow, setSlidesToShow] = useState(3);
 
     useEffect(() => {
@@ -38,6 +40,8 @@ const News = () => {
         autoplaySpeed: 5000,
     };
 
+    const localPost = cidade === 'saoPaulo' ? postSaoPaulo : postNiteroi;
+
     return (
         <section className={styles.PostGrid}>
             <h3 className={styles.sectionTitle}>
@@ -46,32 +50,18 @@ const News = () => {
         
             <div className={styles.PostSection}>
                 <Slider {...settings}>
-                
-                    <div>
-                        <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view">
-                            <img className={styles.Post}
-                            src="/images/post-250x250.jpg" 
-                            alt="teste"/>
-                        </a>
-                    </div>
-
-                    <div>
-                        <a href="https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view?usp=sharing" target="blank" rel="noopener noreferrer">
-                            <img className={styles.Post}
-                            src="/images/Post-250x240-2.jpg"
-                            alt="teste"/>
-                        </a>
-                    </div>
-
-                    <div>
-                        <a href="https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7" target="blank" rel="noopener noreferrer">
-                            <img className={styles.Post}
-                            src="/images/estacionamento.jpg"
-                            alt="teste"/>
-                        </a>
-                    </div>
-
+                    {localPost.map(item => (
+                        <div>
+                            <a href={item.url} target="_blank" rel="noreferrer noopener">
+                                <img 
+                                    className={styles.Post} 
+                                    src={item.img}
+                                    alt={item.alt}/>
+                            </a>
+                        </div>
+                    ))}                
                 </Slider>
+
             </div>
         </section>
     );

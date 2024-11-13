@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserShield, faFilm, faInfoCircle, faUserCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import Styles from "./admin.module.css";
 
-function Admin() {
-   const navigate = useNavigate();
+function Admin({ onLogout }) {
 
    const [activeSection, setActiveSection] = useState("emCartaz");
 
@@ -47,7 +45,7 @@ function Admin() {
                   <li>
                      <button 
                         className={Styles.NavButton} 
-                        onClick={() => navigate('/LoginAdmin')}>
+                        onClick={onLogout}>
                         <FontAwesomeIcon icon={faSignOutAlt} className={Styles.NavIcon}/> Sair
                      </button>
                   </li>

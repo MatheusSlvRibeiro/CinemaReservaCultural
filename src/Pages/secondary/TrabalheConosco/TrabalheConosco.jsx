@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Styles from './trabalheConosco.module.css';
 import Navbar from "../../../components/navbar/Navbar";
-import data from '../../../data/data.json'
 
 function TrabalheConosco (){
   const [formSubmitted, setFormSubmitted] = useState(false);

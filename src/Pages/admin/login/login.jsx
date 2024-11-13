@@ -4,7 +4,7 @@ import Styles from './login.module.css';
 import data from '../../../data/admins.json';
 import ScrollReveal from 'scrollreveal';
 
-function Login() {
+function Login({ onLogin }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -12,7 +12,7 @@ function Login() {
 
     useEffect(() => {
         const sr = ScrollReveal({
-            distance: '50px',
+            distance: '100px',
             duration: 1000,
             easing: 'ease-in-out',
             origin: 'bottom',
@@ -36,6 +36,7 @@ function Login() {
 
         if (admin) {
             setError("");
+            onLogin();
             navigate('/Admin');
         } else {
             setError("Usuário ou senha incorretos!");

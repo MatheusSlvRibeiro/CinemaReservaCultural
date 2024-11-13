@@ -1,0 +1,22 @@
+[
+    { 
+        "img": "/images/brasserie.jpg", 
+        "url": "https://www.instagram.com/brasseriereserva/", 
+        "alt": "Logo e instagram do Brasserie Reserva"
+    },
+    { 
+        "img": "/images/mahatma.jpg", 
+        "url": "https://www.instagram.com/mahatmapizza/", 
+        "alt": "Logo e instagram do Mahatma Pizza. "
+    },
+    { 
+        "img": "/images/DropBurger.jpg", 
+        "url": "https://www.instagram.com/dropburger/", 
+        "alt": "Logo e instagram do DropBurger, melhor hamburgueria de niteroi"
+    },
+    { 
+        "img": "/images/EstacionamentoNiteroi.jpg", 
+        "url": "https://maps.app.goo.gl/U6HPjZcaDLxMZm5d7", 
+        "alt": "Estacionamento conveniado. Cinema de rua com a comodidade que você precisa! tempo de cortesia 10 minutos. Até 3 horas R$20. Até 3 horas e meia R$25. demais frações ou 30 minutos R$5. Endereço: AV. visconde do rio branco, n880"
+    }
+]

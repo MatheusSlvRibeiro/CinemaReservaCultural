@@ -12,17 +12,21 @@
 }
 
 .subtitle{
+    font-size: 2rem;
+    font-weight: 400;
     margin: 1rem;
 }
 
 .form{
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 .labelForm{
+    color: #FFF;
     font-size: 1.4rem;
 }
 

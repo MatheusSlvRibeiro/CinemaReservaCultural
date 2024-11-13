@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from './Movies.module.css';
 
 import getMovieIds from './fetchMovieId'
-import filmesSaoPaulo from '../data/filmesSaoPaulo.json';
-import filmesNiteroi from '../data/filmesNiteroi.json';
+import filmesSaoPaulo from '../data/saoPaulo/filmesSaoPaulo.json';
+import filmesNiteroi from '../data/niteroi/filmesNiteroi.json';
 
 const truncateTitle = (title, maxLength) => {
     if (title.length > maxLength) {
@@ -111,12 +111,19 @@ const MovieSlider = ({cidade}) => {
         <div className={styles.slider_container}>
             <Slider {...settings}>
                 {movies.map(movie => (
+                    
                     <div className={styles.MovieCard} key={movie.id}>
-                        <a href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" target='blank' className={styles.movieLink}>
+                        
+                        <a 
+                            href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
+                            target='blank' 
+                            className={styles.movieLink}>
+                            
                             <img className={styles.moviePoster} 
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
                                 alt={movie.title} 
                             />
+                            
                             <div className={styles.movieContent}>
                                 <h1 className={styles.movieTitle}>
                                     {truncateTitle(movie.title, 30)} 
