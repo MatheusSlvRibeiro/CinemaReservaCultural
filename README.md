@@ -26,7 +26,7 @@
 <h4>📦 Como Executar o Projeto <br></h4>
 
 1. Clone o repositório: <br>
-    git clone https://github.com/seu-usuario/seu-projeto.git<br>
+    git clone https://github.com/MatheusSlvRibeiro/CinemaReservaCultural.git<br>
     cd seu-projeto
 
 2. Instale as dependências: <br>
