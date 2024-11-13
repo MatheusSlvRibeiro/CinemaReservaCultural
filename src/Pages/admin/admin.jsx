@@ -6,7 +6,6 @@ import EmCartaz from "./emCartaz/emCartaz";
 
 
 function Admin({ onLogout }) {
-
    const [activeSection, setActiveSection] = useState("emCartaz");
 
    return (
@@ -55,7 +54,7 @@ function Admin({ onLogout }) {
             </nav>
          </div>
          <div className={Styles.bside}>
-            {activeSection === "emCartaz" && <EmCartaz />}
+            {activeSection === "emCartaz" && <EmCartaz/>}
             
             {activeSection === "infoGerais"}
             

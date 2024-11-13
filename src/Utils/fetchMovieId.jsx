@@ -1,5 +1,5 @@
 import filmesSaoPaulo from '../data/saoPaulo/filmesSaoPaulo.json'
-import filmesNiteroi from '../data/niteroi/filmesNiteroi.json'
+import filmesNiteroi from '../data/Niteroi/filmesNiteroi.json'
 
 const API_KEY = 'd69cb7e92473b2944af9f61f30ebf1a4';
 

@@ -4,7 +4,7 @@ import styles from './News.module.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 import postSaoPaulo from "../../data/saoPaulo/postSaoPaulo.json"
-import postNiteroi from "../../data/niteroi/postNiteroi.json"
+import postNiteroi from "../../data/Niteroi/postNiteroi.json"
 
 const News = ({cidade}) => {
     const [slidesToShow, setSlidesToShow] = useState(3);

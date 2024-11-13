@@ -6,7 +6,7 @@ import styles from './Movies.module.css';
 
 import getMovieIds from './fetchMovieId'
 import filmesSaoPaulo from '../data/saoPaulo/filmesSaoPaulo.json';
-import filmesNiteroi from '../data/niteroi/filmesNiteroi.json';
+import filmesNiteroi from '../data/Niteroi/filmesNiteroi.json';
 
 const truncateTitle = (title, maxLength) => {
     if (title.length > maxLength) {
