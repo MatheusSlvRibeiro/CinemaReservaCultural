@@ -93,7 +93,6 @@ export default function OnShow({ cidade, localMovies }) {
             setDeleteMovieDialog(false);
             setMovie(emptyMovie);
             toast.current.show({ severity: 'success', summary: 'Concluído', detail: 'Filme Deletado', life: 3000 });
-      };
 
       const findIndexById = (id) => {
             let index = -1;
@@ -109,21 +108,17 @@ export default function OnShow({ cidade, localMovies }) {
       };
 
       const createId = () => {
-            let id = '';
-            let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-            for (let i = 0; i < 5; i++) {
-                  id += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-
-            return id;
+            const timestamp = Date.now().toString(36);
+            const randomValue = Math.floor(Math.random() * 1000).toString(36);
+        
+            return `${timestamp}${randomValue}`;
       };
 
       const confirmDeleteSelected = () => {
             setDeleteMoviesDialog(true);
       };
 
-      const deleteselectedMovies = () => {
+      const deleteSelectedMovies = () => {
             let _movies = movies.filter((val) => !selectedMovies.includes(val));
 
             setMovies(_movies);
@@ -135,7 +130,7 @@ export default function OnShow({ cidade, localMovies }) {
       const onCategoryChange = (e) => {
             let _movie = { ...movie };
 
-            _movie['category'] = e.value;
+            _movie['faixaEtaria'] = e.value;
             setMovie(_movie);
       };
 
@@ -193,7 +188,7 @@ export default function OnShow({ cidade, localMovies }) {
       const deleteMoviesDialogFooter = (
             <React.Fragment>
                   <Button label="Não" icon="pi pi-times" outlined onClick={hideDeleteMoviesDialog} />
-                  <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deleteselectedMovies} />
+                  <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deleteSelectedMovies} />
             </React.Fragment>
       );
 
@@ -208,7 +203,7 @@ export default function OnShow({ cidade, localMovies }) {
                               paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
                               currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} filmes" globalFilter={globalFilter} header={header}>
                         <Column selectionMode="multiple" exportable={false}></Column>
-                        <Column field="code" header="ID" style={{ minWidth: '12rem' }}></Column>
+                        <Column field="id" header="ID" style={{ minWidth: '12rem' }}></Column>
                         <Column field="titulo" header="Titulo" style={{ minWidth: '16rem' }}></Column>
                         <Column field="faixaEtaria" header="Categoria" style={{ minWidth: '10rem' }}></Column>
                         <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '12rem' }}></Column>
@@ -221,8 +216,8 @@ export default function OnShow({ cidade, localMovies }) {
                         <label htmlFor="titulo" className="font-bold">
                               Nome
                         </label>
-                        <InputText id="name" value={movie.name} onChange={(e) => onInputChange(e, 'name')} required autoFocus className={classNames({ 'p-invalid': submitted && !movie.name })} />
-                        {submitted && !movie.name && <small className="p-error">o nome é obrigatório</small>}
+                        <InputText id="titulo" value={movie.titulo} onChange={(e) => onInputChange(e, 'name')} required autoFocus className={classNames({ 'p-invalid': submitted && !movie.titulo })} />
+                        {submitted && !movie.titulo && <small className="p-error">o Titulo é obrigatório</small>}
                   </div>
 
                   <div className="field">
@@ -261,7 +256,7 @@ export default function OnShow({ cidade, localMovies }) {
                         <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
                         {movie && (
                               <span>
-                              Você tem certeza que deseja deletar os filmes selecionados? <b>{movie.name}</b>?
+                              Você tem certeza que deseja deletar os filmes selecionados? <b>{movie.titulo}</b>?
                               </span>
                         )}
                   </div>
@@ -275,4 +270,5 @@ export default function OnShow({ cidade, localMovies }) {
                   </Dialog>
             </div>
       );
+      };
 }

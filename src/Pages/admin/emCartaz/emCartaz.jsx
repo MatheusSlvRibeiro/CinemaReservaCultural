@@ -9,7 +9,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 function EmCartaz({ cidade }){
 
-    const [selectedCity, setSelectedCity] = useState(cidade);
+    const [selectedCity, setSelectedCity] = useState(cidade === 'saoPaulo' ? "São Paulo" : "Niterói");
     const [localMovies, setLocalMovies] = useState(cidade === 'saoPaulo' ? filmesSaoPaulo : filmesNiteroi);
 
     const handleCityChange = (e) => {
