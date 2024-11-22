@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styles from "./emCartaz.module.css";
-import filmesSaoPaulo from '../../../data/saoPaulo/filmesSaoPaulo.json';
-import filmesNiteroi from '../../../data/Niteroi/filmesNiteroi.json';
 import OnShow from "../../../components/dataTable/dataTable";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
@@ -10,16 +8,10 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 function EmCartaz({ cidade }){
 
     const [selectedCity, setSelectedCity] = useState(cidade === 'saoPaulo' ? "São Paulo" : "Niterói");
-    const [localMovies, setLocalMovies] = useState(cidade === 'saoPaulo' ? filmesSaoPaulo : filmesNiteroi);
 
     const handleCityChange = (e) => {
         const city = e.target.value;
         setSelectedCity(city);
-        if (city === "São Paulo") {
-            setLocalMovies(filmesSaoPaulo)
-        } else if (city === "Niterói") {
-            setLocalMovies(filmesNiteroi)
-        }
     };
 
     return (
@@ -41,8 +33,7 @@ function EmCartaz({ cidade }){
             <main>
                 <section>
                     <OnShow 
-                        cidade={selectedCity === 'São Paulo' ? "saoPaulo" : "niteroi"}
-                        localMovies={localMovies}/>       
+                        cidade={selectedCity === 'São Paulo' ? "saoPaulo" : "niteroi"}/>       
                 </section>
             </main>
         </article>
