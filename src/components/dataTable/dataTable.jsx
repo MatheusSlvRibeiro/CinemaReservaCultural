@@ -157,7 +157,7 @@ export default function OnShow({ cidade}) {
 
       const leftToolbarTemplate = () => {
             return (
-                  <div className="flex flex-wrap gap-2 p-2">
+                  <div className="flex flex-wrap gap-2">
                         <Button className='p-2' label="Novo" icon="pi pi-plus" severity="success" onClick={openNew} />
                         <Button className='p-2' label="Deletar" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedMovies || !selectedMovies.length} />
                   </div>
@@ -209,7 +209,7 @@ export default function OnShow({ cidade}) {
             <div>
                   <Toast ref={toast} />
                   <div className="card">
-                        <Toolbar className="mb-4" left={leftToolbarTemplate}></Toolbar>
+                        <Toolbar className="mb-2" left={leftToolbarTemplate}></Toolbar>
 
                         <DataTable 
                               ref={dt} 
@@ -225,7 +225,7 @@ export default function OnShow({ cidade}) {
                               globalFilter={globalFilter} 
                               header={header}>
                               <Column selectionMode="multiple" exportable={false}></Column>
-                              <Column field="id" header="ID" style={{ minWidth: '12rem' }}></Column>
+                              <Column field="id" header="ID" style={{ minWidth: '12rem', padding: '0.5rem' }}></Column>
                               <Column field="titulo" header="Titulo" style={{ minWidth: '16rem' }}></Column>
                               <Column field="faixaEtaria" header="Categoria" style={{ minWidth: '10rem' }}></Column>
                               <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '12rem' }}></Column>
