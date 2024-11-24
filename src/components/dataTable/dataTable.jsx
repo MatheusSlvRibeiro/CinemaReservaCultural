@@ -158,8 +158,8 @@ export default function OnShow({ cidade}) {
       const leftToolbarTemplate = () => {
             return (
                   <div className="flex flex-wrap gap-2">
-                        <Button className='p-2' label="Novo" icon="pi pi-plus" severity="success" onClick={openNew} />
-                        <Button className='p-2' label="Deletar" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedMovies || !selectedMovies.length} />
+                        <Button className='p-2 bg-green-500 text-white hover:bg-green-600' label="Novo" icon="pi pi-plus" severity="success" onClick={openNew} />
+                        <Button className='p-2 bg-red-500 text-white hover:bg-red-600' label="Deletar" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedMovies || !selectedMovies.length} />
                   </div>
             );
       };
@@ -167,9 +167,20 @@ export default function OnShow({ cidade}) {
       const actionBodyTemplate = (rowData) => {
             return (
                   <React.Fragment>
-                        <Button icon="pi pi-pencil" rounded outlined className="m-1" onClick={() => editProduct(rowData)} />
-                        <Button icon="pi pi-trash" rounded outlined severity="danger"
-                        className="m-1" onClick={() => confirmDeleteProduct(rowData)} />
+                        <Button 
+                              icon="pi pi-pencil" 
+                              rounded 
+                              outlined 
+                              severity='info'
+                              className="m-1 border-blue-500 text-blue-500 hover:bg-blue-100" 
+                              onClick={() => editProduct(rowData)} />
+                        <Button 
+                              icon="pi pi-trash" 
+                              rounded 
+                              outlined 
+                              severity="danger"
+                              className="m-1 border-red-500 text-red-500 hover:bg-red-100" 
+                              onClick={() => confirmDeleteProduct(rowData)} />
                   </React.Fragment>
             );
       };
@@ -218,16 +229,17 @@ export default function OnShow({ cidade}) {
                               onSelectionChange={(e) => setSelectedMovies(e.value)}
                               dataKey="id"  
                               paginator 
-                              rows={10} 
+                              showGridlines
+                              rows={5} 
                               rowsPerPageOptions={[5, 10, 25, 50]}
                               paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-                              currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} filmes" 
+                              currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} filmes " 
                               globalFilter={globalFilter} 
                               header={header}>
                               <Column selectionMode="multiple" exportable={false}></Column>
-                              <Column field="id" header="ID" style={{ minWidth: '12rem', padding: '0.5rem' }}></Column>
+                              <Column field="id" header="ID" style={{ minWidth: '8rem', padding: '0.5rem' }}></Column>
                               <Column field="titulo" header="Titulo" style={{ minWidth: '16rem' }}></Column>
-                              <Column field="faixaEtaria" header="Categoria" style={{ minWidth: '10rem' }}></Column>
+                              <Column field="faixaEtaria" header="Categoria" style={{ minWidth: '6rem' }}></Column>
                               <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '12rem' }}></Column>
                         </DataTable>
                   </div>
@@ -243,15 +255,40 @@ export default function OnShow({ cidade}) {
                   </div>
 
                   <div className="field">
-                        <label className="mb-3 font-bold">Classificação</label>
+                        <label className="mb-3  font-bold">Classificação</label>
                         <div className="flex">
-                              <RadioButton inputId="faixaEtaria1" name="faixaEtaria" value="L" onChange={onCategoryChange} checked={movie.faixaEtaria === 'L'} />
-                              <label htmlFor="faixaEtaria1" className="mr-2">Livre</label>
-                              <RadioButton inputId="faixaEtaria2" name="faixaEtaria" value="10" onChange={onCategoryChange} checked={movie.faixaEtaria === '10'} />
-                              <label htmlFor="faixaEtaria2" className="mr-2">10 anos</label>
-                              <RadioButton inputId="faixaEtaria3" name="faixaEtaria" value="12" onChange={onCategoryChange} checked={movie.faixaEtaria === '12'} />
-                              <label htmlFor="faixaEtaria3" className="mr-2">12 anos</label>
-                              <RadioButton inputId="faixaEtaria4" name="faixaEtaria" value="14" onChange={onCategoryChange} checked={movie.faixaEtaria === '14'} />
+                              <RadioButton 
+                                    inputId="faixaEtaria1" 
+                                    name="faixaEtaria" 
+                                    value="L" 
+                                    onChange={onCategoryChange} 
+                                    checked={movie.faixaEtaria === 'L'} />
+                              <label 
+                                    htmlFor="faixaEtaria1" 
+                                    className="mr-2">Livre</label>
+                              
+                              <RadioButton 
+                                    inputId="faixaEtaria2" 
+                                    name="faixaEtaria" 
+                                    value="10" 
+                                    onChange={onCategoryChange} 
+                                    checked={movie.faixaEtaria === '10'} />
+                              <label 
+                                    htmlFor="faixaEtaria2" 
+                                    className="mr-2">10 anos</label>
+
+                              <RadioButton 
+                                    inputId="faixaEtaria3" 
+                                    name="faixaEtaria" 
+                                    value="12" 
+                                    onChange={onCategoryChange} 
+                                    checked={movie.faixaEtaria === '12'} />
+                              <label 
+                                    htmlFor="faixaEtaria3" 
+                                    className="mr-2">12 anos</label>
+                              
+                              <RadioButton 
+                                    inputId="faixaEtaria4" name="faixaEtaria" value="14" onChange={onCategoryChange} checked={movie.faixaEtaria === '14'} />
                               <label htmlFor="faixaEtaria4" className="mr-2">14 anos</label>
                               <RadioButton inputId="faixaEtaria5" name="faixaEtaria" value="16" onChange={onCategoryChange} checked={movie.faixaEtaria === '16'} />
                               <label htmlFor="faixaEtaria5" className="mr-2">16 anos</label>

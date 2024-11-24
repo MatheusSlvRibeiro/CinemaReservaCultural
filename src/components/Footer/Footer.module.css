@@ -30,6 +30,7 @@
 }
 
 .column_item{
+    color: var(--main-text-color);
     display: flex;
     font-weight: 300;
     margin-bottom: 20px;
@@ -45,6 +46,7 @@
 }
 
 .SocialMedia_icon{
+    color: var(--main-text-color);
     height: 1.5rem;
     padding: 0 10px;
 }
@@ -65,11 +67,12 @@
 }
 
 .copyright{
+    color: var(--main-text-color);
     font-weight: 200;
 }
 .institucional p{
+    color: var(--main-text-color);
     font-size: var(--normal-font-size);
-    color: white;
     margin-bottom: 0;
 }
 .institucional a{

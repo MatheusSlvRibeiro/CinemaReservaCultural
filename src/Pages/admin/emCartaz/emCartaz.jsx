@@ -35,6 +35,7 @@ function EmCartaz({ cidade }){
                     <OnShow 
                         cidade={selectedCity === 'São Paulo' ? "saoPaulo" : "niteroi"}/>       
                 </section>
+                
             </main>
         </article>
     )

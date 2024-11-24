@@ -90,12 +90,18 @@
 }
 
 .Address a{
+    color: var(--main-text-color);
     padding: 1rem;
 }
 
 .Copyright{
+    color: var(--main-text-color);
     padding-bottom: 2rem;
     font-weight: 200;
+}
+
+.Footer div p{
+    color: var(--main-text-color);
 }
 
 .Developer a{

@@ -20,6 +20,7 @@
 }
 
 .subtitle{
+      color: var(--main-text-color);
       margin-top: 3.5rem;
       font-size: 1.7rem;
       margin-bottom: 1.5rem;
@@ -27,6 +28,7 @@
 }
 
 .paragraph{
+      color: var(--main-text-color);
       font-size: var(--h2-font-size);
       margin-bottom: 1.5rem;
 }

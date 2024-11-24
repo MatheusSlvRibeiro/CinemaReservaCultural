@@ -19,6 +19,7 @@
 }
 
 .Lista{
+      color: var(--main-text-color);
      padding: 2rem;
 }
 

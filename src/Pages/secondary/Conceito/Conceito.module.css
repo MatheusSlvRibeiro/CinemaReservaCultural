@@ -7,6 +7,7 @@
 }
 
 .Subtitle {
+    color: var(--main-text-color);
     font-weight: 400;
     text-transform: uppercase;
     margin-top: 1.5rem;
@@ -14,6 +15,7 @@
 }
 
 .Paragraph {
+    color: var(--main-text-color);
     margin-bottom: 1rem;
     font-size: var(--h2-font-size);
 }

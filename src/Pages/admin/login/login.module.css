@@ -12,6 +12,7 @@
 }
 
 .subtitle{
+    color: var(--main-text-color);
     font-size: 2rem;
     font-weight: 400;
     margin: 1rem;
