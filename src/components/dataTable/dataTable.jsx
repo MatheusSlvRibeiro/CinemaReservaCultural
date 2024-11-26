@@ -158,8 +158,8 @@ export default function OnShow({ cidade}) {
       const leftToolbarTemplate = () => {
             return (
                   <div className="flex flex-wrap gap-2">
-                        <Button className='p-2 bg-green-500 text-white hover:bg-green-600' label="Novo" icon="pi pi-plus" severity="success" onClick={openNew} />
-                        <Button className='p-2 bg-red-500 text-white hover:bg-red-600' label="Deletar" icon="pi pi-trash" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedMovies || !selectedMovies.length} />
+                        <Button className='p-2 bg-green-500 text-white hover:bg-green-600 ' label="Novo" icon="pi pi-plus p-2" severity="success" onClick={openNew} />
+                        <Button className='p-2 bg-red-500 text-white hover:bg-red-600' label="Deletar" icon="pi pi-trash p-2" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedMovies || !selectedMovies.length} />
                   </div>
             );
       };
@@ -172,14 +172,14 @@ export default function OnShow({ cidade}) {
                               rounded 
                               outlined 
                               severity='info'
-                              className="m-1 border-blue-500 text-blue-500 hover:bg-blue-100" 
+                              className="m-1 border-blue-500 text-blue-500 bg-blue-50 hover:bg-blue-100" 
                               onClick={() => editProduct(rowData)} />
                         <Button 
                               icon="pi pi-trash" 
                               rounded 
                               outlined 
                               severity="danger"
-                              className="m-1 border-red-500 text-red-500 hover:bg-red-100" 
+                              className="m-1 border-red-500 text-red-500 bg-red-50 hover:bg-red-100" 
                               onClick={() => confirmDeleteProduct(rowData)} />
                   </React.Fragment>
             );
@@ -187,7 +187,7 @@ export default function OnShow({ cidade}) {
 
       const header = (
             <div className="flex flex-wrap gap-2 align-items-center justify-content-between">
-                  <h4 className="m-0 p-2 text-black text-center">Gestão de catálago</h4>
+                  <h4 className="m-0 p-3 text-black text-center">Gestão de catálago</h4>
                   <IconField iconPosition="right">
                         <InputIcon className="pi pi-search" />
                         <InputText type="search" className='p-2' onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Procurar..." />
@@ -197,22 +197,22 @@ export default function OnShow({ cidade}) {
 
       const movieDialogFooter = (
             <React.Fragment>
-                  <Button label="Cancelar" icon="pi pi-times" outlined onClick={hideDialog} />
-                  <Button label="Salvar" icon="pi pi-check" onClick={saveProduct} />
+                  <Button label="Cancelar" icon="pi pi-times" className='bg-red-200 hover:bg-red-300 p-2 m-1' outlined onClick={hideDialog} />
+                  <Button label="Salvar" icon="pi pi-check" className='bg-green-200 hover:bg-green-400 p-2 m-1' onClick={saveProduct} />
             </React.Fragment>
       );
     
       const deleteMovieDialogFooter = (
             <React.Fragment>
-                  <Button label="Não" icon="pi pi-times" outlined onClick={hideDeleteMovieDialog} />
-                  <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deleteProduct} />
+                  <Button label="Não" icon="pi pi-times p-1" className='bg-red-200 hover:bg-red-300 p-2 m-1' outlined onClick={hideDeleteMovieDialog} />
+                  <Button label="Sim" icon="pi pi-check p-1" className='bg-green-200 hover:bg-green-400 p-2 m-1' severity="danger" onClick={deleteProduct} />
             </React.Fragment>
       );
     
       const deleteMoviesDialogFooter = (
             <React.Fragment>
-                  <Button label="Não" icon="pi pi-times" outlined onClick={hideDeleteMoviesDialog} />
-                  <Button label="Sim" icon="pi pi-check" severity="danger" onClick={deleteSelectedMovies} />
+                  <Button label="Não" icon="pi pi-times p-1" className='bg-red-200 hover:bg-red-300 p-2 m-1' outlined onClick={hideDeleteMoviesDialog} />
+                  <Button label="Sim" icon="pi pi-check p-1" className='bg-green-200 hover:bg-green-400 p-2 m-1' severity="danger" onClick={deleteSelectedMovies} />
             </React.Fragment>
       );
 
@@ -220,7 +220,7 @@ export default function OnShow({ cidade}) {
             <div>
                   <Toast ref={toast} />
                   <div className="card">
-                        <Toolbar className="mb-2" left={leftToolbarTemplate}></Toolbar>
+                        <Toolbar className="mb-2 bg-white" left={leftToolbarTemplate}></Toolbar>
 
                         <DataTable 
                               ref={dt} 
@@ -244,28 +244,49 @@ export default function OnShow({ cidade}) {
                         </DataTable>
                   </div>
 
-                  <Dialog visible={movieDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Detalhes do filme" modal className="p-fluid" footer={movieDialogFooter} onHide={hideDialog}>
+                  <Dialog visible={movieDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Detalhes do filme" modal className="p-fluid p-3 bg-white" footer={movieDialogFooter} onHide={hideDialog}>
                   
                   <div className="field">
-                        <label htmlFor="titulo" className="font-bold p-2">
-                              Nome
+                        <label htmlFor="titulo" className="font-bold p-3 mb-0">
+                              Título
                         </label>
-                        <InputText id="titulo" value={movie.titulo} onChange={(e) => onInputChange(e, 'titulo')} required autoFocus className={classNames({ 'p-invalid': submitted && !movie.titulo })} />
-                        {submitted && !movie.titulo && <small className="p-error">o Titulo é obrigatório</small>}
+                        <div className="flex flex-col space-y-2">
+                              <input
+                                    id="titulo"
+                                    type="text"
+                                    value={movie.titulo}
+                                    onChange={(e) => onInputChange(e, 'titulo')}
+                                    required
+                                    autoFocus
+                                    className={`w-full mx-3 my-0 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500 ${
+                                          submitted && !movie.titulo
+                                          ? 'border-red-500 focus:ring-red-500'
+                                          : 'border-gray-300'
+                                    }`}
+                              />
+                              {submitted && !movie.titulo && (
+                                    <small className="text-red-500">O título é obrigatório</small>
+                              )}
+                        </div>
                   </div>
 
                   <div className="field">
-                        <label className="mb-3  font-bold">Classificação</label>
+                        <label className="mb-3 p-3 font-bold">Classificação</label>
                         <div className="flex">
-                              <RadioButton 
-                                    inputId="faixaEtaria1" 
-                                    name="faixaEtaria" 
-                                    value="L" 
-                                    onChange={onCategoryChange} 
-                                    checked={movie.faixaEtaria === 'L'} />
-                              <label 
-                                    htmlFor="faixaEtaria1" 
-                                    className="mr-2">Livre</label>
+                              <div className='flex p-3'>
+                                    <RadioButton  
+                                          inputId="faixaEtaria1" 
+                                          id='faixaEtaria1'
+                                          name="faixaEtaria" 
+                                          required
+                                          value="L" 
+                                          onChange={onCategoryChange} 
+                                          checked={movie.faixaEtaria === 'L'} 
+                                          className="focus:ring-amber-500"/>
+                                    <label 
+                                          htmlFor="faixaEtaria1" 
+                                          className="text-gray-600 hover:text-amber-500 cursor-pointer">Livre</label>
+                              </div>
                               
                               <RadioButton 
                                     inputId="faixaEtaria2" 
@@ -288,20 +309,42 @@ export default function OnShow({ cidade}) {
                                     className="mr-2">12 anos</label>
                               
                               <RadioButton 
-                                    inputId="faixaEtaria4" name="faixaEtaria" value="14" onChange={onCategoryChange} checked={movie.faixaEtaria === '14'} />
-                              <label htmlFor="faixaEtaria4" className="mr-2">14 anos</label>
-                              <RadioButton inputId="faixaEtaria5" name="faixaEtaria" value="16" onChange={onCategoryChange} checked={movie.faixaEtaria === '16'} />
-                              <label htmlFor="faixaEtaria5" className="mr-2">16 anos</label>
-                              <RadioButton inputId="faixaEtaria6" name="faixaEtaria" value="18" onChange={onCategoryChange} checked={movie.faixaEtaria === '18'} />
-                              <label htmlFor="faixaEtaria6" className="mr-2">18 anos</label>
+                                    inputId="faixaEtaria4" 
+                                    name="faixaEtaria" 
+                                    value="14"
+                                    onChange={onCategoryChange} 
+                                    checked={movie.faixaEtaria === '14'} />
+                              <label 
+                                    htmlFor="faixaEtaria4" 
+                                    className="mr-2">14 anos</label>
+
+                              <RadioButton 
+                                    inputId="faixaEtaria5" 
+                                    name="faixaEtaria" 
+                                    value="16" 
+                                    onChange={onCategoryChange} 
+                                    checked={movie.faixaEtaria === '16'} />
+                              <label 
+                                    htmlFor="faixaEtaria5" 
+                                    className="mr-2">16 anos</label>
+
+                              <RadioButton 
+                                    inputId="faixaEtaria6" 
+                                    name="faixaEtaria" 
+                                    value="18" 
+                                    onChange={onCategoryChange} 
+                                    checked={movie.faixaEtaria === '18'} />
+                              <label 
+                                    htmlFor="faixaEtaria6" 
+                                    className="mr-2">18 anos</label>
                         </div>
                   </div>
 
             </Dialog>
 
-            <Dialog visible={deleteMovieDialog} style={{ width: '450px' }} header="Confirmar" modal footer={deleteMovieDialogFooter} onHide={hideDeleteMovieDialog}>
-                  <div className="confirmation-content">
-                        <i className="pi pi-exclamation-triangle p-mr-3" style={{ fontSize: '2rem' }} />
+            <Dialog visible={deleteMovieDialog} style={{ width: '450px'}} header="Confirmar" className='p-3 bg-white' modal footer={deleteMovieDialogFooter} onHide={hideDeleteMovieDialog}>
+                  <div className="confirmation-content p-1">
+                        <i className="pi pi-exclamation-triangle p-mr-3 p-2" style={{ fontSize: '2rem' }} />
                         {movie && (
                               <span>
                                     Você tem certeza que deseja excluir o filme <b>{movie.titulo}</b>?
@@ -310,8 +353,8 @@ export default function OnShow({ cidade}) {
                   </div>
             </Dialog>
 
-            <Dialog visible={deleteMoviesDialog} style={{ width: '450px' }} header="Confirmar" modal footer={deleteMoviesDialogFooter} onHide={hideDeleteMoviesDialog}>
-                  <div className="confirmation-content">
+            <Dialog visible={deleteMoviesDialog} style={{ width: '450px' }} header="Confirmar" className='p-3 bg-white' modal footer={deleteMoviesDialogFooter} onHide={hideDeleteMoviesDialog}>
+                  <div className="confirmation-content p-1">
                         <i className="pi pi-exclamation-triangle p-mr-3" style={{ fontSize: '2rem' }} />
                         {selectedMovies && selectedMovies.length > 0 && (
                               <span>
