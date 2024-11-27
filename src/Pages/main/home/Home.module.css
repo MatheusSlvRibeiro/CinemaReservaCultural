@@ -4,19 +4,24 @@
     padding: 2rem 4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     min-height: 100vh;
     text-align: center;
 }
 
-.image{
-    margin: -0.8rem;
+.Logo{
     width: 50%;
     max-width: 300px;
+    display:ruby-base; 
+}
+
+.image {
+    width: 50%;
+    max-width: 200px;
 }
 
 .subtitle{
+    font-size: 1.2rem;
     color: var(--main-text-color);
     text-transform: uppercase;
     margin-top: 2rem;
@@ -27,8 +32,27 @@
     border-bottom: 1px solid var(--main-color);
 }
 
-.Object p{
+.Button{
+    cursor: pointer;
+    border: none;
     color: var(--main-text-color);
+    width: 80%;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    background-color: var(--main-bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Button:hover{
+    background-color: var(--main-bg-color-dark);
 }
 
 .SideBySide{
@@ -48,22 +72,6 @@
     padding: 1rem;
     border-radius: 0.5rem;
     margin: 0.5rem;
-}
-
-.SideBySide a{
-    width: 80%;
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    padding: 1rem;
-    background-color: var(--main-bg-color);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .Image{
@@ -105,6 +113,7 @@
 }
 
 .Developer a{
+    color: var(--main-text-color);
     position: relative;
 }
 

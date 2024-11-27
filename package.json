@@ -19,6 +19,7 @@
     "express": "^4.21.1",
     "fs": "^0.0.1-security",
     "higher": "^1.0.5",
+    "js-cookie": "^3.0.5",
     "jsonwebtoken": "^9.0.2",
     "micromatch": "^4.0.8",
     "mongodb": "^6.10.0",

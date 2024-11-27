@@ -1,6 +1,8 @@
 // src/App.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Cookies from 'js-cookie';
+import axios from 'axios';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 import Home from './Pages/main/home/Home';
@@ -21,23 +23,51 @@ import Contato from './Pages/secondary/Contato/Contato';
 
 function App() {
 
+  const cidadeDefault = 'Sao Paulo';
+  
+  // eslint-disable-next-line no-unused-vars
+  const [cidade, setCidade] = useState('');
+
+  // eslint-disable-next-line no-unused-vars
+  const [dados, setDados] = useState({});
+
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogin = () => setIsAuthenticated(true);
   const handleLogout = () => setIsAuthenticated(false);
 
-  const PrivateRoute = ({element}) => {
-    return isAuthenticated ? element : <Navigate to="/LoginAdmin" />;
+  const PrivateRoute = ({ children }) => {
+    return isAuthenticated ? children : <Navigate to="/LoginAdmin" />;
   };
+
+  useEffect(() => {
+    const cidadeSalva = Cookies.get('cidade') || cidadeDefault;
+    setCidade(cidadeSalva);
+
+    Cookies.set('cidade', cidadeSalva, {expires: 7, path: '/'});
+
+    axios.get('/dados').then((response) => {
+      setDados(response.data);
+    });
+  }, []);
+
+    const handleCidadeChange = (novaCidade) => {
+      setCidade(novaCidade);
+      Cookies.set('cidade', novaCidade, {expires: 7, path: '/'});
+      
+      axios.get('/dados').then((response) => {
+        setDados(response.data);
+      });
+    };
 
   return (
 
       <Router>
         <Routes>
-          <Route path='/Admin' element={<PrivateRoute element={<Admin onLogout={handleLogout}/>} /> } />
+          <Route path='/Admin' element={<PrivateRoute ><Admin onLogout={handleLogout}/></PrivateRoute> } />
           <Route path='/LoginAdmin' element={<Login onLogin={handleLogin} /> } />
 
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home onCidadeChange={handleCidadeChange} />} />
           <Route path="/SaoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
           
