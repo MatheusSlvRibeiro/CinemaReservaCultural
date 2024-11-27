@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import Styles from "./Home.module.css";
 import Cookies from "js-cookie"; 
 import { useNavigate } from "react-router-dom"; 
@@ -7,7 +7,7 @@ function Home() {
   const navigate = useNavigate(); 
 
   const handleCitySelection = (cidade, path) => {
-    Cookies.set("cidade", cidade, { expires: 7, path: "/" });
+    Cookies.set("cidade", cidade, { expires: 7, path: "/" }); 
     navigate(path); 
   };
 
@@ -31,7 +31,7 @@ function Home() {
               />
               <button 
                 className={Styles.Button} 
-                onClick={() => handleCitySelection("Sao Paulo", "/SaoPaulo")}
+                onClick={() => handleCitySelection("saoPaulo", "/SaoPaulo")}
               >
                 São Paulo - SP
               </button>
@@ -45,7 +45,7 @@ function Home() {
               />
               <button 
                 className={Styles.Button} 
-                onClick={() => handleCitySelection("Niteroi", "/Niteroi")}
+                onClick={() => handleCitySelection("niteroi", "/Niteroi")}
               >
                 Niterói - RJ
               </button>

@@ -5,32 +5,18 @@ import PlayingNow from '../../components/PlayingNow/PlayingNow';
 import News from '../../components/News/News'
 import Info from '../../components/Info/Info';
 import Footer from '../../components/Footer/Footer';
-import data from '../../data/data.json'
 
 const SaoPaulo = () => {
   return (
     <div>
-      <Navbar 
-        cidadeUrl="saoPaulo"
-        cidade={data.saoPaulo.cidade}
-        ingressos={data.saoPaulo.ingressos}
-        estacionamento={data.saoPaulo.estacionamento}
-        gastronomia={data.saoPaulo.gastronomia || []}/>
+      <Navbar/>
       <Slider />
       <PlayingNow 
         cidade="saoPaulo"/>
       <News 
         cidade="saoPaulo"/>
       <Info/>
-      <Footer 
-        cidade="saoPaulo"
-        ingressos={data.saoPaulo.ingressos}
-        estacionamento={data.saoPaulo.estacionamento}
-        endereço={data.saoPaulo.endereço}
-        endereçoUrl={data.saoPaulo.endereçoUrl}
-        redesSociais={data.saoPaulo.redesSociais}
-        gastronomia={data.saoPaulo.gastronomia}
-        />
+      <Footer/>
     </div>
   );
 };

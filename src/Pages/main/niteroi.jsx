@@ -5,32 +5,18 @@ import News from '../../components/News/News'
 import NowPlaying from '../../components/PlayingNow/PlayingNow';
 import Info from '../../components/Info/Info';
 import Footer from '../../components/Footer/Footer';
-import data from '../../data/data.json'
 
 const Niteroi = () => {
   return (
     <div>
-      <Navbar 
-        cidadeUrl="niteroi"
-        cidade={data.niteroi.cidade}
-        ingressos={data.niteroi.ingressos}
-        estacionamento={data.niteroi.estacionamento}
-        gastronomia={data.niteroi.gastronomia || []}/>
+      <Navbar />
       <Slider />
       <NowPlaying  
         cidade="niteroi"/>
       <News 
         cidade="niteroi"/>
       <Info />
-      <Footer 
-        cidade="niteroi"
-        ingressos={data.niteroi.ingressos}
-        estacionamento={data.niteroi.estacionamento}
-        endereço={data.niteroi.endereço}
-        endereçoUrl={data.niteroi.endereçoUrl}
-        redesSociais={data.niteroi.redesSociais}
-        gastronomia={data.niteroi.gastronomia}
-      />
+      <Footer/>
     </div>
   );
 };
