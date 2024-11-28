@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useCidade } from '../context/context';
+
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -30,7 +32,8 @@ const getCertificationClass = (certification) => {
 
 const API_KEY = 'd69cb7e92473b2944af9f61f30ebf1a4';
 
-const MovieSlider = ({cidade}) => {
+const MovieSlider = () => {
+    const { cidade, dadosCidade } = useCidade();
     const [movies, setMovies] = useState([]);
     const [slidesToShow, setSlidesToShow] = useState(4); 
 
@@ -87,11 +90,19 @@ const MovieSlider = ({cidade}) => {
         handleResize();
     
         window.addEventListener('resize', handleResize);
+
+    if (!dadosCidade) {
+        return (
+            <p style={{ textAlign: "center", marginTop: "2rem", fontSize: "2rem" }}>
+                Cidade não encontrada!
+            </p>
+        );
+    }
     
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [dadosCidade]);
     
 
     const settings = {
