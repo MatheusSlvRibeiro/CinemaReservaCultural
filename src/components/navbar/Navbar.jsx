@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Cookies from "js-cookie"; 
-import data from "../../data/data.json";
+import React, { useState } from "react";
 import { useCidade } from "../../context/context";  
 
 import styles from "./navbar.module.css";
@@ -11,19 +9,12 @@ import { faBars, faTimes, faLocationDot, faCaretDown } from "@fortawesome/free-s
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeSubMenu, setActiveSubMenu] = useState(null);
-    const { cidade, setCidade } = useCidade();
-    const [dadosCidade, setDadosCidade] = useState(null);
+    const { cidade, setCidade, dadosCidade } = useCidade();
 
     const handleCityChange = (e) => {
         const selectedCity = e.target.value;
         setCidade(selectedCity);
-        Cookies.set("cidade", selectedCity, { expires: 7, path: "/" }); 
     };
-
-    useEffect(() => {
-        const cidadeDados = data[cidade]; 
-        setDadosCidade(cidadeDados || null); 
-    }, [cidade]);
 
     if (!dadosCidade) {
         return (
@@ -44,7 +35,7 @@ const Navbar = () => {
             id: 1,
             text: "Programação",
             subItems: [
-                { text: "Em Cartaz", url: "#em_cartaz", target: "_self" },
+                { text: "Em Cartaz", url: `${cidade}#em_cartaz`, target: "_self" },
                 { text: "Ingressos", url: dadosCidade.ingressos, target: "_blank" },
                 { text: "Tarifas", url: "/Tarifas", target: "_self" },
                 { text: "Meia-entrada", url: "/MeiaEntrada", target: "_self" },

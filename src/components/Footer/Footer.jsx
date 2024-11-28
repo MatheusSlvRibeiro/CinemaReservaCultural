@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Cookies from 'js-cookie';
-import data from '../../data/data.json'
+import React, { useState } from 'react';
+import { useCidade } from "../../context/context";  
 
 import Styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,25 +10,12 @@ import NewsletterSignup from '../NewsletterSignup/NewsletterSignup';
 const Footer = () => {
 
   const [openColumn, setOpenColumn] = useState(null);
-  const [cidade, setCidade] = useState(Cookies.get('cidade') || '');
-  const [dadosCidade, setDadosCidade] = useState(null);
+  const { dadosCidade } = useCidade();
   const isSmallScreen = window.innerWidth <= 580;
 
   const toggleColumn = (index) => {
     setOpenColumn(openColumn === index ? null : index);
   };
-  
-  useEffect(() => {
-    const cookieCidade = Cookies.get('cidade');
-    if (cookieCidade && cookieCidade !== cidade) {
-      setCidade(cookieCidade);
-    }
-  }, [cidade]);
-
-  useEffect(() => {
-      const cidadeDados = data[cidade];
-      setDadosCidade(cidadeDados || null);
-  }, [cidade]);
 
   if (!dadosCidade) {
     return <p style={{textAlign: 'center', marginTop: '2rem', fontSize: '2rem'}}>Cidade não encontrada!</p>
