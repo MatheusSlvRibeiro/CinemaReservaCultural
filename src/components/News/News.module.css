@@ -1,14 +1,15 @@
 .PostGrid{
     max-width: 100%;
-    margin: 0 10%;/* Margem de 20% nas laterais */
-    padding: 20px; /* Opcional: adicionar padding para espaçamento interno */
-    box-sizing: border-box; /* Garante que padding e border não afetem o tamanho total */
+    margin: 0 10%;
+    margin-bottom: 4rem;
+    padding: 20px;
+    box-sizing: border-box; 
 }
 
 .sectionTitle{
     font-size: 2rem;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 300;
     color: white;
     text-align: start;
     margin: 4rem 0 1.5rem 0;

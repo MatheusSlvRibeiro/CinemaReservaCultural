@@ -10,7 +10,7 @@ import NewsletterSignup from '../NewsletterSignup/NewsletterSignup';
 const Footer = () => {
 
   const [openColumn, setOpenColumn] = useState(null);
-  const { dadosCidade } = useCidade();
+  const { dadosCidade, cidade } = useCidade();
   const isSmallScreen = window.innerWidth <= 580;
 
   const toggleColumn = (index) => {
@@ -33,13 +33,13 @@ const Footer = () => {
                 Programação
               </h3>
               <ul className={openColumn === 0 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="#em_cartaz">Em Cartaz</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}#em_cartaz`}>Em Cartaz</a></li>
                 <li><a className={Styles.column_item} href={dadosCidade.ingressos} 
                                                             rel='noopener noreferrer' 
                                                             target='blank'>Ingressos</a></li>
-                <li><a className={Styles.column_item} href='/Tarifas'>Tarifas</a></li>
-                <li><a className={Styles.column_item} href='/MeiaEntrada'>Meia-Entrada</a></li>
-                <li><a className={Styles.column_item} href="/guia">Guia do Bom Espectador</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/Tarifas`}>Tarifas</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/MeiaEntrada`}>Meia-Entrada</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/guia`}>Guia do Bom Espectador</a></li>
               </ul>
             </div>
 
@@ -65,8 +65,8 @@ const Footer = () => {
                 Eventos
               </h3>
               <ul className={openColumn === 2 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="/">Eventos Realizados</a></li>
-                <li><a className={Styles.column_item} href="/Parcerias">Parcerias</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/eventos`}>Faça seu evento</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/eventos#Parcerias`}>Parcerias</a></li>
               </ul>
             </div>
 
@@ -75,11 +75,11 @@ const Footer = () => {
                 O Reserva
               </h3>
               <ul className={openColumn === 3 && isSmallScreen ? Styles.active : ''}>
-                <li><a className={Styles.column_item} href="/Conceito">O Conceito</a></li>
-                <li><a className={Styles.column_item} href="/Fidelidade">Fidelidade</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/Conceito`}>O Conceito</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/Fidelidade`}>Fidelidade</a></li>
                 <li><a className={Styles.column_item} href={dadosCidade.estacionamento} target="blank">Estacionamento</a></li>
-                <li><a className={Styles.column_item} href="/TrabalheConosco">Trabalhe Conosco</a></li>
-                <li><a className={Styles.column_item} href="/Contato">Contato</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/TrabalheConosco`}>Trabalhe Conosco</a></li>
+                <li><a className={Styles.column_item} href={`/${cidade}/Contato`}>Contato</a></li>
               </ul>
             </div>
 

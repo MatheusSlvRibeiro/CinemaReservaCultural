@@ -2,18 +2,19 @@ import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Styles from './Contato.module.css';
 import Navbar from "../../../components/navbar/Navbar";
+import { useCidade } from "../../../context/context";
 
 const Contato = () => {
+
+  const { cidade } = useCidade();
+
   const [formData, setFormData] = useState({
     nome: '',
     email: '',
     telefone: '',
-    unidade: 'sp',
+    unidade: cidade,
     assunto: '',
     mensagem: '',
-    filme: '',
-    horarioSessao: '',
-    metodoPagamento: ''
   });
 
   const [captchaValido, setCaptchaValido] = useState(false);

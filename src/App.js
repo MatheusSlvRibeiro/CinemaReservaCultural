@@ -13,11 +13,11 @@ import SaoPaulo from './Pages/main/SaoPaulo';
 import Conceito from './Pages/secondary/Conceito/Conceito';
 import Tarifas from './Pages/secondary/Tarifas/Tarifas';
 import Fidelidade from './Pages/secondary/Fidelidade/Fidelidade';
-import Parcerias from './Pages/secondary/Parcerias/Parcerias';
 import Guia from './Pages/secondary/Guia/Guia';
 import MeiaEntrada from './Pages/secondary/MeiaEntrada/MeiaEntrada';
 import TrabalheConosco from './Pages/secondary/TrabalheConosco/TrabalheConosco';
 import Contato from './Pages/secondary/Contato/Contato';
+import Eventos from './Pages/secondary/Eventos/Eventos'
 
 function App() {
 
@@ -41,7 +41,6 @@ function App() {
           <Route path="/SaoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
 
-          <Route path="/:cidade/Parcerias" element={<Parcerias />} />
           <Route path='/:cidade/Conceito' element={<Conceito />} />
           <Route path='/:cidade/tarifas' element={<Tarifas />} />
           <Route path='/:cidade/Fidelidade' element={<Fidelidade />} />
@@ -49,6 +48,7 @@ function App() {
           <Route path='/:cidade/MeiaEntrada' element={<MeiaEntrada />} />
           <Route path='/:cidade/TrabalheConosco' element={<TrabalheConosco />} />
           <Route path='/:cidade/Contato' element={<Contato />} />
+          <Route path="/:cidade/Eventos" element={<Eventos />}/>
           <Route path="/:cidade/*" element={<Navigate to="/" />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

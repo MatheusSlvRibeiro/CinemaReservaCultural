@@ -70,8 +70,8 @@ const Navbar = () => {
             id: 3,
             text: "Eventos",
             subItems: [
-                { text: "Eventos Realizados", url: "#realizados", target: "_self" },
-                { text: "Parcerias", url: `/${cidade}/Parcerias`, target: "_self" },
+                { text: "Faça seu evento", url: `/${cidade}/Eventos`, target: "_self" },
+                { text: "Parcerias", url: `/${cidade}/Eventos#Parcerias`, target: "_self" },
             ],
         },
         {
