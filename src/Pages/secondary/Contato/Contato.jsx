@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Styles from './Contato.module.css';
 import Navbar from "../../../components/navbar/Navbar";
-import data from '../../../data/data.json'
 
 const Contato = () => {
   const [formData, setFormData] = useState({
@@ -75,9 +74,7 @@ const Contato = () => {
 
   return (
     <div className={Styles.formWrapper}>
-      <Navbar 
-        estacionamento="/"
-        cidade={data.saoPaulo.cidade}/>
+      <Navbar/>
 
       <h1 className={Styles.Title}>FALE CONOSCO</h1>
 

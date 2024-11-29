@@ -13,8 +13,7 @@ function TrabalheConosco (){
 
   return (
     <div>
-      <Navbar
-        estacionamento="/"/>
+      <Navbar />
       <div className={Styles.content}>
         <div className={Styles.aside}>
           <img src="/images/logoReservaCultural.png" alt="Logo reserva cultural" />

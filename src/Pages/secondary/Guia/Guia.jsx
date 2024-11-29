@@ -2,15 +2,12 @@ import React from "react";
 import Styles from './Guia.module.css'
 import Navbar from "../../../components/navbar/Navbar";
 import Info from "../../../components/Info/Info";
-import data from '../../../data/data.json'
 import Footer from '../../../components/Footer/Footer';
 
 function Guia () {
       return (
             <div className={Styles.Guide}>
-                  <Navbar 
-                        estacionamento="/"
-                        cidade={data.saoPaulo.cidade}/>
+                  <Navbar />
                   <article className={Styles.Article}>
                         <div>
                               <h1 className={Styles.title}>Guia do bom espectador</h1>

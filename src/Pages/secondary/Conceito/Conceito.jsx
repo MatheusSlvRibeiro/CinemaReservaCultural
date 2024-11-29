@@ -24,8 +24,7 @@ const Conceito = () => {
 
     return (
         <div>
-            <Navbar
-                estacionamento="/"/>
+            <Navbar />
             <article className={Styles.Article}>
                 <h1 className={Styles.Title}>Conceito</h1>
                 <div>

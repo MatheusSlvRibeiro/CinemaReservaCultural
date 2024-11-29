@@ -17,7 +17,7 @@
 .Paragraph {
     color: var(--main-text-color);
     margin-bottom: 1rem;
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
 }
 
 .Subject{
@@ -29,6 +29,10 @@
     border-radius: 0.5rem;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); 
     margin-bottom: 3rem;
+}
+
+.Links{
+    color: var(--normal-text-color);
 }
 
 .Links:hover{

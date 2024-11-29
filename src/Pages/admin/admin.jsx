@@ -54,7 +54,7 @@ function Admin({ onLogout }) {
             </nav>
          </div>
          <div className={Styles.bside}>
-            {activeSection === "emCartaz" && <EmCartaz cidade="saoPaulo"/>}
+            {activeSection === "emCartaz" && <EmCartaz/>}
             
             {activeSection === "infoGerais"}
             

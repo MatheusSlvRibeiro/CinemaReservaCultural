@@ -7,8 +7,7 @@ import Footer from "../../../components/Footer/Footer";
 const Parcerias = () => {
     return (
         <div className={Styles.PageContainer}>
-            <Navbar
-                estacionamento="/"/>
+            <Navbar/>
 
             <article className={Styles.Article}>
                 <h1 className={Styles.Title}>Parcerias</h1>

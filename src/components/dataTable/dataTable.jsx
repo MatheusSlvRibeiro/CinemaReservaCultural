@@ -157,8 +157,8 @@ export default function OnShow({ cidade}) {
       const leftToolbarTemplate = () => {
             return (
                   <div className="flex flex-wrap gap-2">
-                        <Button className='p-2 bg-green-500 text-white hover:bg-green-600 ' label="Novo" icon="pi pi-plus p-2" severity="success" onClick={openNew} />
-                        <Button className='p-2 bg-red-500 text-white hover:bg-red-600' label="Deletar" icon="pi pi-trash p-2" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedMovies || !selectedMovies.length} />
+                        <Button className='p-2 m-1' label="Novo" icon="pi pi-plus p-2" severity="success" onClick={openNew} />
+                        <Button className='p-2 m-1' label="Deletar" icon="pi pi-trash p-2" severity="danger" onClick={confirmDeleteSelected} disabled={!selectedMovies || !selectedMovies.length} />
                   </div>
             );
       };
@@ -186,7 +186,7 @@ export default function OnShow({ cidade}) {
 
       const header = (
             <div className="flex flex-wrap gap-2 align-items-center justify-content-between">
-                  <h4 className="m-0 p-3 text-black text-center">Gestão de catálago</h4>
+                  <h4 className="m-0 p-3 text-black text-center">Filmes em cartaz: {cidade}</h4>
                   <IconField iconPosition="right">
                         <InputIcon className="pi pi-search" />
                         <InputText type="search" className='p-2' onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Procurar..." />
@@ -196,22 +196,22 @@ export default function OnShow({ cidade}) {
 
       const movieDialogFooter = (
             <React.Fragment>
-                  <Button label="Cancelar" icon="pi pi-times" className='bg-red-200 hover:bg-red-300 p-2 m-1' outlined onClick={hideDialog} />
-                  <Button label="Salvar" icon="pi pi-check" className='bg-green-200 hover:bg-green-400 p-2 m-1' onClick={saveProduct} />
+                  <Button label="Cancelar" icon="pi pi-times" className='p-2 m-1' outlined onClick={hideDialog} />
+                  <Button label="Salvar" icon="pi pi-check" className='p-2 m-1' onClick={saveProduct} />
             </React.Fragment>
       );
     
       const deleteMovieDialogFooter = (
             <React.Fragment>
-                  <Button label="Não" icon="pi pi-times p-1" className='bg-red-200 hover:bg-red-300 p-2 m-1' outlined onClick={hideDeleteMovieDialog} />
-                  <Button label="Sim" icon="pi pi-check p-1" className='bg-green-200 hover:bg-green-400 p-2 m-1' severity="danger" onClick={deleteProduct} />
+                  <Button label="Não" icon="pi pi-times p-1" className='p-2 m-1' outlined onClick={hideDeleteMovieDialog} />
+                  <Button label="Sim" icon="pi pi-check p-1" className='p-2 m-1' severity="danger" onClick={deleteProduct} />
             </React.Fragment>
       );
     
       const deleteMoviesDialogFooter = (
             <React.Fragment>
-                  <Button label="Não" icon="pi pi-times p-1" className='bg-red-200 hover:bg-red-300 p-2 m-1' outlined onClick={hideDeleteMoviesDialog} />
-                  <Button label="Sim" icon="pi pi-check p-1" className='bg-green-200 hover:bg-green-400 p-2 m-1' severity="danger" onClick={deleteSelectedMovies} />
+                  <Button label="Não" icon="pi pi-times p-1" className='p-2 m-1' outlined onClick={hideDeleteMoviesDialog} />
+                  <Button label="Sim" icon="pi pi-check p-1" className='p-2 m-1' severity="danger" onClick={deleteSelectedMovies} />
             </React.Fragment>
       );
 
@@ -235,11 +235,11 @@ export default function OnShow({ cidade}) {
                               currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} filmes " 
                               globalFilter={globalFilter} 
                               header={header}>
-                              <Column selectionMode="multiple" exportable={false}></Column>
+                              <Column selectionMode="multiple" style={{padding: '0.5rem', justifyContent: 'items-center'}} exportable={false}></Column>
                               <Column field="id" header="ID" style={{ minWidth: '8rem', padding: '0.5rem' }}></Column>
-                              <Column field="titulo" header="Titulo" style={{ minWidth: '16rem' }}></Column>
-                              <Column field="faixaEtaria" header="Categoria" style={{ minWidth: '6rem' }}></Column>
-                              <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '12rem' }}></Column>
+                              <Column field="titulo" header="Titulo" style={{ minWidth: '16rem', padding: '0.5rem' }}></Column>
+                              <Column field="faixaEtaria" header="Categoria" style={{ minWidth: '6rem', padding: '0.5rem' }}></Column>
+                              <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '12rem', padding: '0.2rem' }}></Column>
                         </DataTable>
                   </div>
 
@@ -271,8 +271,8 @@ export default function OnShow({ cidade}) {
 
                   <div className="field">
                         <label className="mb-3 p-3 font-bold">Classificação</label>
-                        <div className="flex">
-                              <div className='flex p-3'>
+                        <div className="flex px-3 my-0">
+                              <div className='flex p-1'>
                                     <RadioButton  
                                           inputId="faixaEtaria1" 
                                           id='faixaEtaria1'
@@ -281,61 +281,76 @@ export default function OnShow({ cidade}) {
                                           value="L" 
                                           onChange={onCategoryChange} 
                                           checked={movie.faixaEtaria === 'L'} 
-                                          className="focus:ring-amber-500"/>
+                                          />
                                     <label 
                                           htmlFor="faixaEtaria1" 
-                                          className="text-gray-600 hover:text-amber-500 cursor-pointer">Livre</label>
+                                          className="mr-3 ml-1">Livre</label>
                               </div>
                               
-                              <RadioButton 
-                                    inputId="faixaEtaria2" 
-                                    name="faixaEtaria" 
-                                    value="10" 
-                                    onChange={onCategoryChange} 
-                                    checked={movie.faixaEtaria === '10'} />
-                              <label 
-                                    htmlFor="faixaEtaria2" 
-                                    className="mr-2">10 anos</label>
+                              <div className='flex p-1 items-center'>
+                                    <RadioButton 
+                                          inputId="faixaEtaria2"
+                                          id='faixaEtaria2' 
+                                          name="faixaEtaria" 
+                                          value="10" 
+                                          onChange={onCategoryChange} 
+                                          checked={movie.faixaEtaria === '10'} />
+                                    <label 
+                                          htmlFor="faixaEtaria2" 
+                                          className="mr-3 ml-1">10</label>
+                              </div>
 
-                              <RadioButton 
-                                    inputId="faixaEtaria3" 
-                                    name="faixaEtaria" 
-                                    value="12" 
-                                    onChange={onCategoryChange} 
-                                    checked={movie.faixaEtaria === '12'} />
-                              <label 
-                                    htmlFor="faixaEtaria3" 
-                                    className="mr-2">12 anos</label>
+                              <div className="flex p-1">
+                                    <RadioButton 
+                                          inputId="faixaEtaria3"
+                                          id='faixaEtaria3' 
+                                          name="faixaEtaria" 
+                                          value="12" 
+                                          onChange={onCategoryChange} 
+                                          checked={movie.faixaEtaria === '12'} />
+                                    <label 
+                                          htmlFor="faixaEtaria3" 
+                                          className="mr-3 ml-1">12 </label>
+                              </div>
                               
-                              <RadioButton 
-                                    inputId="faixaEtaria4" 
-                                    name="faixaEtaria" 
-                                    value="14"
-                                    onChange={onCategoryChange} 
-                                    checked={movie.faixaEtaria === '14'} />
-                              <label 
-                                    htmlFor="faixaEtaria4" 
-                                    className="mr-2">14 anos</label>
+                              <div className="flex p-1">
+                                    <RadioButton 
+                                          inputId="faixaEtaria4" 
+                                          id="faixaEtaria4"
+                                          name="faixaEtaria" 
+                                          value="14"
+                                          onChange={onCategoryChange} 
+                                          checked={movie.faixaEtaria === '14'} />
+                                    <label 
+                                          htmlFor="faixaEtaria4" 
+                                          className="mr-3 ml-1">14 </label>
+                              </div>
 
-                              <RadioButton 
-                                    inputId="faixaEtaria5" 
-                                    name="faixaEtaria" 
-                                    value="16" 
-                                    onChange={onCategoryChange} 
-                                    checked={movie.faixaEtaria === '16'} />
-                              <label 
-                                    htmlFor="faixaEtaria5" 
-                                    className="mr-2">16 anos</label>
+                              <div className="flex p-1">
+                                    <RadioButton 
+                                          inputId="faixaEtaria5" 
+                                          id='faixaEtaria5'
+                                          name="faixaEtaria" 
+                                          value="16" 
+                                          onChange={onCategoryChange} 
+                                          checked={movie.faixaEtaria === '16'} />
+                                    <label 
+                                          htmlFor="faixaEtaria5" 
+                                          className="mr-3 ml-1">16 </label>
+                              </div>
 
-                              <RadioButton 
-                                    inputId="faixaEtaria6" 
-                                    name="faixaEtaria" 
-                                    value="18" 
-                                    onChange={onCategoryChange} 
-                                    checked={movie.faixaEtaria === '18'} />
-                              <label 
-                                    htmlFor="faixaEtaria6" 
-                                    className="mr-2">18 anos</label>
+                              <div className="flex p-1">
+                                    <RadioButton 
+                                          inputId="faixaEtaria6" 
+                                          id='faixaEtaria6'
+                                          name="faixaEtaria" 
+                                          value="18" 
+                                          onChange={onCategoryChange} 
+                                          checked={movie.faixaEtaria === '18'} />
+                                    <label 
+                                          htmlFor="faixaEtaria6" 
+                                          className="mr-3 ml-1">18 </label>
+                              </div>
                         </div>
                   </div>
 
@@ -354,7 +369,7 @@ export default function OnShow({ cidade}) {
 
             <Dialog visible={deleteMoviesDialog} style={{ width: '450px' }} header="Confirmar" className='p-3 bg-white' modal footer={deleteMoviesDialogFooter} onHide={hideDeleteMoviesDialog}>
                   <div className="confirmation-content p-1">
-                        <i className="pi pi-exclamation-triangle p-mr-3" style={{ fontSize: '2rem' }} />
+                        <i className="pi pi-exclamation-triangle p-mr-3 p-1" style={{ fontSize: '2rem' }} />
                         {selectedMovies && selectedMovies.length > 0 && (
                               <span>
                                     Você tem certeza que deseja excluir os filmes selecionados?

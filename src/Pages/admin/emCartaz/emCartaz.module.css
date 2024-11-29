@@ -12,8 +12,27 @@
     margin: 0;
 }
 
-.subtitle{
-    font-weight: 400;
+.Header nav{
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header nav div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title{
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.Subtitle{
+    font-weight: 300;
 }
 .LocationContainer {
     margin: 0;

@@ -2,15 +2,12 @@ import React from "react";
 import Styles from './Fidelidade.module.css'
 import Navbar from "../../../components/navbar/Navbar";
 import Info from "../../../components/Info/Info";
-import data from '../../../data/data.json'
 import Footer from '../../../components/Footer/Footer';
 
 function Fidelidade() {
     return (
         <div className="Guide">
-            <Navbar 
-                estacionamento="/"
-                cidade={data.saoPaulo.cidade}/>
+            <Navbar />
             <article className={Styles.Article}>
                 <h1 className={Styles.title}>Regulamento interno <br /> Programa cartão fidelidade</h1>
                 
