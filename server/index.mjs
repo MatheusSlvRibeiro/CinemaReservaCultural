@@ -7,9 +7,11 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
-app.use(cors({ origin: 'http://localhost:3000'}));
+app.use(cors({
+    origin: [  'http://localhost:3000', 'https://reservacultural.netlify.app/' ]
+}));
 app.use(bodyParser.json());
 
 const __filename = fileURLToPath(import.meta.url);
