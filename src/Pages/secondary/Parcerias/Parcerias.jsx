@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from '../../../components/navbar/Navbar'
 import Info from '../../../components/Info/Info'
 import Styles from './Parcerias.module.css'
+import Footer from "../../../components/Footer/Footer";
 
 const Parcerias = () => {
     return (
@@ -94,6 +95,7 @@ const Parcerias = () => {
             </article>
             
             <Info />
+            <Footer />
         </div>
     );
 };

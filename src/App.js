@@ -41,14 +41,15 @@ function App() {
           <Route path="/SaoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
 
-          <Route path="/Parcerias" element={<Parcerias />} />
-          <Route path='/Conceito' element={<Conceito />} />
-          <Route path='/tarifas' element={<Tarifas />} />
-          <Route path='/Fidelidade' element={<Fidelidade />} />
-          <Route path='/Guia' element={<Guia />} />
-          <Route path='/MeiaEntrada' element={<MeiaEntrada />} />
-          <Route path='/TrabalheConosco' element={<TrabalheConosco />} />
-          <Route path='/Contato' element={<Contato />} />
+          <Route path="/:cidade/Parcerias" element={<Parcerias />} />
+          <Route path='/:cidade/Conceito' element={<Conceito />} />
+          <Route path='/:cidade/tarifas' element={<Tarifas />} />
+          <Route path='/:cidade/Fidelidade' element={<Fidelidade />} />
+          <Route path='/:cidade/Guia' element={<Guia />} />
+          <Route path='/:cidade/MeiaEntrada' element={<MeiaEntrada />} />
+          <Route path='/:cidade/TrabalheConosco' element={<TrabalheConosco />} />
+          <Route path='/:cidade/Contato' element={<Contato />} />
+          <Route path="/:cidade/*" element={<Navigate to="/" />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

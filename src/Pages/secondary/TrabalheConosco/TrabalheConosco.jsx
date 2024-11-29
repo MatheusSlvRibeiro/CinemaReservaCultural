@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Styles from './trabalheConosco.module.css';
 import Navbar from "../../../components/navbar/Navbar";
+import Footer from "../../../components/Footer/Footer";
 
 function TrabalheConosco (){
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -16,7 +17,7 @@ function TrabalheConosco (){
         estacionamento="/"/>
       <div className={Styles.content}>
         <div className={Styles.aside}>
-          <img src="images/logoReservaCultural.png" alt="Logo reserva cultural" />
+          <img src="/images/logoReservaCultural.png" alt="Logo reserva cultural" />
         </div>
 
         <div className={Styles.bside}>
@@ -53,6 +54,7 @@ function TrabalheConosco (){
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

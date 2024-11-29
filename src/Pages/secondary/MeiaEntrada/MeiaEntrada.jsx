@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../../../components/navbar/Navbar";
 import Styles from './MeiaEntrada.module.css';
 import Info from "../../../components/Info/Info";
+import Footer from "../../../components/Footer/Footer";
 
 function MeiaEntrada () {
     return (
@@ -14,6 +15,7 @@ function MeiaEntrada () {
                     src="/images/meia-entrada.png"/>
             </div>
             <Info />
+            <Footer />
         </div>
     );
 };

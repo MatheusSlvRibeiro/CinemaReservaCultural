@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useCidade } from "../../context/context";  
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import styles from "./navbar.module.css";
 import Logo from "../logo/logo";
@@ -9,11 +10,25 @@ import { faBars, faTimes, faLocationDot, faCaretDown } from "@fortawesome/free-s
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeSubMenu, setActiveSubMenu] = useState(null);
-    const { cidade, setCidade, dadosCidade } = useCidade();
+    const { cidade, dadosCidade, setCidade } = useCidade();
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const handleCityChange = (e) => {
-        const selectedCity = e.target.value;
-        setCidade(selectedCity);
+    const handleCityChange = (novaCidade) => {
+        if (cidade === novaCidade) {
+            return;
+        }
+
+        document.cookie = `cidade=${novaCidade}; path=/;`
+        setCidade(novaCidade);
+
+        const pathSegments = location.pathname.split('/');
+
+        pathSegments[1] = novaCidade
+
+        const newPath = `/${pathSegments.slice(1).join('/')}`;
+
+        navigate(newPath);
     };
 
     if (!dadosCidade) {
@@ -35,11 +50,11 @@ const Navbar = () => {
             id: 1,
             text: "Programação",
             subItems: [
-                { text: "Em Cartaz", url: `${cidade}#em_cartaz`, target: "_self" },
+                { text: "Em Cartaz", url: `/${cidade}#em_cartaz`, target: "_self" },
                 { text: "Ingressos", url: dadosCidade.ingressos, target: "_blank" },
-                { text: "Tarifas", url: "/Tarifas", target: "_self" },
-                { text: "Meia-entrada", url: "/MeiaEntrada", target: "_self" },
-                { text: "Guia do Bom Espectador", url: "/Guia", target: "_self" },
+                { text: "Tarifas", url: `/${cidade}/Tarifas`, target: "_self" },
+                { text: "Meia-entrada", url: `/${cidade}/MeiaEntrada`, target: "_self" },
+                { text: "Guia do Bom Espectador", url: `/${cidade}/Guia`, target: "_self" },
             ],
         },
         {
@@ -56,18 +71,18 @@ const Navbar = () => {
             text: "Eventos",
             subItems: [
                 { text: "Eventos Realizados", url: "#realizados", target: "_self" },
-                { text: "Parcerias", url: "/Parcerias", target: "_self" },
+                { text: "Parcerias", url: `/${cidade}/Parcerias`, target: "_self" },
             ],
         },
         {
             id: 4,
             text: "O Reserva",
             subItems: [
-                { text: "O Conceito", url: "/Conceito", target: "_self" },
-                { text: "Fidelidade", url: "/Fidelidade", target: "_self" },
+                { text: "O Conceito", url: `/${cidade}/Conceito`, target: "_self" },
+                { text: "Fidelidade", url: `/${cidade}/Fidelidade`, target: "_self" },
                 { text: "Estacionamento", url: dadosCidade.estacionamento, target: "_blank" },
-                { text: "Trabalhe Conosco", url: "/TrabalheConosco", target: "_self" },
-                { text: "Contato", url: "/Contato", target: "_self" },
+                { text: "Trabalhe Conosco", url: `/${cidade}/TrabalheConosco`, target: "_self" },
+                { text: "Contato", url: `/${cidade}/Contato`, target: "_self" },
             ],
         },
     ];
@@ -123,7 +138,7 @@ const Navbar = () => {
                 <label className={styles.LocationLabel}>
                     <select
                         value={cidade} 
-                        onChange={handleCityChange} 
+                        onChange={(e) => handleCityChange(e.target.value)} 
                         className={styles.CitySelect}
                     >
                         <option className={styles.Option} value="saoPaulo">

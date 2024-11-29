@@ -3,6 +3,7 @@ import Styles from './Guia.module.css'
 import Navbar from "../../../components/navbar/Navbar";
 import Info from "../../../components/Info/Info";
 import data from '../../../data/data.json'
+import Footer from '../../../components/Footer/Footer';
 
 function Guia () {
       return (
@@ -67,6 +68,7 @@ function Guia () {
                         </div>
                   </article>
                   <Info />
+                  <Footer />
             </div>
       );
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Navbar from '../../components/navbar/Navbar';
 import Slider from '../../components/Slider/Slider';
 import PlayingNow from '../../components/PlayingNow/PlayingNow';
@@ -7,12 +8,12 @@ import Info from '../../components/Info/Info';
 import Footer from '../../components/Footer/Footer';
 
 const SaoPaulo = () => {
+
   return (
     <div>
       <Navbar/>
       <Slider />
-      <PlayingNow 
-        cidade="saoPaulo"/>
+      <PlayingNow />
       <News 
         cidade="saoPaulo"/>
       <Info/>

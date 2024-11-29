@@ -3,6 +3,7 @@ import Styles from './Fidelidade.module.css'
 import Navbar from "../../../components/navbar/Navbar";
 import Info from "../../../components/Info/Info";
 import data from '../../../data/data.json'
+import Footer from '../../../components/Footer/Footer';
 
 function Fidelidade() {
     return (
@@ -54,6 +55,7 @@ function Fidelidade() {
                 </div>
             </article>
             <Info />
+            <Footer />
         </div>
     );
 }

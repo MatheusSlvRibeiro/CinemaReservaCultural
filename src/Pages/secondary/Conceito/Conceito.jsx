@@ -1,10 +1,12 @@
 import React from "react";
 import Styles from './Conceito.module.css';
+
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css"; 
 import Navbar from "../../../components/navbar/Navbar"; 
 import Info from '../../../components/Info/Info'
+import Footer from '../../../components/Footer/Footer'
 
 const Conceito = () => {
     const sliderSettings = {
@@ -181,6 +183,7 @@ const Conceito = () => {
                 </div>
             </article>
             <Info />
+            <Footer />
         </div>
     );
 }
