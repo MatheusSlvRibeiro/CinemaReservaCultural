@@ -3,8 +3,10 @@ import Slider from "react-slick";
 import Styles from './Info.module.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useCidade } from '../../context/context'
 
 function Info() {
+    const { cidade } = useCidade();
     const [slidesToShow, setSlidesToShow] = useState(3);
 
     useEffect(() => {
@@ -46,7 +48,7 @@ function Info() {
             <div className={Styles.Content}>
                 <Slider {...settings}>
                     <div className={Styles.Img}>
-                        <a href="/MeiaEntrada">
+                        <a href={`/${cidade}/MeiaEntrada`}>
                             <img
                                 src="/images/Meiaentrada.jpg"
                                 alt="Cartaz do cinema Reserva Cultural informando sobre o direito à meia-entrada de acordo com a Lei N° 12.933/2013, com ícones de pipoca, refrigerante, ingresso e um botão escrito Saiba Mais"
@@ -55,7 +57,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="/Fidelidade">
+                        <a href={`/${cidade}/Fidelidade`}>
                             <img
                                 src="/images/Fidelidade.jpg"
                                 alt="Cartaz do programa de fidelidade do cinema Reserva Cultural com as seguintes informações: Ganhe 1 ingresso a cada 10 comprados; Adquira descontos em sessões especiais; Receba a programação semanal com novidades exclusivas."
@@ -64,7 +66,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="/Guia">
+                        <a href={`/${cidade}/Guia`}>
                             <img
                                 src="/images/Guide.jpg"
                                 alt="Banner Guia do Bom Espectador com ícones de cinema e botão 'Saiba Mais"
@@ -73,7 +75,7 @@ function Info() {
                     </div>
 
                     <div className={Styles.Img}>
-                        <a href="/Conceito">
+                        <a href={`/${cidade}/Conceito`}>
                             <img
                                 src="/images/post-1000x1000.jpg"
                                 alt="teste"/>

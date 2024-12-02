@@ -1,12 +1,13 @@
 import React from "react";
 import styles from './Eventos.module.css'
 import { useCidade } from "../../../context/context";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
 
 const Eventos = () => {
-      
-      const { dadosCidade } = useCidade();
+      const navigate = useNavigate();
+      const { dadosCidade, cidade } = useCidade();
 
       if (!dadosCidade) {
             return <p style={{textAlign: 'center', marginTop: '2rem', fontSize: '2rem'}}>Cidade não encontrada!</p>
@@ -17,6 +18,40 @@ const Eventos = () => {
                   <Navbar />
                   <section>
                         
+                        <article className={styles.Article}>
+                              <img 
+                                    className={styles.Banner}
+                                    src="/images/banner-eventos-orcamento.jpg" 
+                                    alt=" No banner diz: Com uma estrutura moderna, versátil e totalmente equipada, nosso cinema 
+                                          é o cenário ideal para eventos de todos os formatos. 
+                                          Desde palestras e seminários a pré-estreias exclusivas e celebrações temáticas, 
+                                          oferecemos o ambiente perfeito para tornar cada momento único e inesquecível"/>
+                              <button 
+                                    onClick={() => navigate(`/${cidade}/Contato`)}
+                                    className={styles.Orcamento}>Solicitar orçamento</button>
+                        </article>
+
+                        <article className={styles.ArticleFull}>
+                              <div>
+                                    <img src="/images/15-anos-editora-planeta.jpg" alt="" />
+                              </div>
+
+                              <div>
+                                    <h1 className={styles.Title}>Mude de ambiente</h1>
+                                    <p>Oferecemos um ambiente versátil e sofisticado, ideal para transformar qualquer ocasião em um momento único. Nosso cinema vai além das exibições de filmes e abre suas portas para receber diferentes tipos de eventos. <br/>
+                                    <br/>Confira algumas das possibilidades:</p> <br/>
+                                    
+                                    <ul>
+                                          <li>Palestras e seminários</li>
+                                          <li>Eventos corporativos</li>
+                                          <li>Festas e aniversários Temáticos</li>
+                                    </ul> <br/>
+
+                                    <p>Solicite o seu orçamento com nosso comercial e faça a sua visita. Estamos ansiosos para recebê-los.</p>
+
+                              </div>
+                        </article>
+
                         <article className={styles.Article}>
                               <h1 className={styles.Title}>Parcerias</h1>
                                     <div className={styles.Parcerias}>
