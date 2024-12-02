@@ -10,23 +10,20 @@
 }
 
 .ArticleFull{
-    padding: 6rem;
+    padding: 3rem 9rem;
     display: flex;
     flex-direction: row;
     width: 100%;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #202020;
     border-radius: 0;
 }
+
 .ArticleFull div{
     width: 50%;
-    margin: 1rem;
+    margin: 1.5rem;
 }
-.ArticleFull p{
-    color: var(--main-bg-color-dark);
-    font-size: 1.3rem;
-    font-weight: 300;
-}
+
 .ArticleFull img{
     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -41,27 +38,42 @@
 }
 
 .Title{
-    color: var(--main-color);
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
+    padding-bottom: 0.5rem;
     margin-bottom: 2.5rem;
+    color: var(--main-text-color);
+    border-bottom: 3px solid var(--main-color);
 }
 
-.Paragraph{
-    color: var(--main-text-color);
-    font-size: 1.2rem;
+.TitleSide{
+    font-size: 2.5rem;
     font-weight: 400;
-    text-align: center;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 2.5rem;
+    color: var(--main-text-color);
+    border-bottom: 3px solid var(--main-color);  
+
 }
+
 .ArticleFull div ul{
     padding-left: 2rem;
 }
 
 .ArticleFull div li{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     list-style: disc;
+    color: var(--main-text-color);
+    margin-bottom: 0.8rem;
+}
+.Paragraph{
+    font-size: 1.3rem;
+    list-style: disc;
+    color: var(--main-text-color);
+    margin-bottom: 0.1rem;
 }
 
 .Orcamento{
@@ -70,7 +82,7 @@
     border-radius: 0.5rem;
     width: 15rem;
     padding: 1rem;
-    margin: 1.8rem auto;
+    margin: 0.9rem auto;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -87,7 +99,7 @@
     justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .Parcerias a{
