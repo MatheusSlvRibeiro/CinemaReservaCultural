@@ -75,7 +75,7 @@ export default function OnShow({ cidade}) {
                 if (movie.id) {
 
                   try {
-                        await axios.put(`http://localhost:5000/filmes/${cidade}/${movie.id}`, _movie);
+                        await axios.put(`${apiUrl}/filmes/${cidade}/${movie.id}`, _movie);
                         const updatedMovies = _movies.map(m => m.id === movie.id ? _movie : m);
                         setMovies(updatedMovies);
                         toast.current.show({ severity: 'success', summary: 'Concluído', detail: 'Filme Atualizado', life: 3000 });
@@ -85,7 +85,7 @@ export default function OnShow({ cidade}) {
                 } else {
 
                   try {
-                        const response = await axios.post(`http://localhost:5000/filmes/${cidade}`, _movie);
+                        const response = await axios.post(`${apiUrl}/filmes/${cidade}`, _movie);
                         _movie.id = response.data.id; 
                         setMovies([..._movies, _movie]);
                         toast.current.show({ severity: 'success', summary: 'Concluído', detail: 'Filme Adicionado', life: 3000 });
@@ -111,7 +111,7 @@ export default function OnShow({ cidade}) {
 
       const deleteProduct = async () => {
             try {
-                await axios.delete(`http://localhost:5000/filmes/${cidade}/${movie.id}`);
+                await axios.delete(`${apiUrl}/filmes/${cidade}/${movie.id}`);
                 let _movies = movies.filter((val) => val.id !== movie.id);
                 setMovies(_movies);
                 setDeleteMovieDialog(false);
@@ -129,7 +129,7 @@ export default function OnShow({ cidade}) {
       const deleteSelectedMovies = async () => {
             try {
                 for (const selectedMovie of selectedMovies) {
-                    await axios.delete(`http://localhost:5000/filmes/${cidade}/${selectedMovie.id}`);
+                    await axios.delete(`${apiUrl}/filmes/${cidade}/${selectedMovie.id}`);
                 }
                 let _movies = movies.filter((val) => !selectedMovies.includes(val));
                 setMovies(_movies);
