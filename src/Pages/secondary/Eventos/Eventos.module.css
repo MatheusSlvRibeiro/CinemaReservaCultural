@@ -33,7 +33,7 @@
 
 .Banner{
     border-radius: 0.5rem;
-    width: 100%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -104,7 +104,6 @@
 
 .Parcerias a{
     margin: 0;
-
 }
 
 .Parcerias a:hover{
@@ -118,26 +117,75 @@
     margin: 0;
 }
 
+@media (min-width: 1400px) {
+    .Article{
+        width: 40%;
+    }
+    .ArticleFull div{
+        width: 30%;
+    }
+    .Banner{
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .Article{
         width: 100%;
         margin: 0;
         margin-top: 4rem;
     }
+    .ArticleFull{
+        width: 100%;
+        padding: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .ArticleFull div{
+        width: 100%;
+        justify-content: center;
+    }
 
     .Parcerias img{
         width: 10rem;
     }
-}
-
-@media (min-width: 769px) {
-    .Article{
-        width: 70%;
+    .ArticleFull h1{
+        text-align: center;
     }
 }
 
-@media (min-width: 1400px) {
-    .Article{
-        width: 40%;
+@media (max-width: 1024px) {
+    .ArticleFull{
+        padding: 2rem 2.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .Banner{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+    .ArticleFull{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .ArticleFull h1{
+        font-size: 1.5rem;
+    }
+    .TitleSide{
+        font-size: 2.5rem;
+        margin: 1.5rem 2rem;
+    }
+    .ArticleFull div{
+        width: 90%;
+    }
+    .Parcerias{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Title{
+        font-size: 2.5rem;
+        margin: 0 2rem;
     }
 }

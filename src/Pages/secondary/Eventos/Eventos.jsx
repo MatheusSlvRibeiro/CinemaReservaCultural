@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from './Eventos.module.css'
 import { useCidade } from "../../../context/context";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
+import ScrollReveal from 'scrollreveal';
+
 
 const Eventos = () => {
       const navigate = useNavigate();
       const { dadosCidade, cidade } = useCidade();
+
+      useEffect(() => {
+            const sr = ScrollReveal({
+                distance: '100px',
+                duration: 700,
+                easing: 'ease-in-out',
+                origin: 'bottom',
+            });
+    
+            sr.reveal('.reveal', {
+                interval: 200,
+            });
+
+            sr.reveal('.reveal-left', {
+                  origin: 'bottom',
+                  distance: '100px',
+                  duration: 700,
+                  easing: 'ease-in',
+              });
+
+        }, []);
 
       if (!dadosCidade) {
             return <p style={{textAlign: 'center', marginTop: '2rem', fontSize: '2rem'}}>Cidade não encontrada!</p>
@@ -38,7 +61,7 @@ const Eventos = () => {
 
                         <article className={styles.ArticleFull}>
                               <div>
-                                    <h2 className={styles.TitleSide}>Uma Estrutura Completa</h2>
+                                    <h1 className={styles.TitleSide}>Uma Estrutura Completa</h1>
                                     <p className={styles.Paragraph}>Localizado em pontos estratégicos, nosso cinema combina conforto, tecnologia e elegância para atender às suas necessidades.</p>
                                     <ul>
                                           <br/>
@@ -52,13 +75,18 @@ const Eventos = () => {
                                     </ul>
                               </div>
                               <div>
-                                    <img src="/images/sala-1.jpg" alt="" />
+                                    <img 
+                                          className="reveal"
+                                          src="/images/sala-1.jpg" 
+                                          alt="Imagem da sala 1" />
                               </div>
                         </article>
 
                         <article className={styles.ArticleFull}>
                               <div>
-                                    <img src="/images/15-anos-editora-planeta.jpg" alt="" />
+                                    <img  
+                                          className="reveal-left"
+                                          src="/images/15-anos-editora-planeta.jpg" alt="Imagem evento 15 anos da editora planeta" />
                               </div>
 
                               <div>
@@ -104,7 +132,10 @@ const Eventos = () => {
                               </div>
 
                               <div>
-                                    <img src="/images/buffet.jpg" alt="O serviço de buffet do Cinema Reserva Cultural São Paulo"></img>
+                                    <img 
+                                          className="reveal"
+                                          src="/images/buffet.jpg" 
+                                          alt="O serviço de buffet do Cinema Reserva Cultural São Paulo"></img>
                               </div>
                         </article>
 

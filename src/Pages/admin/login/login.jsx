@@ -13,7 +13,7 @@ function Login({ onLogin }) {
     useEffect(() => {
         const sr = ScrollReveal({
             distance: '100px',
-            duration: 1000,
+            duration: 700,
             easing: 'ease-in-out',
             origin: 'bottom',
         });
@@ -44,7 +44,7 @@ function Login({ onLogin }) {
     };
 
     return (
-        <article className={Styles.loginContainer}>
+        <article className={`${Styles.loginContainer} reveal`}>
             <img 
                 src="/images/logoReservaCultural.png" 
                 alt="Logo Reserva Cultural" 
