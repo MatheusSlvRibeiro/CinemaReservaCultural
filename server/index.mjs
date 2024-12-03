@@ -14,7 +14,7 @@ const port = process.env.PORT || 5000;
 const cors = require('cors')
 
 app.use(cors({
-    origin: [  'http://localhost:3000', 'https://reservacultural.netlify.app' ]
+    origin: [  'http://localhost:3000', 'https://cinemareservacultural.netlify.app/' ]
 }));
 app.use(bodyParser.json());
 
