@@ -5,12 +5,15 @@ import bodyParser from 'body-parser';
 import { nanoid } from 'nanoid';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: [  'http://localhost:3000', 'https://reservacultural.netlify.app/' ]
+    origin: [  'http://localhost:3000', 'https://reservacultural.netlify.app' ]
 }));
 app.use(bodyParser.json());
 
@@ -120,5 +123,5 @@ app.delete("/filmes/:cidade/:id", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Servidor funcionando na porta ${port}`);
+    console.log(`Servidor funcionando em: ${port || process.env.BASE_URL}`);
 });

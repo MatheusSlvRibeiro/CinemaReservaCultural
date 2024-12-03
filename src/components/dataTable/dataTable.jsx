@@ -30,11 +30,12 @@ export default function OnShow({ cidade}) {
       const [globalFilter, setGlobalFilter] = useState(null);
       const toast = useRef(null);
       const dt = useRef(null);
-
+      const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000";
+     
       useEffect(() => {
             const fetchMovies = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:5000/filmes/${cidade}`);
+                    const response = await axios.get(`${apiUrl}/filmes/${cidade}`);
                     setMovies(response.data); 
                 } catch (error) {
                     console.error("Erro ao buscar filmes:", error);
