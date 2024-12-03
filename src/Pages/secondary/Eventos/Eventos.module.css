@@ -1,21 +1,95 @@
-.PageContainer{
-    min-height: 100vh;
+.Article{
+    background-color: var(--main-bg-color);
+    margin: 6rem auto;
+    width: 100%;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    box-shadow: none;
 }
 
-.Article{
+.ArticleFull{
+    padding: 3rem 9rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    background-color: #202020;
+    border-radius: 0;
+}
+
+.ArticleFull div{
     width: 50%;
+    margin: 1.5rem;
+}
+
+.ArticleFull img{
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 0.5rem;
+
+}
+
+.Banner{
+    border-radius: 0.5rem;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .Title{
-    color: var(--main-color);
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 500;
     text-transform: uppercase;
     text-align: center;
+    padding-bottom: 0.5rem;
     margin-bottom: 2.5rem;
+    color: var(--main-text-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.TitleSide{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 2.5rem;
+    color: var(--main-text-color);
+    border-bottom: 3px solid var(--main-color);  
+
+}
+
+.ArticleFull div ul{
+    padding-left: 2rem;
+}
+
+.ArticleFull div li{
+    font-size: 1.3rem;
+    list-style: disc;
+    color: var(--main-text-color);
+    margin-bottom: 0.8rem;
+}
+.Paragraph{
+    font-size: 1.3rem;
+    list-style: disc;
+    color: var(--main-text-color);
+    margin-bottom: 0.1rem;
+}
+
+.Orcamento{
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    width: 15rem;
+    padding: 1rem;
+    margin: 0.9rem auto;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.Orcamento:hover {
+    background-color: var(--main-color);
+    color: var(--main-text-color);
 }
 
 .Parcerias{
@@ -25,12 +99,11 @@
     justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .Parcerias a{
     margin: 0;
-
 }
 
 .Parcerias a:hover{
@@ -44,32 +117,75 @@
     margin: 0;
 }
 
+@media (min-width: 1400px) {
+    .Article{
+        width: 40%;
+    }
+    .ArticleFull div{
+        width: 30%;
+    }
+    .Banner{
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .Article{
         width: 100%;
         margin: 0;
         margin-top: 4rem;
     }
+    .ArticleFull{
+        width: 100%;
+        padding: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .ArticleFull div{
+        width: 100%;
+        justify-content: center;
+    }
 
     .Parcerias img{
         width: 10rem;
     }
-}
-
-@media (min-width: 769px) {
-    .Article{
-        width: 70%;
+    .ArticleFull h1{
+        text-align: center;
     }
 }
 
-@media (min-width: 1024px) {
-    .Article{
-        width: 50%;
+@media (max-width: 1024px) {
+    .ArticleFull{
+        padding: 2rem 2.5rem;
     }
 }
 
-@media (min-width: 1400px) {
-    .Article{
-        width: 40%;
+@media (max-width: 425px) {
+    .Banner{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+    .ArticleFull{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .ArticleFull h1{
+        font-size: 1.5rem;
+    }
+    .TitleSide{
+        font-size: 2.5rem;
+        margin: 1.5rem 2rem;
+    }
+    .ArticleFull div{
+        width: 90%;
+    }
+    .Parcerias{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Title{
+        font-size: 2.5rem;
+        margin: 0 2rem;
     }
 }

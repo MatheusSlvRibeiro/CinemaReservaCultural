@@ -23,7 +23,7 @@ const Contato = () => {
 
   const reCaptchaRef = useRef(null);
 
-  const reCaptchaSiteKey = "6Lc7dXYqAAAAAPHi-169L83jTYyA1kPnQEA3DdB_"; 
+  const reCaptchaSiteKey = "6LeXq5AqAAAAAEO2pqkjRoGd3jFdBJMbwOFE0TUA"; 
 
   const handleChange = (e) => {
     const { name, value } = e.target;

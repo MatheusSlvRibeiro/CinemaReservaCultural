@@ -5,9 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; 
 import postSaoPaulo from "../../data/saoPaulo/postSaoPaulo.json"
 import postNiteroi from "../../data/niteroi/postNiteroi.json";
+import { useCidade } from '../../context/context'
 
-const News = ({cidade}) => {
+const News = () => {
     const [slidesToShow, setSlidesToShow] = useState(3);
+    const { cidade } = useCidade();
 
     useEffect(() => {
         const handleResize = () => {

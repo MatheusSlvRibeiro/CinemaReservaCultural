@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from './Eventos.module.css'
 import { useCidade } from "../../../context/context";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
 import Footer from "../../../components/Footer/Footer";
+import ScrollReveal from 'scrollreveal';
+
 
 const Eventos = () => {
-      
-      const { dadosCidade } = useCidade();
+      const navigate = useNavigate();
+      const { dadosCidade, cidade } = useCidade();
+
+      useEffect(() => {
+            const sr = ScrollReveal({
+                distance: '100px',
+                duration: 700,
+                easing: 'ease-in-out',
+                origin: 'bottom',
+            });
+    
+            sr.reveal('.reveal', {
+                interval: 200,
+            });
+
+            sr.reveal('.reveal-left', {
+                  origin: 'bottom',
+                  distance: '100px',
+                  duration: 700,
+                  easing: 'ease-in',
+              });
+
+        }, []);
 
       if (!dadosCidade) {
             return <p style={{textAlign: 'center', marginTop: '2rem', fontSize: '2rem'}}>Cidade não encontrada!</p>
@@ -18,8 +42,106 @@ const Eventos = () => {
                   <section>
                         
                         <article className={styles.Article}>
+                              <img 
+                                    className={styles.Banner}
+                                    src="/images/banner-eventos-orcamento.jpg" 
+                                    alt=" No banner diz: Com uma estrutura moderna, versátil e totalmente equipada, nosso cinema 
+                                          é o cenário ideal para eventos de todos os formatos. 
+                                          Desde palestras e seminários a pré-estreias exclusivas e celebrações temáticas, 
+                                          oferecemos o ambiente perfeito para tornar cada momento único e inesquecível"/>
+                              <button 
+                                    onClick={() => navigate(`/${cidade}/Contato`)}
+                                    className={styles.Orcamento}>Solicitar orçamento</button>
+                        </article>
+
+                        
+                  </section>
+
+                  <section>
+
+                        <article className={styles.ArticleFull}>
+                              <div>
+                                    <h1 className={styles.TitleSide}>Uma Estrutura Completa</h1>
+                                    <p className={styles.Paragraph}>Localizado em pontos estratégicos, nosso cinema combina conforto, tecnologia e elegância para atender às suas necessidades.</p>
+                                    <ul>
+                                          <br/>
+                                          <li>4 salas em formato stadium <br/>(Capacidade de 110 a 190 lugares)</li>
+                                          <li>Exibição em <strong>QUALQUER FORMATO:</strong> PPT, DVD, HD e apresentações de filmes institucionais.
+                                          </li>
+                                          <li>Sala de exibição com equipamentos de última geração
+                                          </li>
+                                          <li>Ambientes climatizados e Wi-Fi gratuito
+                                          </li>
+                                    </ul>
+                              </div>
+                              <div>
+                                    <img 
+                                          className="reveal"
+                                          src="/images/sala-1.jpg" 
+                                          alt="Imagem da sala 1" />
+                              </div>
+                        </article>
+
+                        <article className={styles.ArticleFull}>
+                              <div>
+                                    <img  
+                                          className="reveal-left"
+                                          src="/images/15-anos-editora-planeta.jpg" alt="Imagem evento 15 anos da editora planeta" />
+                              </div>
+
+                              <div>
+                                    <h1 className={styles.TitleSide}>Mude de ambiente</h1>
+                                    <p className={styles.Paragraph}>Oferecemos um ambiente versátil e sofisticado, ideal para transformar qualquer ocasião em um momento único. Nosso cinema vai além das exibições de filmes e abre suas portas para receber diferentes tipos de eventos: <br/>
+                                    </p> <br/>
+                                    
+                                    <ul>
+                                          <li>Palestras e seminários</li>
+                                          <li>Eventos corporativos</li>
+                                          <li>Festas e aniversários Temáticos</li>
+                                          <li>Lançamento de produtos</li>
+                                    </ul> <br/>
+
+                                    <p className={styles.Paragraph}>
+                                    Entre em contato com nossa equipe comercial para solicitar seu orçamento e agendar uma visita.
+                                    </p>
+
+                                    <button 
+                                    onClick={() => navigate(`/${cidade}/Contato`)}
+                                    className={styles.Orcamento}>Solicitar orçamento</button>
+
+                              </div>
+                        </article>
+
+                        <article className={styles.ArticleFull}>
+                              <div>
+                                    <h1 className={styles.TitleSide}>Serviços</h1>
+                                    <p className={styles.Paragraph}>Espaço para recepções e coquetéis: até 350 pessoas (em pé) ou 150 pessoas (sentadas).</p> <br />
+                                    <p className={styles.Paragraph}>Estacionamento conveniado para maior praticidade.</p> <br/>
+                                    <p className={styles.Paragraph}>Serviços de buffet com opções variadas:</p><br />
+                                    <ul>
+                                          <li>Welcome Coffee</li>
+                                          <li>Brunch</li>
+                                          <li>Almoços</li>
+                                          <li>Coquetéis</li>
+                                          <li>Jantares</li>
+                                    </ul>
+
+                                    <button 
+                                    onClick={() => navigate(`/${cidade}/Contato`)}
+                                    className={styles.Orcamento}>Solicitar orçamento</button>
+                              </div>
+
+                              <div>
+                                    <img 
+                                          className="reveal"
+                                          src="/images/buffet.jpg" 
+                                          alt="O serviço de buffet do Cinema Reserva Cultural São Paulo"></img>
+                              </div>
+                        </article>
+
+                        <article className={styles.Article} id="Parcerias">
                               <h1 className={styles.Title}>Parcerias</h1>
-                                    <div className={styles.Parcerias}>
+                                    <div className={styles.Parcerias} >
                                           <a  href="https://dancarmarketing.com.br/"
                                           target="_blank" rel="noreferrer noopener">
                                           <img src={require('../../../images/Parceiros/11_dmkt.png')} alt="Logo Dançar Marketing" />
@@ -101,6 +223,7 @@ const Eventos = () => {
                               </div>
                         </article>
                   </section>
+
                   <Footer />
             </main>
       );
