@@ -10,6 +10,7 @@ import Login from './Pages/admin/login/login';
 import Niteroi from './Pages/main/niteroi';
 import SaoPaulo from './Pages/main/SaoPaulo';
 
+import Filme from './Pages/secondary/Movie/Movie';
 import Conceito from './Pages/secondary/Conceito/Conceito';
 import Tarifas from './Pages/secondary/Tarifas/Tarifas';
 import Fidelidade from './Pages/secondary/Fidelidade/Fidelidade';
@@ -41,6 +42,7 @@ function App() {
           <Route path="/SaoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
 
+          <Route path='/:cidade/Filme' element={<Filme />} />
           <Route path='/:cidade/Conceito' element={<Conceito />} />
           <Route path='/:cidade/tarifas' element={<Tarifas />} />
           <Route path='/:cidade/Fidelidade' element={<Fidelidade />} />

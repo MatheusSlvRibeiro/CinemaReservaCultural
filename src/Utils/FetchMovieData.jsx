@@ -126,7 +126,7 @@ const MovieSlider = () => {
                     <div className={styles.MovieCard} key={movie.id}>
                         
                         <a 
-                            href="https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo" 
+                            href={`/${cidade}/Filme`} 
                             target='blank' 
                             className={styles.movieLink}>
                             
