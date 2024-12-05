@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useCidade } from '../context/context';
+import { useNavigate } from "react-router-dom";
 
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -36,6 +37,7 @@ const MovieSlider = () => {
     const { cidade, dadosCidade } = useCidade();
     const [movies, setMovies] = useState([]);
     const [slidesToShow, setSlidesToShow] = useState(4); 
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchMovieDetails = async () => {
@@ -48,6 +50,14 @@ const MovieSlider = () => {
                     const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=pt-BR`);
                     const movieData = await movieResponse.json();
                     
+                    const videosResponse = await fetch(
+                        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=pt-BR`
+                    );
+                    const videosData = await videosResponse.json();
+
+                    const trailer = videosData.results.find(
+                        (video) => video.type === 'Trailer' && video.site === 'YouTube'
+                    );
                     const movieTitle = movieData.title.toLowerCase();
                     const localMovie = localMovies.find(movie => movie.titulo.toLowerCase() === movieTitle);
                     const certification = localMovie ? localMovie.faixaEtaria : 'Não disponível';
@@ -63,6 +73,7 @@ const MovieSlider = () => {
                         ...movieData,
                         certification,
                         mainGenre,
+                        trailerKey: trailer ? trailer.key : null,
                     };
                 })
             );
@@ -125,10 +136,14 @@ const MovieSlider = () => {
                     
                     <div className={styles.MovieCard} key={movie.id}>
                         
-                        <a 
-                            href={`/${cidade}/Filme`} 
-                            target='blank' 
-                            className={styles.movieLink}>
+                        <div 
+                            className={styles.movieLink} 
+                            onClick={() => 
+                                navigate(`/${cidade}/Filme/${movie.title.replace(/\s+/g, '-')}`, {
+                                    state: { movie },
+                                })
+                            }
+                        >
                             
                             <img className={styles.moviePoster} 
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
@@ -147,7 +162,7 @@ const MovieSlider = () => {
                                     </p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 ))}
             </Slider>

@@ -31,7 +31,7 @@ function Home() {
               />
               <button 
                 className={Styles.Button} 
-                onClick={() => handleCitySelection("saoPaulo", "/SaoPaulo")}
+                onClick={() => handleCitySelection("saoPaulo", "/saoPaulo")}
               >
                 São Paulo - SP
               </button>
@@ -45,7 +45,7 @@ function Home() {
               />
               <button 
                 className={Styles.Button} 
-                onClick={() => handleCitySelection("niteroi", "/Niteroi")}
+                onClick={() => handleCitySelection("niteroi", "/niteroi")}
               >
                 Niterói - RJ
               </button>

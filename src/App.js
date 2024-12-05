@@ -39,10 +39,10 @@ function App() {
           <Route path='/LoginAdmin' element={<Login onLogin={handleLogin} />} />
 
           <Route path="/" element={<Home />} />
-          <Route path="/SaoPaulo" element={<SaoPaulo />} />
+          <Route path="/saoPaulo" element={<SaoPaulo />} />
           <Route path="/niteroi" element={<Niteroi />} />
 
-          <Route path='/:cidade/Filme' element={<Filme />} />
+          <Route path='/:cidade/Filme/:titulo' element={<Filme />} />
           <Route path='/:cidade/Conceito' element={<Conceito />} />
           <Route path='/:cidade/tarifas' element={<Tarifas />} />
           <Route path='/:cidade/Fidelidade' element={<Fidelidade />} />
