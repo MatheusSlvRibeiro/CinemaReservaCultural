@@ -1,10 +1,186 @@
-.movieDetails{
-    margin: 2rem auto;
+.movieSection{
+    margin: 0;
     padding: 0;
-    max-width: 100%;
 }
 
-.moviePoster{
+.movieDetails{
+    margin: 5rem auto 0 auto;
+    padding: 0;
+}
+
+.trailerContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+  
+.movieBackdrop {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.movieTitle{
+    position: absolute;
+    top: 65%;
+    left: 17%;
+    text-transform: uppercase;
+    font-size: 3rem;
+    z-index: 900;
     display: flex;
-    max-width: 100%;
+
+}
+
+.playButtonOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
+  
+.playIcon {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.548);
+}
+  
+.trailerWrapper {
+    z-index: 1000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+  
+iframe {
+    width: 100%;
+    height: 100%;
+}
+  
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.closeButton:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+aside{
+    width: 2rem;
+}
+
+.movieContent{
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moviePoster {
+    width: 60%;
+    margin: 2.5rem 1rem 0 1rem ;
+    border-radius: 0.5rem;
+}
+
+.description {
+    width: 60%;
+    margin: 1rem;
+    padding: 0 0.5rem;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.description p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: white;
+}
+
+.certification {
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.livre {
+    background-color: green;
+}
+
+.dez {
+    background-color: blue;
+}
+
+.doze {
+    background-color: rgb(242, 195, 70);
+}
+
+.quatorze {
+    background-color: orange;
+}
+
+.dezesseis {
+    background-color: red;
+}
+
+.dezoito {
+    background-color: black;
+    color: white;
+}
+
+.naoDisponivel {
+    background-color: rgb(105, 105, 105);
+}
+
+.additionalInfo {
+    max-width: 60%;
+    padding: 2rem;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.additionalInfo p {
+    margin: 0.8rem 0;
+    font-weight: 300;
+}
+
+.ingressos{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.ingressos:hover{
+    background-color: var(--main-color);
+    color: var(--main-text-color);
 }

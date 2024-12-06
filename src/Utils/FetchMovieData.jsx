@@ -50,6 +50,9 @@ const MovieSlider = () => {
                     const movieResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=pt-BR`);
                     const movieData = await movieResponse.json();
                     
+                    const creditsResponse = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}&language=pt-BR`);
+                    const creditsData = await creditsResponse.json();
+
                     const videosResponse = await fetch(
                         `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=pt-BR`
                     );
@@ -69,11 +72,27 @@ const MovieSlider = () => {
                         mainGenre = 'Ficção'
                     }
 
+                    const elenco = creditsData.cast.slice(0, 5).map(cast => cast.name).join(", ");
+                    const direcao = creditsData.crew.find(crew => crew.job === "Director")?.name || "Direção não disponível";
+                    const roteiro = creditsData.crew.find(crew => crew.job === "Screenplay")?.name || "Roteiro não disponível";
+                    const producao = creditsData.crew
+                        .filter(crew => crew.job === "Producer")
+                        .map(crew => crew.name)
+                        .join(", ") || "Produção não disponível";
+
+                    const distribuidora = movieData.production_companies?.[0]?.name || "Distribuidora não disponível";
+
                     return {
                         ...movieData,
                         certification,
                         mainGenre,
                         trailerKey: trailer ? trailer.key : null,
+                        sinopse: movieData.overview || "sinopse não disponível",
+                        elenco,
+                        direcao,
+                        roteiro,
+                        producao,
+                        distribuidora,
                     };
                 })
             );
