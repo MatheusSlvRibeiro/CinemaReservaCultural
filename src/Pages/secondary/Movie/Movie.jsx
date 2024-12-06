@@ -80,7 +80,7 @@ return (
                 ></iframe>
               </div>
             ) : (
-              <p>Trailer não disponível</p>
+              <p className={styles.undefined}>Trailer não disponível</p>
             )}
           </div>
         </article>

@@ -1,3 +1,20 @@
+.undefined{
+    background-color: red;
+    padding: 1rem 0.5rem;
+    color: var(--main-text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    width: 20%;
+    border-radius: 0.5rem;
+    left: 40%;
+    top: 35%;
+}
+
 .movieSection{
     margin: 0;
     padding: 0;
@@ -183,4 +200,46 @@ aside{
 .ingressos:hover{
     background-color: var(--main-color);
     color: var(--main-text-color);
+}
+
+@media (max-width: 425px) {
+    .movieBackdrop{
+        height: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .movieTitle{
+        top: 75%;
+        font-size: 2.2rem;
+    }
+    .description{
+        padding: 0;
+        margin: 1rem 0;
+    }
+    .additionalInfo{
+        padding: 2rem 1rem;
+        margin-right: 1rem;
+    }
+    .moviePoster{
+        width: 70%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .movieTitle{
+        top: 55%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .movieTitle{
+        top: 50%;
+    }
+}
+
+@media (min-width: 2000px) {
+    .movieTitle{
+        top: 25%;
+    }
 }
