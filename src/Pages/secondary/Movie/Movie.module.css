@@ -175,7 +175,7 @@ aside{
 }
 
 .additionalInfo {
-    max-width: 60%;
+    width: 60%;
     padding: 2rem;
     margin-top: 10px;
     font-size: 1.2rem;
@@ -202,44 +202,92 @@ aside{
     color: var(--main-text-color);
 }
 
-@media (max-width: 425px) {
-    .movieBackdrop{
-        height: 50%;
+@media (min-width: 120px) and (max-width: 768px) {
+    .aside{
+        display: none;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
     .movieTitle{
-        top: 75%;
-        font-size: 2.2rem;
+        top: 40%;
+        left: 6%;
+        font-size: 1.7rem;
     }
-    .description{
+    
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .movieTitle{
+        top: 45%;
+        left: 10%;
+        font-size: 1.7rem;
+    }
+    
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+    .movieTitle{
+        font-size: 1.7rem;
+        top: 50%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 425px) {
+    .movieDetails{
+        margin: 5rem 0 1rem 0;
+        width: 100%; 
+    }
+    .trailerContainer{
+        margin: 0;
         padding: 0;
-        margin: 1rem 0;
+        height: 50%;
+    }
+    .movieBackdrop{
+        height: 50%;
+    }
+    .playButtonOverlay{
+        top: 50%;
+    }
+    
+    .movieContent{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .additionalInfo{
-        padding: 2rem 1rem;
-        margin-right: 1rem;
+        width: 100%;
     }
-    .moviePoster{
-        width: 70%;
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .movieTitle{
+        top: 72%;
+    }
+
+    .movieContent{
+        display: flex;
+        flex-direction: column;
+    }
+    .additionalInfo{
+        width: 100%;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .movieTitle{
-        top: 55%;
+        top: 80%;
+    }
+    .aside{
+        width: 40%;
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .movieTitle{
-        top: 50%;
-    }
-}
-
-@media (min-width: 2000px) {
-    .movieTitle{
-        top: 25%;
+        top: 70%;
     }
 }
