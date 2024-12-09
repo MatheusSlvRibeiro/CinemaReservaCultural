@@ -41,12 +41,16 @@
 .movieTitle{
     position: absolute;
     top: 65%;
-    left: 17%;
+    left: 2.5rem;
     text-transform: uppercase;
     font-size: 3rem;
     z-index: 900;
-    display: flex;
-
+    display: block;
+    word-wrap: break-word;
+    word-break: break-word;
+    color: #FFF;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    width: 55%;
 }
 
 .playButtonOverlay {
@@ -229,7 +233,7 @@ aside{
 @media (min-width: 376px) and (max-width: 425px) {
     .movieTitle{
         font-size: 1.7rem;
-        top: 50%;
+        top: 60%;
         left: 10%;
     }
 }
@@ -265,7 +269,7 @@ aside{
 
 @media (min-width: 426px) and (max-width: 768px) {
     .movieTitle{
-        top: 72%;
+        top: 50%;
     }
 
     .movieContent{
@@ -279,15 +283,10 @@ aside{
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .movieTitle{
-        top: 80%;
+        top: 60%;
+        width: 70%;
     }
     .aside{
         width: 40%;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .movieTitle{
-        top: 70%;
     }
 }

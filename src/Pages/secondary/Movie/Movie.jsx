@@ -59,6 +59,8 @@ return (
                   alt={movie.title}
                 />
 
+                <h1 className={styles.movieTitle}>{movie.title}</h1>
+
                 <div className={styles.playButtonOverlay} onClick={handlePlayClick}>
                   <FontAwesomeIcon icon={faPlayCircle} className={styles.playIcon}></FontAwesomeIcon>
                 </div>
@@ -100,8 +102,6 @@ return (
             </div>
 
             <div className={styles.additionalInfo}>
-                <h1 className={styles.movieTitle}>{movie.title}</h1>
-
                 <h1 className={movie.Title}>Sinopse</h1>
                 <p className={styles.movieSynopsis}>{movie.sinopse}</p>
                 <br/>
