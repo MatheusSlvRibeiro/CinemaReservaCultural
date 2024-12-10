@@ -106,11 +106,11 @@ const MovieSlider = () => {
         const handleResize = () => {
             const width = window.innerWidth;
     
-            const baseWidth = width < 500 ? 200 : 400;
+            const baseWidth = width < 500 ? 300 : 400;
     
             let quantidade = Math.floor(width / baseWidth);
             
-            if (width> 550){
+            if (width> 450){
                 quantidade += 1;
             }
 

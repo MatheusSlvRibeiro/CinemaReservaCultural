@@ -290,3 +290,16 @@ aside{
         width: 40%;
     }
 }
+
+@media (max-width: 425px) {
+    .undefined{
+        width: 50%;
+        left: 25%;
+    }
+    .trailerContainer{
+        background-color: var(--main-bg-color);
+    }
+    .movieDetails{
+        box-shadow: none;
+    }
+}

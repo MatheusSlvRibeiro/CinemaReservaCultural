@@ -13,9 +13,10 @@
 
 .moviePoster {
     width: 100%;
-    height: 23rem;
+    height: 350px;
     border-radius: 0.5rem;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .movieContent {
@@ -118,14 +119,14 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 397px) and (max-width: 425px) {
     .moviePoster{
-        height: 16rem;
+        height: 350px;
     }
 }
 
 @media (max-width: 396px) {
     .moviePoster{
-        height: 22rem;
+        height: 350px;
     }   
 }

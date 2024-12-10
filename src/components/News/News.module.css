@@ -28,8 +28,8 @@
     margin: 5px;
     border-radius: 20px;
     transition: transform 0.3s ease;
-    box-shadow: 0 6px 13px rgba(0, 0, 0, 0.8);
-
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
 }
 
 .Post:hover {
