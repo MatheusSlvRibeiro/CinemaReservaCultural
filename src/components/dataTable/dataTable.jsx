@@ -72,6 +72,8 @@ export default function OnShow({ cidade}) {
                 let _movies = [...movies];
                 let _movie = { ...movie };
         
+                  _movie.faixaEtaria = _movie.faixaEtaria.toString();
+
                 if (movie.id) {
 
                   try {
@@ -87,7 +89,7 @@ export default function OnShow({ cidade}) {
                   try {
                         const response = await axios.post(`${apiUrl}/filmes/${cidade}`, _movie);
                         _movie.id = response.data.id; 
-                        setMovies([..._movies, _movie]);
+                        setMovies( [_movie, ..._movies]);
                         toast.current.show({ severity: 'success', summary: 'Concluído', detail: 'Filme Adicionado', life: 3000 });
                     } catch (error) {
                         console.error("Erro ao adicionar filme:", error);
@@ -144,7 +146,7 @@ export default function OnShow({ cidade}) {
 
       const onCategoryChange = (e) => {
             let _movie = { ...movie };
-            _movie['faixaEtaria'] = e.value;
+            _movie['faixaEtaria'] = e.value.toString();
             setMovie(_movie);
       };
 

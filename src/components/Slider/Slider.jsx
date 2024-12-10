@@ -33,8 +33,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change slide every 6 seconds
-
+    }, 6000); 
     return () => clearInterval(interval);
   }, []);
 
@@ -56,7 +55,7 @@ const Slider = () => {
     <div className={styles.slider}>
       <div className={styles.slidesContainer}>
       {images.map((image, index) => {
-          console.log(image.src, image.href); // This will log each image source and href
+          console.log(image.src, image.href);
           return (
             <a
               key={index}

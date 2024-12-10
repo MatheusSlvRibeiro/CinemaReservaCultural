@@ -78,8 +78,8 @@ app.post("/filmes/:cidade", (req, res) => {
         const novoFilme = req.body;
 
         novoFilme.id = nanoid(8); 
+        filmes.unshift(novoFilme);
 
-        filmes.push(novoFilme);
         writeJSONFile(path, filmes);
         res.status(201).json(novoFilme);
     } catch (error) {
@@ -119,6 +119,27 @@ app.delete("/filmes/:cidade/:id", (req, res) => {
         res.status(200).json({ message: "Filme deletado com sucesso." });
     } catch (error) {
         res.status(500).json({ error: "Erro ao deletar o filme.", details: error.message });
+    }
+});
+
+app.put("/filmes/:cidade/destacar/:id", (req, res) => {
+    const { cidade, id } = req.params;
+    const path = cidade === 'saoPaulo' ? filmesSaoPauloPath : filmesNiteroiPath;
+
+    try {
+        const filmes = readJSONFile(path);
+        const index = filmes.findIndex((filme) => filme.id === id); 
+
+        if (index !== -1) {
+            const [filme] = filmes.splice(index, 1); 
+            filmes.unshift(filme); 
+            writeJSONFile(path, filmes);
+            res.status(200).json(filme);
+        } else {
+            res.status(404).json({ error: "Filme não encontrado." });
+        }
+    } catch (error) {
+        res.status(500).json({ error: "Erro ao destacar o filme.", details: error.message });
     }
 });
 
