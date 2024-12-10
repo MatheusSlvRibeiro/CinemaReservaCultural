@@ -3,9 +3,9 @@ import styles from './Slider.module.css';
 
 import kayakImg from '../../images/ad/kayak.jpg';
 import menuImg from '../../images/ad/menu.jpg';
-import obastardoImg from '../../images/ad/obastardo.jpg';
-import motelDestinoImg from '../../images/ad/MotelDestino.jpg';
-import beetlejuiceImg from '../../images/ad/beetlejuice.jpg';
+import aindaEstouAquiImg from '../../images/ad/ainda-estou-aqui-background.jpg';
+import OrvalhoImg from '../../images/ad/a-hora-do-orvalho.jpg'
+import DyingImg from '../../images/ad/dying.jpg';
 
 const images = [
   { src: kayakImg, 
@@ -14,17 +14,16 @@ const images = [
   { src: menuImg, 
     href: 'https://drive.google.com/file/d/1r1duntiYfC_eTOw-I71YMWEsy2oh5DJM/view' },
   
-  { src: obastardoImg, 
+  { src: aindaEstouAquiImg, 
     href: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo', 
-    title: 'O Bastardo' },
+    title: 'Ainda estou aqui' },
   
-  { src: motelDestinoImg, 
+  { src: OrvalhoImg, 
     href: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo', 
-    title: 'Motel Destino' },
-  
-  { src: beetlejuiceImg, 
-    href: 'https://www.ingresso.com/filme/os-fantasmas-ainda-se-divertem-beetlejuice-beetlejuice?city=sao-paulo', 
-    title: 'Beetlejuice Beetlejuice' },
+    title: 'A Hora do orvalho' },
+  { src: DyingImg, 
+    href: 'https://www.ingresso.com/cinema/cinema-reserva-cultural-sao-paulo?city=sao-paulo', 
+    title: 'Dying - A última sinfonia' }
 ];
 
 
