@@ -1,8 +1,8 @@
 .undefined{
-    background-color: red;
+    background-color: var(--main-text-color);
     padding: 1rem 0.5rem;
-    color: var(--main-text-color);
-    font-weight: 500;
+    color: var(--main-bg-color);
+    font-weight: 600;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
@@ -14,6 +14,28 @@
     left: 40%;
     top: 35%;
 }
+
+.movieUndefined{
+    background-color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: var(--main-bg-color);
+}
+.movieUndefined p{
+    padding: 0.5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
 
 .movieSection{
     margin: 0;

@@ -24,9 +24,14 @@ import { useCidade } from "../../../context/context";
 
     if (!movie) {
         return (
-        <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <div>
+          <div className={styles.movieUndefined}>
             <h1>Filme não encontrado</h1>
             <p>Volte para a página anterior e selecione um filme válido.</p>
+            <button>Voltar</button>
+          </div>
+
+
         </div>
         );
     }
