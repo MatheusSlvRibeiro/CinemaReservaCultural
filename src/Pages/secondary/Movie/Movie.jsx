@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar";
 import PlayingNow from "../../../components/PlayingNow/PlayingNow";
 import Footer from "../../../components/Footer/Footer";
@@ -13,7 +13,8 @@ import { useCidade } from "../../../context/context";
     const movie = state?.movie;
     const { dadosCidade } = useCidade();
     const [showTrailer, setShowTrailer] = useState(false);
-
+    const navigate = useNavigate();
+    
     const handlePlayClick = () => {
         setShowTrailer(true);
     };
@@ -28,7 +29,8 @@ import { useCidade } from "../../../context/context";
           <div className={styles.movieUndefined}>
             <h1>Filme não encontrado</h1>
             <p>Volte para a página anterior e selecione um filme válido.</p>
-            <button>Voltar</button>
+            <button 
+                  onClick={() => navigate (-1)}>Voltar</button>
           </div>
 
 

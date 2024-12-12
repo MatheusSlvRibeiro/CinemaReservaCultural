@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Slider.module.css';
 
 import kayakImg from '../../images/ad/kayak.jpg';
@@ -29,13 +29,31 @@ const images = [
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState([]);
+  const intervalRef = useRef(null);
+
+  const startAutoSlide = () => {
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 6000);
+  };
+
+  const resetAutoSlide = () => {
+    clearInterval(intervalRef.current);
+    startAutoSlide();
+  };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); 
-    return () => clearInterval(interval);
-  }, []);
+    const preloadImages = () => {
+      const nextIndex = (currentIndex + 1) % images.length;
+      setLoadedImages((prev) => [...new Set([...prev, currentIndex, nextIndex])]);
+    };
+
+    preloadImages();
+    resetAutoSlide();
+
+    return () => clearInterval(intervalRef.current);
+  }, [currentIndex]);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -47,9 +65,6 @@ const Slider = () => {
     );
   };
 
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
 
   return (
     <div className={styles.slider}>
@@ -74,15 +89,7 @@ const Slider = () => {
       </div>
       <button className={styles.prev} onClick={prevSlide}>&#10094;</button>
       <button className={styles.next} onClick={nextSlide}>&#10095;</button>
-      <div className={styles.dotsbox}>
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`${styles.dot} ${index === currentIndex ? styles.active : ''}`}
-            onClick={() => goToSlide(index)}
-          ></span>
-        ))}
-      </div>
+      
     </div>
   );
 };

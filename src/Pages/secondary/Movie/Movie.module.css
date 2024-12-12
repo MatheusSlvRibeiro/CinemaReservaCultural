@@ -35,7 +35,13 @@
     font-weight: 400;
     font-size: 1.2rem;
 }
-
+.movieUndefined button{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
 
 .movieSection{
     margin: 0;

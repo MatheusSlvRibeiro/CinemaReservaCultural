@@ -4,6 +4,7 @@
 }
 
 .MovieCard{
+    cursor: pointer;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -15,7 +16,6 @@
     width: 100%;
     height: 350px;
     border-radius: 0.5rem;
-    cursor: pointer;
     box-sizing: border-box;
 }
 
