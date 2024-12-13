@@ -127,8 +127,8 @@ const Contato = () => {
             value={formData.unidade} 
             onChange={handleChange} 
           >
-            <option value="sp">São Paulo</option>
-            <option value="rj">Rio de Janeiro</option>
+            <option value="saoPaulo">São Paulo</option>
+            <option value="niteroi">Niterói</option>
           </select>
         </label>
         <label>
